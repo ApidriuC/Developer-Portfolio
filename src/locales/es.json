@@ -10,5 +10,7 @@
     "option-contact-label": "Contactame",
     "intro-hello": "Hola 👋, soy",
     "intro-developer": "Un desarrollador FullStack",
-    "intro-message": "Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe dónde vives"
+    "intro-message": "Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe dónde vives",
+    "notification-lng-change": "Language changed!",
+    "notification-theme-change": "Theme changed!"
 }
