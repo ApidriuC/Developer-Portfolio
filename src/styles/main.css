@@ -39,12 +39,8 @@ section {
     position: relative;
     height: 100vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-}
-
-#intro .container-intro {
-    padding-top: 15%;
 }
 
 #intro h1 {
