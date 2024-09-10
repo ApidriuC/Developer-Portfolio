@@ -1,0 +1,117 @@
+.navBar-bg {
+    mask-image: linear-gradient(0deg, #000000 0, transparent);
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    background-color: #1e1c1c38;
+}
+
+body.dark-theme .navBar-bg {
+    background-color: #1e1c1c;
+}
+
+.navBar-float {
+    width: 30%;
+    height: auto;
+    left: 37.5%;
+    bottom: 30px;
+    position: fixed;
+    background-color: rgb(53 53 53 / 47%);
+    border-radius: 15px;
+    padding: 5px 10px;
+    border: 1px solid #ffffff36;
+    transition: 0.4s all ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.navBar-float:hover {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.navBar-float button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: hsla(0, 0%, 9%, .7);
+    border: 1px solid #ffffff36;
+    color: white;
+}
+
+.navBar-float .option-navBar {
+    height: 100%;
+    width: fit-content;
+    transition: 0.4s all ease;
+}
+
+.navBar-float .option-navBar .option {
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    width: 100px;
+    text-align: center;
+    background-color: hsla(0, 0%, 9%, .7);
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #ffffff36;
+}
+
+.navBar-float .option-navBar:hover {
+    transform: translateY(-10px) scale(1.2);
+}
+
+.navBar-float .option-navBar:hover .option {
+    display: block;
+}
+
+.navBar-float .option-navBar .theme-icon {
+    background-image: url('/src/assets/light-theme.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 100%;
+}
+
+body.dark-theme .navBar-float .option-navBar .theme-icon {
+    background-image: url('/src/assets/black-theme.svg');
+}
+
+.icon-character {
+    background-image: url('/src/assets/icon-character-git-hub.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.icon-person {
+    background-image: url('/src/assets/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 100%;
+}
+
+.icon-book {
+    background-image: url('/src/assets/icon-book.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 100%;
+}
+
+.icon-code {
+    background-image: url('/src/assets/icon-code.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 100%;
+}
+
+.icon-message {
+    background-image: url('/src/assets/icon-message.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 100%;
+}
