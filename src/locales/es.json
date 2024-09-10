@@ -1,0 +1,14 @@
+{
+    "document-title": "Mi Portafolio - Desarrollador FullStack",
+    "option-theme-label": "Tema",
+    "option-language-label": "Idioma",
+    "option-language-value": "ES",
+    "option-home-label": "Inicio",
+    "option-about-me-label": "Sobre mi",
+    "option-projects-label": "Proyectos",
+    "option-skills-label": "Habilidades",
+    "option-contact-label": "Contactame",
+    "intro-hello": "Hola 👋, soy",
+    "intro-developer": "Un desarrollador FullStack",
+    "intro-message": "Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe dónde vives"
+}

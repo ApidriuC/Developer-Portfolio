@@ -1,0 +1,14 @@
+{
+    "document-title": "My Portfolio - FullStack Developer",
+    "option-theme-label": "Theme",
+    "option-language-label": "Language",
+    "option-language-value": "EN",
+    "option-home-label": "Home",
+    "option-about-me-label": "About",
+    "option-projects-label": "Projects",
+    "option-skills-label": "Skills",
+    "option-contact-label": "Contact me",
+    "intro-hello": "Hello 👋, i am",
+    "intro-developer": "a FullStack Developer",
+    "intro-message": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live"
+}
