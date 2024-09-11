@@ -7,15 +7,15 @@ function NavOptions() {
     const { showNotification } = useNotification();
 
     const changeLanguage = () => {
-        showNotification(t('notification-lng-change'));
         const newLang = i18n.language === 'es' ? 'en' : 'es';
         i18n.changeLanguage(newLang);
+        showNotification(t('notification-lng-change'));
     };
 
     const changeTheme = () => {
-        showNotification(t('notification-theme-change'));
         const classNameDark = 'dark-theme';
         document.body.classList.toggle(classNameDark);
+        showNotification(t('notification-theme-change'));
     }
 
     const goToScroll = (id) => {

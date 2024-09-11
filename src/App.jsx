@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import NavOptions from './components/common/NavOptions.jsx'
-import BgAnimation from './utils/BgAnimation.jsx'
+import BgAnimation from './utils/BgAnimation.jsx';
+import NavOptions from './components/common/NavOptions.jsx';
 import HelloSection from './components/home/HelloSection.jsx';
 import SkillsSection from './components/skills/SkillsSection.jsx';
+import AboutMeSection from './components/resume/AboutMeSection.jsx';
 import { NotificationProvider } from './components/common/NotificationComponent.jsx';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <BgAnimation />
                 <NavOptions />
                 <HelloSection />
+                <AboutMeSection />
                 <SkillsSection />
             </NotificationProvider>
         </>
