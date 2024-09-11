@@ -11,6 +11,6 @@
     "intro-hello": "Hello 👋, i am",
     "intro-developer": "a FullStack Developer",
     "intro-message": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
-    "notification-lng-change": "Lenguaje modificado!",
-    "notification-theme-change": "Tema modificado!"
+    "notification-lng-change": "Language changed!",
+    "notification-theme-change": "Theme changed!"
 }
