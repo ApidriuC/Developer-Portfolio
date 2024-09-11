@@ -41,7 +41,8 @@ body h3,
 body h4,
 body h5,
 body h6,
-body span {
+body span,
+body label {
     text-align: center;
     color: var(--color-default);
 }
@@ -54,7 +55,8 @@ body.dark-theme h3,
 body.dark-theme h4,
 body.dark-theme h5,
 body.dark-theme h6,
-body.dark-theme span {
+body.dark-theme span,
+body.dark-theme label {
     color: var(--color-dark);
 }
 
@@ -172,4 +174,36 @@ body.dark-theme .com-circule {
     width: 30px;
     left: -35px;
     top: 90px;
+}
+
+.skill-box {
+    background-color: white;
+    border-color: hsla(0, 0%, 100%, .1);
+    outline-color: #1a1a1a;
+}
+
+body.dark-theme .skill-box {
+    background-color: black;
+}
+
+.skill-box a {
+    background-image: url('/src/assets/arrow-top-icon-black.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: hsla(0, 0%, 100%, .1);
+    outline-color: #1a1a1a;
+}
+
+.skill-box:hover a {
+    background-color: black;
+    background-image: url('/src/assets/arrow-top-icon-white.svg');
+}
+
+body.dark-theme .skill-box a {
+    background-image: url('/src/assets/arrow-top-icon-white.svg');
+}
+
+body.dark-theme .skill-box:hover a {
+    background-color: white;
+    background-image: url('/src/assets/arrow-top-icon-black.svg');
 }
