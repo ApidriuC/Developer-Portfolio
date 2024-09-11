@@ -20,7 +20,13 @@ function NavOptions() {
 
     const goToScroll = (id) => {
         const section = document.getElementById(id);
-        if (section) section.scrollIntoView({ behavior: 'smooth' });
+        if (section) {
+            section.scrollIntoView(
+                {
+                    block: 'center',
+                    behavior: 'smooth'
+                });
+        }
     }
 
     const options = [
@@ -40,10 +46,10 @@ function NavOptions() {
                 {options.map((option, index) => (
                     <OptionControl
                         key={index}
-                        Label={option.label}
-                        Value={option.value}
-                        Action={option.action}
-                        ClassName={option.className}
+                        label={option.label}
+                        value={option.value}
+                        action={option.action}
+                        className={option.className}
                     />
                 ))}
             </div>
@@ -51,11 +57,11 @@ function NavOptions() {
     );
 }
 
-function OptionControl({ Value, Label, Action, ClassName }) {
+function OptionControl({ value, label, action, className }) {
     return (
         <div className='option-navBar'>
-            <label className='option'>{Label}</label>
-            <button className={`${ClassName}`} onClick={Action}>{Value}</button>
+            <label className='option'>{label}</label>
+            <button className={`${className}`} onClick={action}>{value}</button>
         </div>
     );
 }
