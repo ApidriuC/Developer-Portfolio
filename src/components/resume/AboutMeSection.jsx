@@ -5,8 +5,8 @@ function AboutMeSection() {
     const { t } = useTranslation();
 
     return (
-        <section id='about-me' className='flex justify-center items-center h-screen flex-wrap'>
-            <div className='border-t border-gray-600 w-full ml-[10%] mr-[10%]' />
+        <section id='about-me' className='flex justify-center items-center h-[80vh] flex-wrap'>
+            <div className='border-t border-gray-600 w-full ml-[5%] mr-[5%]' />
             <div className='w-2/4 p-4 h-full flex justify-center items-center'>
                 <img
                     alt="me-image"
@@ -37,6 +37,7 @@ function AboutMeSection() {
                     </p>
                 </div>
             </div>
+            <div className='border-t border-gray-600 ml-[5%] mr-[5%]' />
         </section>
     );
 }

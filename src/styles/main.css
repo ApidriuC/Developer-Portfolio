@@ -40,7 +40,8 @@ body h2,
 body h3,
 body h4,
 body h5,
-body h6 {
+body h6,
+body span {
     text-align: center;
     color: var(--color-default);
 }
@@ -52,7 +53,8 @@ body.dark-theme h2,
 body.dark-theme h3,
 body.dark-theme h4,
 body.dark-theme h5,
-body.dark-theme h6 {
+body.dark-theme h6,
+body.dark-theme span {
     color: var(--color-dark);
 }
 
@@ -101,4 +103,73 @@ body.dark-theme #intro p {
     padding: 15px 20%;
     font-size: var(--size-text-small);
     font-style: italic;
+}
+
+.box-education {
+    z-index: 1;
+    position: relative;
+    background-color: #f5f5dc;
+    border: 2px solid #a67d9d;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.box-education:hover {
+    transform: translateX(5px) translateY(-5px);
+}
+
+.box-education p,
+.box-education span {
+    color: #333333 !important;
+}
+
+body.dark-theme .box-education {
+    background-color: #e0f7fa;
+    border: 2px solid #b2dfdb;
+}
+
+.label-rectangle {
+    background-color: #ff4081;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+body.dark-theme .label-rectangle {
+    background-color: #8e24aa;
+}
+
+.box-education .popup {
+    background-color: #ff4081;
+}
+
+.box-education .popup p {
+    color: white !important;
+}
+
+body.dark-theme .box-education .popup {
+    background-color: #8e24aa;
+}
+
+.com-circule {
+    background-color: #ff4081;
+    border-radius: 50% !important;
+}
+
+body.dark-theme .com-circule {
+    background-color: #8e24aa;
+}
+
+.first-circule {
+    height: 15px;
+    width: 15px;
+    left: -55px;
+    top: 110px;
+}
+
+.second-circule {
+    border-radius: 50% !important;
+    height: 30px;
+    width: 30px;
+    left: -35px;
+    top: 90px;
 }
