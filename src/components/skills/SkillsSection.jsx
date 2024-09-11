@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import vsCodeImage from '../../assets/vsco-logo.jpg'
 
 function SkillsSection() {
     const { t } = useTranslation();
@@ -9,6 +10,24 @@ function SkillsSection() {
         { year: '2023', label: t('education-title-2'), value: t('education-place-2'), details: t('education-details-2') },
         { year: '2022', label: t('education-title-3'), value: t('education-place-3'), details: t('education-details-3') },
         { year: '2021', label: t('education-title-4'), value: t('education-place-4'), details: t('education-details-4') }
+    ];
+
+    const skillsFrontEnd = [
+        { label: 'Visual studio code', sourceImage: vsCodeImage }
+    ];
+
+    const skillsBackEnd = [
+        { label: 'Visual studio code', sourceImage: vsCodeImage }
+    ];
+
+    const skillsBd = [
+        { label: 'Visual studio code', sourceImage: vsCodeImage }
+    ];
+
+    const containerSkillsOptns = [
+        { label: 'Front-End', items: skillsFrontEnd },
+        { label: 'Back-End', items: skillsBackEnd },
+        { label: 'Base de datos', items: skillsBd },
     ];
 
     return (
@@ -33,8 +52,14 @@ function SkillsSection() {
                     ))}
                 </div>
                 {/* Skills */}
-                <div className='w-4/6 h-full  pl-10'>
-
+                <div className='w-4/6 h-full pl-20 flex justify-center items-center content-center flex-wrap'>
+                    {containerSkillsOptns.map((option, index) => (
+                        <ContainerSkill
+                            key={index}
+                            label={option.label}
+                            items={option.items}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
@@ -47,7 +72,7 @@ function EducationBox({ label, value, year, details }) {
 
     return (
         <div
-            className='box-education relative mt-5 p-4 rounded-lg border w-full h-[150px] flex justify-center items-center content-center flex-wrap'
+            className='box-education relative mt-5 p-4 rounded-lg border w-full h-[150px] flex justify-center items-center content-center flex-wrap shadow-lg'
             onMouseEnter={() => setShowPopup(true)}
             onMouseLeave={() => setShowPopup(false)}
         >
@@ -77,10 +102,29 @@ function EducationBox({ label, value, year, details }) {
     );
 }
 
-function SkillBox() {
+function ContainerSkill({ label, items = [] }) {
     return (
-        <div>
-            
+        <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mt-5 mb-5'>
+            <h3 className='text-left w-full mb-3 text-xl'>{label}</h3>
+            <div className='items flex flex-wrap'>
+                {items.map((item, index) => (
+                    <SkillBox
+                        key={index}
+                        label={item.label}
+                        sourceImage={item.sourceImage}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+}
+
+function SkillBox({ label, sourceImage }) {
+    return (
+        <div className='skill-box w-auto rounded-xl border flex justify-center items-center flex-col p-5 gap-2 cursor-pointer shadow-lg relative'>
+            <a className='absolute rounded-full border border-gray-500 h-8 w-8 top-1 right-1 transition-all ease-in shadow-lg'></a>
+            <img src={sourceImage} alt="skill" className='w-[55px] h-[55px] rounded-xl shadow-lg' />
+            <label className='w-full h-auto font-bold text-base'>{label}</label>
         </div>
     );
 }
