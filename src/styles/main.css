@@ -77,8 +77,3 @@ body.dark-theme #intro p {
     font-size: 1rem;
     font-style: italic;
 }
-
-.notification-message {
-    left: 45%;
-    top: 35px;
-}
