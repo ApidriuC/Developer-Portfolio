@@ -2,6 +2,9 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     --color-default: black;
     --color-dark: white;
+    --size-text-big: 4rem;
+    --size-text-small: 1rem;
+    --size-text-default: 1.5rem;
 }
 
 body {
@@ -30,6 +33,29 @@ body::-webkit-scrollbar {
     height: 5px;
 }
 
+body a,
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    text-align: center;
+    color: var(--color-default);
+}
+
+body.dark-theme a,
+body.dark-theme p,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+    color: var(--color-dark);
+}
+
 section {
     box-sizing: border-box;
 }
@@ -48,17 +74,16 @@ section {
     background: linear-gradient(to right, #000000 0%, #A50000 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 4rem;
+    font-size: var(--size-text-big);
     text-align: center;
     margin: 5px;
     line-height: 4rem;
 }
 
 #intro p {
-    color: var(--color-default);
     text-align: center;
     margin: 10px;
-    font-size: 1.5rem;
+    font-size: var(--size-text-default);
 }
 
 body.dark-theme #intro h1 {
@@ -74,6 +99,6 @@ body.dark-theme #intro p {
 
 #intro .description-intro {
     padding: 15px 20%;
-    font-size: 1rem;
+    font-size: var(--size-text-small);
     font-style: italic;
 }
