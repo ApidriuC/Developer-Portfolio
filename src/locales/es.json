@@ -12,5 +12,11 @@
     "intro-developer": "Un desarrollador FullStack",
     "intro-message": "Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe dónde vives",
     "notification-lng-change": "Lenguaje modificado!",
-    "notification-theme-change": "Tema modificado!"
+    "notification-theme-change": "Tema modificado!",
+    "about-me-1": "Quien soy",
+    "about-me-2": "Sobre mí",
+    "about-me-desc-1": "Estudiante graduado de Ingeniería de Sistemas e Informática de la Universidad Pontificia Bolivariana de la seccional Bucaramanga / Santander / Colombia. Soy una persona autodidacta, apasionada por aprender cosas nuevas 📚. Por un lado, me destaco por programar en lenguajes como C#, Java y Python. Además cuento con conocimientos en Front-End y Back-End en JavaScript, JQuery, HTML, CSS y más ⚙️.",
+    "about-me-desc-2": "Los frameworks en los que principalmente me enfoco para realizar soluciones informáticas son .NET Framework, .NET Core y React. En un futuro quiero llegar a dominar Scrum y me gustaría trabajar para una empresa que valore mis habilidades y pueda seguir enriqueciendo mi conocimiento.",
+    "about-me-desc-3": " Actualmente estoy trabajando para “Sistemas y Computadores S.A”, esta empresa brinda soluciones de software principalmente para entidades gubernamentales 🔍. Me encuentro desempeñando el cargo de implementador y desarrollador de software FullStack para el servicio del “Núcleo de Ingeniería”, el cual asocia todos los proyectos de la entidad. En resumen, es un equipo de desarrollo especializado en dar apoyo a todos los proyectos de la compañía para dar cumpliento con tiempos de entrega urgentes. Todo esto siguiendo la metodología DevOps para lograr una mayor organización en el equipo de trabajo 🛠.",
+    "about-me-desc-4": "Espero disfrutes del contenido que he preparado, cualquier cosa que necesites házmelo saber por si puedo ayudarte."
 }

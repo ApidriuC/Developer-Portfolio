@@ -8,9 +8,15 @@
     "option-projects-label": "Projects",
     "option-skills-label": "Skills",
     "option-contact-label": "Contact me",
-    "intro-hello": "Hello 👋, i am",
+    "intro-hello": "Hello 👋, I am",
     "intro-developer": "a FullStack Developer",
     "intro-message": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
     "notification-lng-change": "Language changed!",
-    "notification-theme-change": "Theme changed!"
+    "notification-theme-change": "Theme changed!",
+    "about-me-1": "Who I Am",
+    "about-me-2": "About Me",
+    "about-me-desc-1": "I am a graduate of Systems and Computer Engineering from Universidad Pontificia Bolivariana, Bucaramanga / Santander / Colombia. I am a self-taught individual, passionate about learning new things 📚. I excel in programming languages such as C#, Java, and Python. Additionally, I have experience in both Front-End and Back-End development using JavaScript, JQuery, HTML, CSS, and more ⚙️.",
+    "about-me-desc-2": "The frameworks I primarily focus on for building software solutions are .NET Framework, .NET Core, and React. In the future, I aim to master Scrum and would love to work for a company that values my skills and supports my continuous learning.",
+    "about-me-desc-3": "I am currently working at 'Sistemas y Computadores S.A.', a company that provides software solutions mainly for government entities 🔍. I serve as a FullStack software developer and implementer within the 'Engineering Core,' a development team that supports all company projects. In short, we specialize in ensuring all company projects meet urgent deadlines while following the DevOps methodology for better team organization 🛠.",
+    "about-me-desc-4": "I hope you enjoy the content I've prepared. If you need anything, feel free to reach out and I'll be happy to help."
 }
