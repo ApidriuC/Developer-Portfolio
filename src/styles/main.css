@@ -241,3 +241,23 @@ body.dark-theme .skill-box:hover a {
 #projects-me .bg-container-6 {
     background-image: linear-gradient(45deg, rgb(147, 165, 207) 0%, rgb(228, 239, 233) 100%);
 }
+
+body.dark-theme #contact-me {
+    background-color: rgb(31 36 33);
+}
+
+body.dark-theme #contact-me h2{
+    color: rgb(156 197 161);
+}
+
+#contact-me {
+    background-color: rgb(156 197 161);
+}
+
+#contact-me h2 {
+    color: rgb(31 36 33);
+}
+
+#contact-me ul{
+    background-color: rgb(31 36 33);
+}

@@ -6,6 +6,7 @@ import HelloSection from './components/home/HelloSection.jsx';
 import SkillsSection from './components/skills/SkillsSection.jsx';
 import AboutMeSection from './components/resume/AboutMeSection.jsx';
 import ProjectsSection from './components/projects/ProjectsSection.jsx';
+import ConnectMeSection from './components/contact/ConnectMeSection.jsx';
 import { NotificationProvider } from './components/common/NotificationComponent.jsx';
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
                 <SkillsSection />
                 <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
                 <ProjectsSection />
-                <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                <ConnectMeSection />
             </NotificationProvider>
         </>
     );
