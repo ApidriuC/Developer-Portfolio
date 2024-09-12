@@ -63,16 +63,20 @@ function SkillsSection() {
     ];
 
     return (
-        <section id='skills-me' className='h-auto pt-24 pb-24 pl-20 pr-20'>
+        <section id='skills-me' className='h-auto p-20'>
             <div className='h-full w-full flex justify-center items-start flex-wrap'>
                 {/* Titulo */}
                 <div className='w-full mb-5'>
                     <h2 className='text-left text-5xl'>
                         {t('education-skills')}
                     </h2>
+                    <p className='text-left pt-2 pb-5'>
+                        {t('education-skills-desc')}
+                    </p>
                 </div>
+
                 {/* Education */}
-                <div className='w-2/6 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4'>
+                <div className='w-full md:w-1/3 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4'>
                     {educationOptns.map((option, index) => (
                         <EducationBox
                             key={index}
@@ -83,8 +87,9 @@ function SkillsSection() {
                         />
                     ))}
                 </div>
+
                 {/* Skills */}
-                <div className='w-4/6 h-full pl-20 flex justify-center items-center content-center flex-wrap'>
+                <div className='w-full md:w-2/3 pl-20 flex justify-center items-center content-center flex-wrap'>
                     {containerSkillsOptns.map((option, index) => (
                         <ContainerSkill
                             key={index}
@@ -120,7 +125,7 @@ function EducationBox({ label, value, year, details }) {
 
             {/* Popup emergente */}
             <div
-                className={`popup absolute top-1/2 right-[-575px] transform -translate-y-1/2 w-[500px] p-4 shadow-lg rounded-lg z-10 transition-opacity duration-300 ease-in-out
+                className={`popup absolute top-1/2 right-[-575px] transform -translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-10 transition-opacity duration-300 ease-in-out
                     ${showPopup ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
                 <h3 className='font-bold text-white'>{t('education-details-title')}</h3>
@@ -159,9 +164,9 @@ function SkillBox({ label, sourceImage, sourceLink }) {
         <div className='skill-box w-[180px] rounded-xl border flex justify-center items-center flex-col p-5 gap-2 cursor-pointer shadow-lg relative'
             onClick={goToPage}
         >
-            <a className='absolute rounded-full border border-gray-500 h-8 w-8 top-1 right-1 transition-all ease-in shadow-lg'></a>
+            <a className='absolute rounded-full border border-gray-500 h-8 w-8 top-1 right-1 transition-all ease-in shadow-lg' />
             <img src={sourceImage} alt="skill" className='w-[55px] h-[55px] rounded-full shadow-lg' />
-            <label className='w-full h-auto font-bold text-base'>{label}</label>
+            <label className='w-full h-auto font-bold text-base cursor-pointer'>{label}</label>
         </div>
     );
 }

@@ -33,7 +33,7 @@ function NavOptions() {
         { className: 'icon-character', label: t('option-home-label'), action: () => goToScroll('intro') },
         { className: 'icon-person', label: t('option-about-me-label'), action: () => goToScroll('about-me') },
         { className: 'icon-code', label: t('option-skills-label'), action: () => goToScroll('skills-me', 'start') },
-        { className: 'icon-book', label: t('option-projects-label'), action: () => goToScroll('projects-me') },
+        { className: 'icon-book', label: t('option-projects-label'), action: () => goToScroll('projects-me', 'start') },
         { className: 'icon-message', label: t('option-contact-label'), action: () => goToScroll('contact-me') },
         { className: 'theme-icon', label: t('option-theme-label'), action: changeTheme },
         { label: t('option-language-label'), value: t('option-language-value'), action: changeLanguage },
