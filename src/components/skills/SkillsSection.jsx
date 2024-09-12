@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import vsCodeImage from '../../assets/vsco-logo.jpg'
+import htmlImage from '../../assets/icon-html.jpg'
+import cssImage from '../../assets/logo-css.png'
+import boostrapImage from '../../assets/logo-boostrap.svg'
+import tailwindImage from '../../assets/logo-tailwind.png'
+import reactImage from '../../assets/react-logo.png'
+import jsImage from '../../assets/logo-javascript.png'
+import tsImgage from '../../assets/logo-typescript.png'
+import nodeImage from '../../assets/logo-nodejs.png'
+import cImage from '../../assets/logo-c.svg'
+import javaImage from '../../assets/Java-Logo.png'
+import pythonImage from '../../assets/python-logo.png'
+import sqlImage from '../../assets/sql-logo.png'
+import oracleImage from '../../assets/oracle-logo.svg'
+import visualImage from '../../assets/visual-logo.png'
 
 function SkillsSection() {
     const { t } = useTranslation();
@@ -13,34 +27,50 @@ function SkillsSection() {
     ];
 
     const skillsFrontEnd = [
-        { label: 'Visual studio code', sourceImage: vsCodeImage }
+        { label: 'HTML', sourceImage: htmlImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/HTML' },
+        { label: 'CSS', sourceImage: cssImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/CSS' },
+        { label: 'Boostrap', sourceImage: boostrapImage, sourceLink: 'https://getbootstrap.com/' },
+        { label: 'Tailwind', sourceImage: tailwindImage, sourceLink: 'https://tailwindcss.com/' },
+        { label: 'React', sourceImage: reactImage, sourceLink: 'https://es.react.dev/' },
+        { label: 'JavaScript', sourceImage: jsImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/JavaScript' },
+        { label: 'TypeScript', sourceImage: tsImgage, sourceLink: 'https://www.typescriptlang.org/' },
     ];
 
     const skillsBackEnd = [
-        { label: 'Visual studio code', sourceImage: vsCodeImage }
+        { label: 'NodeJs', sourceImage: nodeImage, sourceLink: 'https://nodejs.org/en' },
+        { label: 'C#', sourceImage: cImage, sourceLink: 'https://learn.microsoft.com/es-es/dotnet/csharp/' },
+        { label: 'Java', sourceImage: javaImage, sourceLink: 'https://www.java.com/es/' },
+        { label: 'Python', sourceImage: pythonImage, sourceLink: 'https://www.python.org/' }
     ];
 
     const skillsBd = [
-        { label: 'Visual studio code', sourceImage: vsCodeImage }
+        { label: 'SQL Server', sourceImage: sqlImage, sourceLink: 'https://www.microsoft.com/es-co/sql-server/sql-server-downloads' },
+        { label: 'Oracle', sourceImage: oracleImage, sourceLink: 'https://www.oracle.com/co/' }
+    ];
+
+    const skillsFrames = [
+        { label: 'Visual Studio Code', sourceImage: vsCodeImage },
+        { label: 'Visual Studio 2022', sourceImage: visualImage }
     ];
 
     const containerSkillsOptns = [
         { label: 'Front-End', items: skillsFrontEnd },
         { label: 'Back-End', items: skillsBackEnd },
-        { label: 'Base de datos', items: skillsBd },
+        { label: 'Data Base', items: skillsBd },
+        { label: 'Frameworks', items: skillsFrames },
     ];
 
     return (
-        <section id='skills-me' className='h-[100vh] pt-24 pb-24 pl-40 pr-40'>
-            <div className='h-full w-full flex justify-center items-center flex-wrap'>
+        <section id='skills-me' className='h-auto pt-24 pb-24 pl-20 pr-20'>
+            <div className='h-full w-full flex justify-center items-start flex-wrap'>
                 {/* Titulo */}
-                <div className='w-full'>
+                <div className='w-full mb-5'>
                     <h2 className='text-left text-5xl'>
                         {t('education-skills')}
                     </h2>
                 </div>
                 {/* Education */}
-                <div className='w-2/6 h-full pr-10 flex justify-center items-center content-center flex-wrap'>
+                <div className='w-2/6 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4'>
                     {educationOptns.map((option, index) => (
                         <EducationBox
                             key={index}
@@ -72,7 +102,7 @@ function EducationBox({ label, value, year, details }) {
 
     return (
         <div
-            className='box-education relative mt-5 p-4 rounded-lg border w-full h-[150px] flex justify-center items-center content-center flex-wrap shadow-lg'
+            className='box-education relative  p-4 rounded-lg border w-full h-[150px] max-w-[500px] flex justify-center items-center content-center flex-wrap shadow-lg'
             onMouseEnter={() => setShowPopup(true)}
             onMouseLeave={() => setShowPopup(false)}
         >
@@ -88,15 +118,15 @@ function EducationBox({ label, value, year, details }) {
 
             {/* Popup emergente */}
             <div
-                className={`popup absolute top-1/2 left-[220%] transform -translate-x-full -translate-y-1/2 w-[500px] p-4 shadow-lg rounded-lg z-10 transition-opacity duration-300 ease-in-out
+                className={`popup absolute top-1/2 right-[-575px] transform -translate-y-1/2 w-[500px] p-4 shadow-lg rounded-lg z-10 transition-opacity duration-300 ease-in-out
                     ${showPopup ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
                 <h3 className='font-bold text-white'>{t('education-details-title')}</h3>
                 <p className='text-sm text-justify'>
                     {details}
                 </p>
-                <div className='com-circule first-circule absolute' />
-                <div className='com-circule second-circule absolute' />
+                <div className='com-circule first-circule absolute shadow-lg' />
+                <div className='com-circule second-circule absolute shadow-lg' />
             </div>
         </div>
     );
@@ -104,14 +134,15 @@ function EducationBox({ label, value, year, details }) {
 
 function ContainerSkill({ label, items = [] }) {
     return (
-        <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mt-5 mb-5'>
+        <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mb-5'>
             <h3 className='text-left w-full mb-3 text-xl'>{label}</h3>
-            <div className='items flex flex-wrap'>
+            <div className='items flex flex-wrap gap-4'>
                 {items.map((item, index) => (
                     <SkillBox
                         key={index}
                         label={item.label}
                         sourceImage={item.sourceImage}
+                        sourceLink={item.sourceLink}
                     />
                 ))}
             </div>
@@ -119,11 +150,15 @@ function ContainerSkill({ label, items = [] }) {
     );
 }
 
-function SkillBox({ label, sourceImage }) {
+function SkillBox({ label, sourceImage, sourceLink }) {
+    const goToPage = () => window.open(sourceLink, '_blank');
+
     return (
-        <div className='skill-box w-auto rounded-xl border flex justify-center items-center flex-col p-5 gap-2 cursor-pointer shadow-lg relative'>
+        <div className='skill-box w-[180px] rounded-xl border flex justify-center items-center flex-col p-5 gap-2 cursor-pointer shadow-lg relative'
+            onClick={goToPage}
+        >
             <a className='absolute rounded-full border border-gray-500 h-8 w-8 top-1 right-1 transition-all ease-in shadow-lg'></a>
-            <img src={sourceImage} alt="skill" className='w-[55px] h-[55px] rounded-xl shadow-lg' />
+            <img src={sourceImage} alt="skill" className='w-[55px] h-[55px] rounded-full shadow-lg' />
             <label className='w-full h-auto font-bold text-base'>{label}</label>
         </div>
     );

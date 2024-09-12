@@ -42,7 +42,7 @@ function NavOptions() {
     return (
         <>
             <div className='navBar-bg' />
-            <div className='navBar-float'>
+            <div className='navBar-float shadow-lg'>
                 {options.map((option, index) => (
                     <OptionControl
                         key={index}
