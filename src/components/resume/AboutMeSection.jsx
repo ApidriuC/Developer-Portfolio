@@ -5,7 +5,7 @@ function AboutMeSection() {
     const { t } = useTranslation();
 
     return (
-        <section id='about-me' className='flex flex-wrap justify-center items-center h-auto p-10'>
+        <section id='about-me' className='flex flex-wrap justify-center items-center h-auto p-10 pl-40 pr-40'>
             {/* Imagen */}
             <div className='w-full md:w-2/4 p-4 flex justify-center'>
                 <img
