@@ -5,16 +5,16 @@ function AboutMeSection() {
     const { t } = useTranslation();
 
     return (
-        <section id='about-me' className='flex justify-center items-center h-[80vh] flex-wrap'>
+        <section id='about-me' className='flex justify-center items-center h-auto flex-wrap'>
             <div className='border-t border-gray-600 w-full ml-[5%] mr-[5%]' />
-            <div className='w-2/4 p-4 h-full flex justify-center items-center'>
+            <div className='w-2/4 p-4 mt-10 mb-10 h-full flex justify-center items-center'>
                 <img
                     alt="me-image"
                     src={MeImage}
-                    className='w-[30rem] border border-gray-800 h-[30rem] rounded-full object-cover object-left-bottom'
+                    className='w-[30rem] h-[30rem] rounded-full object-cover object-left-bottom shadow-2xl'
                 />
             </div>
-            <div className='w-2/4 pr-40 h-full flex justify-center items-center content-center flex-wrap'>
+            <div className='w-2/4 pr-40 mt-10 mb-10 h-full flex justify-center items-center content-center flex-wrap'>
                 <div className='w-full p-4'>
                     <div className='w-max flex justify-center items-center flex-col'>
                         <p className='leading-[5px]'>{t('about-me-1')}</p>
@@ -37,7 +37,7 @@ function AboutMeSection() {
                     </p>
                 </div>
             </div>
-            <div className='border-t border-gray-600 ml-[5%] mr-[5%]' />
+            <div className='border-t border-gray-600 ml-[5%] mr-[5%] w-full' />
         </section>
     );
 }
