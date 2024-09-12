@@ -18,12 +18,12 @@ function NavOptions() {
         showNotification(t('notification-theme-change'));
     }
 
-    const goToScroll = (id) => {
+    const goToScroll = (id, position = 'center') => {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView(
                 {
-                    block: 'center',
+                    block: position,
                     behavior: 'smooth'
                 });
         }
@@ -32,7 +32,7 @@ function NavOptions() {
     const options = [
         { className: 'icon-character', label: t('option-home-label'), action: () => goToScroll('intro') },
         { className: 'icon-person', label: t('option-about-me-label'), action: () => goToScroll('about-me') },
-        { className: 'icon-code', label: t('option-skills-label'), action: () => goToScroll('skills-me') },
+        { className: 'icon-code', label: t('option-skills-label'), action: () => goToScroll('skills-me', 'start') },
         { className: 'icon-book', label: t('option-projects-label'), action: () => goToScroll('projects-me') },
         { className: 'icon-message', label: t('option-contact-label'), action: () => goToScroll('contact-me') },
         { className: 'theme-icon', label: t('option-theme-label'), action: changeTheme },
