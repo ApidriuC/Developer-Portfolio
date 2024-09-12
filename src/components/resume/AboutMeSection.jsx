@@ -1,43 +1,40 @@
-import MeImage from '../../assets/me-image-profile.jpeg';
 import { useTranslation } from 'react-i18next';
+import MeImage from '../../assets/me-image-profile.jpeg';
 
 function AboutMeSection() {
     const { t } = useTranslation();
 
     return (
-        <section id='about-me' className='flex justify-center items-center h-auto flex-wrap'>
-            <div className='border-t border-gray-600 w-full ml-[5%] mr-[5%]' />
-            <div className='w-2/4 p-4 mt-10 mb-10 h-full flex justify-center items-center'>
+        <section id='about-me' className='flex flex-wrap justify-center items-center h-auto p-10'>
+            {/* Imagen */}
+            <div className='w-full md:w-2/4 p-4 flex justify-center'>
                 <img
                     alt="me-image"
                     src={MeImage}
-                    className='w-[30rem] h-[30rem] rounded-full object-cover object-left-bottom shadow-2xl'
+                    className='image-me w-[20rem] md:w-[30rem] h-[20rem] md:h-[30rem] rounded-full object-cover'
                 />
             </div>
-            <div className='w-2/4 pr-40 mt-10 mb-10 h-full flex justify-center items-center content-center flex-wrap'>
-                <div className='w-full p-4'>
-                    <div className='w-max flex justify-center items-center flex-col'>
-                        <p className='leading-[5px]'>{t('about-me-1')}</p>
-                        <h2 className='w-max text-5xl p-1'>{t('about-me-2')}</h2>
-                        <span className='border border-purple-400 w-32' />
-                    </div>
+
+            {/* Texto */}
+            <div className='w-full md:w-2/4 p-4 flex flex-col justify-center items-start'>
+                <div className='text-center md:text-left flex flex-col items-center'>
+                    <p className='leading-[8px]'>{t('about-me-1')}</p>
+                    <h2 className='md:text-5xl'>{t('about-me-2')}</h2>
+                    <span className='block border-b-2 border-purple-400 w-40 mb-6 mx-auto md:mx-0' />
                 </div>
-                <div className='w-full p-4'>
-                    <p className='text-justify text-base'>
+
+                <div className='text-justify'>
+                    <p className='text-base text-justify'>
                         {t('about-me-desc-1')}
-                        <br />
-                        <br />
+                        <br /><br />
                         {t('about-me-desc-2')}
-                        <br />
-                        <br />
+                        <br /><br />
                         {t('about-me-desc-3')}
-                        <br />
-                        <br />
+                        <br /><br />
                         {t('about-me-desc-4')}
                     </p>
                 </div>
             </div>
-            <div className='border-t border-gray-600 ml-[5%] mr-[5%] w-full' />
         </section>
     );
 }
