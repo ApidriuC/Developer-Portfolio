@@ -15,6 +15,7 @@ import pythonImage from '../../assets/python-logo.png'
 import sqlImage from '../../assets/sql-logo.png'
 import oracleImage from '../../assets/oracle-logo.svg'
 import visualImage from '../../assets/visual-logo.png'
+import gitImage from '../../assets/git-logo.png'
 
 function SkillsSection() {
     const { t } = useTranslation();
@@ -49,8 +50,9 @@ function SkillsSection() {
     ];
 
     const skillsFrames = [
-        { label: 'Visual Studio Code', sourceImage: vsCodeImage },
-        { label: 'Visual Studio 2022', sourceImage: visualImage }
+        { label: 'Visual Studio Code', sourceImage: vsCodeImage, sourceLink: 'https://code.visualstudio.com/' },
+        { label: 'Visual Studio 2022', sourceImage: visualImage, sourceLink: 'https://visualstudio.microsoft.com/es/vs/' },
+        { label: 'GIT', sourceImage: gitImage, sourceLink: 'https://git-scm.com/' }
     ];
 
     const containerSkillsOptns = [
