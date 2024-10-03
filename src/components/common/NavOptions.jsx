@@ -61,7 +61,7 @@ function OptionControl({ value, label, action, className }) {
     return (
         <div className='option-navBar'>
             <label className='option'>{label}</label>
-            <button className={`${className}`} onClick={action}>{value}</button>
+            <button className={`${className} h-[5.5vh] w-[5.5vh]`} onClick={action}>{value}</button>
         </div>
     );
 }

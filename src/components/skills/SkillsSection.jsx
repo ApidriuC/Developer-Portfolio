@@ -67,16 +67,16 @@ function SkillsSection() {
             <div className='h-full w-full flex justify-center items-start flex-wrap'>
                 {/* Titulo */}
                 <div className='w-full mb-5'>
-                    <h2 className='text-left text-5xl'>
+                    <h2 className='text-left text-5xl md:text-5xl xs:text-4xl'>
                         {t('education-skills')}
                     </h2>
-                    <p className='text-left pt-2 pb-5'>
+                    <p className='text-left pt-2 pb-5 md:text-lg xs:text-sm'>
                         {t('education-skills-desc')}
                     </p>
                 </div>
 
                 {/* Education */}
-                <div className='w-full md:w-1/3 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4'>
+                <div className='w-full md:w-1/3 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4 xs:pt-[0px] xs:pr-[15px] xs:pl-[15px] md:pr-10'>
                     {educationOptns.map((option, index) => (
                         <EducationBox
                             key={index}
@@ -89,7 +89,7 @@ function SkillsSection() {
                 </div>
 
                 {/* Skills */}
-                <div className='w-full md:w-2/3 pl-20 flex justify-center items-center content-center flex-wrap'>
+                <div className='w-full md:w-2/3 pl-20 flex justify-center items-center content-center flex-wrap xs:pr-0 xs:pt-5 xs:pl-0 md:pt-0'>
                     {containerSkillsOptns.map((option, index) => (
                         <ContainerSkill
                             key={index}
@@ -106,42 +106,56 @@ function SkillsSection() {
 function EducationBox({ label, value, year, details }) {
     const { t } = useTranslation();
     const [showPopup, setShowPopup] = useState(false);
+    const [shouldRenderPopup, setShouldRenderPopup] = useState(false);
+
+    const handleMouseEnter = () => {
+        setShouldRenderPopup(true);
+        setShowPopup(true);
+    };
+
+    const handleMouseLeave = () => {
+        setShowPopup(false);
+        setTimeout(() => setShouldRenderPopup(false), 300);
+    };
 
     return (
         <div
-            className='box-education relative  p-4 rounded-lg border w-full h-[150px] max-w-[500px] flex justify-center items-center content-center flex-wrap shadow-lg'
-            onMouseEnter={() => setShowPopup(true)}
-            onMouseLeave={() => setShowPopup(false)}
+            className='box-education relative  p-4 rounded-lg border w-full h-[150px] max-w-[500px] xs:max-w-none xs:h-[120px] md:h-[150px] flex justify-center items-center content-center flex-wrap shadow-lg'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
-            <div className='label-rectangle absolute top-[10px] left-[-30px] text-white font-bold'>
+            <div className='label-rectangle absolute top-[10px] left-[-30px] text-white font-bold xs:text-xs'>
                 {year}
             </div>
-            <p className='text-left w-full text-2xl leading-6 pt-3'>
+            <p className='text-left w-full text-2xl leading-6 pt-3 xs:text-lg xs:leading-5'>
                 {label}
             </p>
-            <span className='text-left w-full text-base pt-1 italic'>
+            <span className='text-left w-full text-base pt-1 italic xs:text-sm'>
                 {value}
             </span>
 
-            {/* Popup emergente */}
-            <div
-                className={`popup absolute top-1/2 right-[-575px] transform -translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-10 transition-opacity duration-300 ease-in-out
-                    ${showPopup ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-            >
-                <h3 className='font-bold text-white'>{t('education-details-title')}</h3>
-                <p className='text-sm text-justify'>
-                    {details}
-                </p>
-                <div className='com-circule first-circule absolute shadow-lg' />
-                <div className='com-circule second-circule absolute shadow-lg' />
-            </div>
+            {/* Condicionamos la renderización del Popup */}
+            {shouldRenderPopup && (
+                <div
+                    className={`popup absolute top-1/2 right-[-575px] transform -translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-10 transition-opacity duration-300 ease-in-out md:block xs:hidden
+                        ${showPopup ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                >
+                    <h3 className='font-bold text-white'>{t('education-details-title')}</h3>
+                    <p className='text-sm text-justify'>
+                        {details}
+                    </p>
+                    <div className='com-circule first-circule absolute shadow-lg' />
+                    <div className='com-circule second-circule absolute shadow-lg' />
+                </div>
+            )}
         </div>
     );
 }
 
+
 function ContainerSkill({ label, items = [] }) {
     return (
-        <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mb-5'>
+        <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mb-5 xs:p-[0] xs:pl-3 md:pl-5'>
             <h3 className='text-left w-full mb-3 text-xl'>{label}</h3>
             <div className='items flex flex-wrap gap-4'>
                 {items.map((item, index) => (
@@ -161,12 +175,12 @@ function SkillBox({ label, sourceImage, sourceLink }) {
     const goToPage = () => window.open(sourceLink, '_blank');
 
     return (
-        <div className='skill-box w-[180px] rounded-xl border flex justify-center items-center flex-col p-5 gap-2 cursor-pointer shadow-lg relative'
+        <div className='skill-box w-[180px] rounded-xl border flex justify-center items-center flex-col p-5 gap-2 cursor-pointer shadow-lg relative xs:w-[95px] md:w-[180px]'
             onClick={goToPage}
         >
             <a className='absolute rounded-full border border-gray-500 h-8 w-8 top-1 right-1 transition-all ease-in shadow-lg' />
-            <img src={sourceImage} alt="skill" className='w-[55px] h-[55px] rounded-full shadow-lg' />
-            <label className='w-full h-auto font-bold text-base cursor-pointer'>{label}</label>
+            <img src={sourceImage} alt="skill" className='w-[55px] h-[55px] rounded-full shadow-lg xs:w-[30px] xs:h-[30px] md:w-[55px] md:h-[55px]' />
+            <label className='w-full h-auto font-bold text-base cursor-pointer xs:text-xs md:text-base'>{label}</label>
         </div>
     );
 }

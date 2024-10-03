@@ -7,9 +7,9 @@ function ConnectMeSection() {
     const { t } = useTranslation();
 
     return (
-        <footer id='contact-me' className='w-full h-[100vh] rounded-t-3xl'>
-            <div className='h-full w-full p-40 flex justify-center content-center items-center flex-wrap gap-5'>
-                <h2 className='w-full text-7xl font-bold'>
+        <section id='contact-me' className='w-full h-[100vh] rounded-t-3xl'>
+            <div className='h-full w-full p-40 flex justify-center content-center items-center flex-wrap gap-5 xs:p-5'>
+                <h2 className='w-full text-7xl font-bold md:text-5xl xs:text-4xl'>
                     {t('connect-me-title')}
                 </h2>
                 <ul className="w-auto footer-links flex justify-center align-center list-none items-center text-center text-3xl gap-4 p-5 rounded-lg">
@@ -32,7 +32,7 @@ function ConnectMeSection() {
                     </li>
                 </ul>
             </div>
-        </footer>
+        </section>
     );
 }
 

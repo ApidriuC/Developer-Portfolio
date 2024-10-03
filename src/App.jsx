@@ -20,16 +20,20 @@ function App() {
     return (
         <>
             <NotificationProvider>
-                <BgAnimation />
-                <NavOptions />
-                <HelloSection />
-                <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
-                <AboutMeSection />
-                <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
-                <SkillsSection />
-                <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
-                <ProjectsSection />
-                <ConnectMeSection />
+                <main className='w-full h-full'>
+                    <BgAnimation />
+                    <NavOptions />
+                    <HelloSection />
+                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <AboutMeSection />
+                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <SkillsSection />
+                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <ProjectsSection />
+                </main>
+                <footer className='w-full'>
+                    <ConnectMeSection />
+                </footer>
             </NotificationProvider>
         </>
     );

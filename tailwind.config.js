@@ -8,6 +8,9 @@ export default {
   plugins: [],
   theme: {
     extend: {
+      screens: {
+        'xs': '299px',
+      },
       keyframes: {
         alertSlideIn: {
           '0%': { transform: 'translateY(-100%) translateX(-50%)', opacity: '0' },
