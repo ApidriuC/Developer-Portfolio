@@ -4,7 +4,7 @@ function HelloSection() {
     const { t } = useTranslation();
 
     return (
-        <section id="intro">
+        <section id="intro" className='w-full'>
             <div className="container-intro">
                 <p>{t('intro-hello')}</p>
                 <h1>

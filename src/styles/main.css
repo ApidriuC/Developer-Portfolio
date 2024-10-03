@@ -81,13 +81,14 @@ section {
     font-size: var(--size-text-big);
     text-align: center;
     margin: 5px;
-    line-height: 4rem;
+    line-height: var(--size-text-big);
 }
 
 #intro p {
     text-align: center;
     margin: 10px;
     font-size: var(--size-text-default);
+    line-height: var(--size-text-default);
 }
 
 body.dark-theme #intro h1 {
@@ -246,7 +247,7 @@ body.dark-theme #contact-me {
     background-color: rgb(31 36 33);
 }
 
-body.dark-theme #contact-me h2{
+body.dark-theme #contact-me h2 {
     color: rgb(156 197 161);
 }
 
@@ -258,6 +259,24 @@ body.dark-theme #contact-me h2{
     color: rgb(31 36 33);
 }
 
-#contact-me ul{
+#contact-me ul {
     background-color: rgb(31 36 33);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --size-text-big: 2.8rem;
+        --size-text-small: .8rem;
+        --size-text-default: 1rem;
+    }
+
+    section{
+        padding: 15px !important;
+    }
+}
+
+@media (max-width: 499px) {
+    #intro .description-intro {
+        padding: 5px;
+    }
 }

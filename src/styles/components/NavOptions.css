@@ -12,9 +12,10 @@ body.dark-theme .navBar-bg {
 }
 
 .navBar-float {
-    width: 30%;
+    width: auto;
     height: auto;
-    left: 37.5%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 30px;
     position: fixed;
     background-color: rgb(53 53 53 / 47%);
@@ -26,15 +27,14 @@ body.dark-theme .navBar-bg {
     align-items: center;
     justify-content: space-between;
     z-index: 99;
+    gap: 10px;
 }
 
 .navBar-float:hover {
-    transform: translateY(-10px) scale(1.1);
+    transform: translateY(-10px) translateX(-50%) scale(1.1);
 }
 
 .navBar-float button {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     cursor: pointer;
     background-color: hsla(0, 0%, 9%, .7);
