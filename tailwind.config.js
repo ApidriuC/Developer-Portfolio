@@ -8,14 +8,17 @@ export default {
   plugins: [],
   theme: {
     extend: {
+      screens: {
+        'xs': '299px',
+      },
       keyframes: {
-        slideIn: {
-          '0%': { transform: 'translateY(-100%)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
+        alertSlideIn: {
+          '0%': { transform: 'translateY(-100%) translateX(-50%)', opacity: '0' },
+          '100%': { transform: 'translateY(0) translateX(-50%)', opacity: '1' },
+        }
       },
       animation: {
-        slideIn: 'slideIn 1s ease-out',
+        alertSlideIn: 'alertSlideIn 1s ease-out'
       },
     },
   },
