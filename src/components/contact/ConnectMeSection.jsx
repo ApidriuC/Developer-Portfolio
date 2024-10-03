@@ -31,6 +31,9 @@ function ConnectMeSection() {
                         </a>
                     </li>
                 </ul>
+                <p className='w-full'>
+                    &copy; {t('copyright-text')}
+                </p>
             </div>
         </section>
     );
