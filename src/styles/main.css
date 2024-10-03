@@ -2,6 +2,9 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     --color-default: black;
     --color-dark: white;
+    --size-text-big: 4rem;
+    --size-text-small: 1rem;
+    --size-text-default: 1.5rem;
 }
 
 body {
@@ -30,6 +33,33 @@ body::-webkit-scrollbar {
     height: 5px;
 }
 
+body a,
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body span,
+body label {
+    text-align: center;
+    color: var(--color-default);
+}
+
+body.dark-theme a,
+body.dark-theme p,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme span,
+body.dark-theme label {
+    color: var(--color-dark);
+}
+
 section {
     box-sizing: border-box;
 }
@@ -48,17 +78,17 @@ section {
     background: linear-gradient(to right, #000000 0%, #A50000 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 4rem;
+    font-size: var(--size-text-big);
     text-align: center;
     margin: 5px;
-    line-height: 4rem;
+    line-height: var(--size-text-big);
 }
 
 #intro p {
-    color: var(--color-default);
     text-align: center;
     margin: 10px;
-    font-size: 1.5rem;
+    font-size: var(--size-text-default);
+    line-height: var(--size-text-default);
 }
 
 body.dark-theme #intro h1 {
@@ -74,11 +104,179 @@ body.dark-theme #intro p {
 
 #intro .description-intro {
     padding: 15px 20%;
-    font-size: 1rem;
+    font-size: var(--size-text-small);
     font-style: italic;
 }
 
-.notification-message {
-    left: 45%;
-    top: 35px;
+.box-education {
+    z-index: 1;
+    position: relative;
+    background-color: #f5f5dc;
+    border: 2px solid #a67d9d;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.box-education:hover {
+    transform: translateX(5px) translateY(-5px);
+}
+
+.box-education p,
+.box-education span {
+    color: #333333 !important;
+}
+
+body.dark-theme .box-education {
+    background-color: #e0f7fa;
+    border: 2px solid #b2dfdb;
+}
+
+.label-rectangle {
+    background-color: #ff4081;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+body.dark-theme .label-rectangle {
+    background-color: #8e24aa;
+}
+
+.box-education .popup {
+    background-color: #ff4081;
+}
+
+.box-education .popup p {
+    color: white !important;
+}
+
+body.dark-theme .box-education .popup {
+    background-color: #8e24aa;
+}
+
+.com-circule {
+    background-color: #ff4081;
+    border-radius: 50% !important;
+}
+
+body.dark-theme .com-circule {
+    background-color: #8e24aa;
+}
+
+.first-circule {
+    height: 15px;
+    width: 15px;
+    left: -55px;
+    top: 110px;
+}
+
+.second-circule {
+    border-radius: 50% !important;
+    height: 30px;
+    width: 30px;
+    left: -35px;
+    top: 90px;
+}
+
+.skill-box {
+    background-color: white;
+    border-color: hsla(0, 0%, 100%, .1);
+    outline-color: #1a1a1a;
+}
+
+body.dark-theme .skill-box {
+    background-color: black;
+}
+
+.skill-box a {
+    background-image: url('/src/assets/arrow-top-icon-black.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: hsla(0, 0%, 100%, .1);
+    outline-color: #1a1a1a;
+}
+
+.skill-box:hover a {
+    background-color: black;
+    background-image: url('/src/assets/arrow-top-icon-white.svg');
+}
+
+body.dark-theme .skill-box a {
+    background-image: url('/src/assets/arrow-top-icon-white.svg');
+}
+
+body.dark-theme .skill-box:hover a {
+    background-color: white;
+    background-image: url('/src/assets/arrow-top-icon-black.svg');
+}
+
+.image-me {
+    box-shadow: 0px 4px 15px rgb(255 0 0 / 23%);
+}
+
+.overlay {
+    opacity: 0;
+    transition: opacity .6s ease-in-out;
+    background: linear-gradient(to bottom, #0000000d, #000c 95%);
+}
+
+#projects-me .bg-container-1 {
+    background-image: linear-gradient(to right, rgb(168, 202, 186) 0%, rgb(93, 65, 87));
+}
+
+#projects-me .bg-container-2 {
+    background-image: linear-gradient(60deg, rgb(100, 179, 244) 0%, rgb(194, 229, 156) 100%);
+}
+
+#projects-me .bg-container-3 {
+    background-image: linear-gradient(45deg, rgb(135, 77, 162) 0%, rgb(196, 58, 48) 100%);
+}
+
+#projects-me .bg-container-4 {
+    background-image: linear-gradient(15deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+}
+
+#projects-me .bg-container-5 {
+    background-image: linear-gradient(to right, rgb(58, 181, 176) 0%, rgb(61, 153, 190) 31%, rgb(86, 49, 122) 100%);
+}
+
+#projects-me .bg-container-6 {
+    background-image: linear-gradient(45deg, rgb(147, 165, 207) 0%, rgb(228, 239, 233) 100%);
+}
+
+body.dark-theme #contact-me {
+    background-color: rgb(31 36 33);
+}
+
+body.dark-theme #contact-me h2 {
+    color: rgb(156 197 161);
+}
+
+#contact-me {
+    background-color: rgb(156 197 161);
+}
+
+#contact-me h2 {
+    color: rgb(31 36 33);
+}
+
+#contact-me ul {
+    background-color: rgb(31 36 33);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --size-text-big: 2.8rem;
+        --size-text-small: .8rem;
+        --size-text-default: 1rem;
+    }
+
+    section{
+        padding: 15px !important;
+    }
+}
+
+@media (max-width: 499px) {
+    #intro .description-intro {
+        padding: 5px;
+    }
 }

@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import NavOptions from './components/common/NavOptions.jsx'
-import BgAnimation from './utils/BgAnimation.jsx'
+import BgAnimation from './utils/BgAnimation.jsx';
+import NavOptions from './components/common/NavOptions.jsx';
 import HelloSection from './components/home/HelloSection.jsx';
 import SkillsSection from './components/skills/SkillsSection.jsx';
+import AboutMeSection from './components/resume/AboutMeSection.jsx';
+import ProjectsSection from './components/projects/ProjectsSection.jsx';
+import ConnectMeSection from './components/contact/ConnectMeSection.jsx';
 import { NotificationProvider } from './components/common/NotificationComponent.jsx';
 
 function App() {
@@ -17,10 +20,20 @@ function App() {
     return (
         <>
             <NotificationProvider>
-                <BgAnimation />
-                <NavOptions />
-                <HelloSection />
-                <SkillsSection />
+                <main className='w-full h-full'>
+                    <BgAnimation />
+                    <NavOptions />
+                    <HelloSection />
+                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <AboutMeSection />
+                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <SkillsSection />
+                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <ProjectsSection />
+                </main>
+                <footer className='w-full'>
+                    <ConnectMeSection />
+                </footer>
             </NotificationProvider>
         </>
     );
