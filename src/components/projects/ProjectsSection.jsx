@@ -25,7 +25,7 @@ function ProjectsSection() {
             <div className='h-full w-full flex justify-center items-start flex-wrap'>
                 {/* Titulo */}
                 <div className='w-full mb-5'>
-                    <h2 className='text-left text-5xl md:text-5xl xs:text-4xl'>
+                    <h2 className='text-left text-5xl md:text-5xl xs:text-4xl border-b-2 border-purple-400 mb-2 pl-3 pr-3 w-max'>
                         {t('projects-title')}
                     </h2>
                     <p className='text-left pt-2 pb-5 w-3/4 md:text-lg xs:text-sm xs:w-full xs:pb-0'>
