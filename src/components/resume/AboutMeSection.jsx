@@ -17,12 +17,9 @@ function AboutMeSection() {
 
             {/* Texto */}
             <div className='w-full md:w-2/4 p-4 flex flex-col justify-center items-start'>
-                <div className='text-center md:text-left flex flex-col items-center'>
-                    <p className='leading-[8px] md:text-4xl xs:text-4xl'>{t('about-me-1')}</p>
-                    <h2 className='md:text-5xl xs:text-4xl'>{t('about-me-2')}</h2>
-                    <span className='block border-b-2 border-purple-400 w-40 mb-6 mx-auto md:mx-0' />
-                </div>
-
+                <h2 className='md:text-5xl xs:text-4xl border-b-2 border-purple-400 mb-5 pl-3 pr-3'>
+                    {t('about-me-2')}
+                </h2>
                 <div className='text-justify'>
                     <p className='text-base text-justify md:text-sm xs:text-xs'>
                         {t('about-me-desc-1')}
