@@ -1,4 +1,4 @@
-import '../styles/components/BgAnimation.css';
+import '../../styles/components/BgAnimation.css';
 
 function BgAnimation() {
     return (

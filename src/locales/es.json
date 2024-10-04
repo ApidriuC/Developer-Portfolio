@@ -13,7 +13,6 @@
     "intro-message": "Programa siempre tu código como si el tipo que va a tener que mantenerlo en el futuro fuera un violento psicópata que sabe dónde vives",
     "notification-lng-change": "Lenguaje modificado!",
     "notification-theme-change": "Tema modificado!",
-    "about-me-1": "Quien soy",
     "about-me-2": "Sobre mí",
     "about-me-desc-1": "Estudiante graduado de Ingeniería de Sistemas e Informática de la Universidad Pontificia Bolivariana de la seccional Bucaramanga / Santander / Colombia. Soy una persona autodidacta, apasionada por aprender cosas nuevas 📚. Por un lado, me destaco por programar en lenguajes como C#, Java y Python. Además cuento con conocimientos en Front-End y Back-End en JavaScript, JQuery, HTML, CSS y más ⚙️.",
     "about-me-desc-2": "Los frameworks en los que principalmente me enfoco para realizar soluciones informáticas son .NET Framework, .NET Core y React. En un futuro quiero llegar a dominar Scrum y me gustaría trabajar para una empresa que valore mis habilidades y pueda seguir enriqueciendo mi conocimiento.",
@@ -37,5 +36,6 @@
     "projects-title": "Mis proyectos",
     "projects-desc": "He participado en numerosos proyectos, tanto complejos como más simples, a lo largo de mi carrera. Sin embargo, los siguientes son aquellos de los que me siento más orgulloso. Cabe destacar que, debido a la naturaleza confidencial de muchos de estos proyectos, no es posible mostrar todos los detalles aquí.",
     "bingo-project-label": "Algoritmo de generación de Bingos",
-    "connect-me-title": "Conecta conmigo"
+    "connect-me-title": "Conecta conmigo",
+    "copyright-text": "2024 Andrés. Todos los derechos reservados."
 }

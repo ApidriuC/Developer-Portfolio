@@ -67,7 +67,7 @@ function SkillsSection() {
             <div className='h-full w-full flex justify-center items-start flex-wrap'>
                 {/* Titulo */}
                 <div className='w-full mb-5'>
-                    <h2 className='text-left text-5xl md:text-5xl xs:text-4xl'>
+                    <h2 className='text-left text-5xl md:text-5xl xs:text-4xl border-b-2 border-purple-400 mb-2 pl-2 pr-2 w-max'>
                         {t('education-skills')}
                     </h2>
                     <p className='text-left pt-2 pb-5 md:text-lg xs:text-sm'>
@@ -76,7 +76,7 @@ function SkillsSection() {
                 </div>
 
                 {/* Education */}
-                <div className='w-full md:w-1/3 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4 xs:pt-[0px] xs:pr-[15px] xs:pl-[15px] md:pr-10'>
+                <div className='w-full md:w-1/3 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4 xs:pt-[0px] xs:pr-[15px] xs:pl-[15px] md:pr-10 relative z-[1]'>
                     {educationOptns.map((option, index) => (
                         <EducationBox
                             key={index}
@@ -120,7 +120,7 @@ function EducationBox({ label, value, year, details }) {
 
     return (
         <div
-            className='box-education relative  p-4 rounded-lg border w-full h-[150px] max-w-[500px] xs:max-w-none xs:h-[120px] md:h-[150px] flex justify-center items-center content-center flex-wrap shadow-lg'
+            className='box-education relative z-[1] p-4 rounded-lg border w-full h-[150px] max-w-[500px] xs:max-w-none xs:h-[120px] md:h-[150px] flex justify-center items-center content-center flex-wrap shadow-lg'
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -137,10 +137,12 @@ function EducationBox({ label, value, year, details }) {
             {/* Condicionamos la renderización del Popup */}
             {shouldRenderPopup && (
                 <div
-                    className={`popup absolute top-1/2 right-[-575px] transform -translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-10 transition-opacity duration-300 ease-in-out md:block xs:hidden
+                    className={`popup absolute md:top-1/2 md:right-[-575px] transform md:-translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-[999] transition-opacity duration-300 ease-in-out xs:hidden md:block
                         ${showPopup ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                 >
-                    <h3 className='font-bold text-white'>{t('education-details-title')}</h3>
+                    <h3 className='font-bold text-white'>
+                        {t('education-details-title')}
+                    </h3>
                     <p className='text-sm text-justify'>
                         {details}
                     </p>
@@ -151,7 +153,6 @@ function EducationBox({ label, value, year, details }) {
         </div>
     );
 }
-
 
 function ContainerSkill({ label, items = [] }) {
     return (

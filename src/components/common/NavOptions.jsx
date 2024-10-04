@@ -60,8 +60,8 @@ function NavOptions() {
 function OptionControl({ value, label, action, className }) {
     return (
         <div className='option-navBar'>
-            <label className='option'>{label}</label>
-            <button className={`${className} h-[5.5vh] w-[5.5vh]`} onClick={action}>{value}</button>
+            <label className='option md:text-base xs:text-xs'>{label}</label>
+            <button className={`${className} h-[5.5vh] w-[5.5vh] md:h-[5.5vh] md:w-[5vh] xs:h-[4.5vh] xs:w-[4.5vh]`} onClick={action}>{value}</button>
         </div>
     );
 }
