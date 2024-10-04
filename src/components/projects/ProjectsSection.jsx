@@ -34,7 +34,7 @@ function ProjectsSection() {
                 </div>
 
                 {/* Projects */}
-                <div className='container-projects m-12 w-full flex items-center justify-center flex-wrap gap-40 xs:gap-5 xs:m-0'>
+                <div className='container-projects m-12 w-full flex items-center justify-center flex-wrap md:gap-40 xs:gap-5 xs:m-0'>
                     <article className='w-[80vh] h-[75vh] relative rounded-lg hover:rounded-3xl overflow-hidden  duration-[350ms] transition-all ease-expo group 
                         shadow-2xl xs:w-[40vh] xs:h-[30vh] md:w-[80vh] md:h-[75vh]'>
                         <a className='block w-full h-full z-10:' href='https://edeskprisma.syc.com.co/santander' target='_blank'>
@@ -77,7 +77,7 @@ function ProjectsSection() {
                     </article>
                 </div>
 
-                <div className='container-projects m-12 w-full flex items-center justify-center flex-wrap gap-40 xs:gap-5 xs:m-5'>
+                <div className='container-projects m-12 w-full flex items-center justify-center flex-wrap md:gap-40 xs:gap-5 xs:m-5'>
                     <article className='w-[55vh] h-[55vh] relative rounded-lg hover:rounded-3xl overflow-hidden  duration-[350ms] transition-all ease-expo group 
                         shadow-2xl xs:w-[40vh] xs:h-[30vh] md:w-[55vh] md:h-[55vh]'>
                         <a className='block w-full h-full z-10 rounded-lg group-hover:rounded-3xl:' href='https://github.com/ApidriuC/DDA-BOOKINGS-Dispositivos-Moviles' target='_blank'>
@@ -117,7 +117,7 @@ function ProjectsSection() {
                     </article>
                 </div>
 
-                <div className='container-projects m-12 w-full flex items-center justify-center flex-wrap gap-40 xs:gap-5 xs:m-5'>
+                <div className='container-projects m-12 w-full flex items-center justify-center flex-wrap md:gap-40 xs:gap-5 xs:m-5'>
                     <article className='w-[95vh] h-[80vh] relative rounded-lg hover:rounded-3xl overflow-hidden  duration-[350ms] transition-all ease-expo group 
                         shadow-2xl xs:w-[40vh] xs:h-[30vh] md:w-[95vh] md:h-[80vh]'>
                         <a className='block w-full h-full z-10 rounded-lg group-hover:rounded-3xl:' href='https://github.com/ApidriuC/Bingo_Alcaldia_Risaralda' target='_blank'>
