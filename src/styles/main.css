@@ -247,7 +247,8 @@ body.dark-theme #contact-me {
     background-color: rgb(31 36 33);
 }
 
-body.dark-theme #contact-me h2 {
+body.dark-theme #contact-me h2,
+body.dark-theme #contact-me p {
     color: rgb(156 197 161);
 }
 
@@ -255,7 +256,8 @@ body.dark-theme #contact-me h2 {
     background-color: rgb(156 197 161);
 }
 
-#contact-me h2 {
+#contact-me h2,
+#contact-me p {
     color: rgb(31 36 33);
 }
 
@@ -270,7 +272,7 @@ body.dark-theme #contact-me h2 {
         --size-text-default: 1rem;
     }
 
-    section{
+    section {
         padding: 15px !important;
     }
 }
