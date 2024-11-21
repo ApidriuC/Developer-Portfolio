@@ -13,20 +13,13 @@ function NavOptions() {
     };
 
     const changeTheme = () => {
-        const classNameDark = 'dark-theme';
-        document.body.classList.toggle(classNameDark);
+        document.body.classList.toggle('dark-theme');
         showNotification(t('notification-theme-change'));
     }
 
     const goToScroll = (id, position = 'center') => {
         const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView(
-                {
-                    block: position,
-                    behavior: 'smooth'
-                });
-        }
+        if (section) section.scrollIntoView({ block: position, behavior: 'smooth' });
     }
 
     const options = [
@@ -61,7 +54,11 @@ function OptionControl({ value, label, action, className }) {
     return (
         <div className='option-navBar'>
             <label className='option md:text-base xs:text-xs'>{label}</label>
-            <button className={`${className} h-[5.5vh] w-[5.5vh] md:h-[5.5vh] md:w-[5vh] xs:h-[4.5vh] xs:w-[4.5vh]`} onClick={action}>{value}</button>
+            <button
+                onClick={action}
+                className={`${className} h-[5.5vh] w-[5.5vh] md:h-[5.5vh] md:w-[5vh] xs:h-[4.5vh] xs:w-[4.5vh]`}>
+                {value}
+            </button>
         </div>
     );
 }
