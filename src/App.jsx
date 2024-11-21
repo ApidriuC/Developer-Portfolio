@@ -24,11 +24,14 @@ function App() {
                     <BgAnimation />
                     <NavOptions />
                     <HelloSection />
-                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <BorderSection />
+
                     <AboutMeSection />
-                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <BorderSection />
+
                     <SkillsSection />
-                    <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />
+                    <BorderSection />
+
                     <ProjectsSection />
                 </main>
                 <footer className='w-full'>
@@ -37,6 +40,10 @@ function App() {
             </NotificationProvider>
         </>
     );
+}
+
+function BorderSection() {
+    return <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />;
 }
 
 export default App;
