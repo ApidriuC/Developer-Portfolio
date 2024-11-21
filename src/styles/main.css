@@ -219,27 +219,27 @@ body.dark-theme .skill-box:hover a {
     background: linear-gradient(to bottom, #0000000d, #000c 95%);
 }
 
-#projects-me .bg-container-1 {
+#projects-me .container-projects article:nth-child(1) {
     background-image: linear-gradient(to right, rgb(168, 202, 186) 0%, rgb(93, 65, 87));
 }
 
-#projects-me .bg-container-2 {
+#projects-me .container-projects article:nth-child(2) {
     background-image: linear-gradient(60deg, rgb(100, 179, 244) 0%, rgb(194, 229, 156) 100%);
 }
 
-#projects-me .bg-container-3 {
+#projects-me .container-projects article:nth-child(3) {
     background-image: linear-gradient(45deg, rgb(135, 77, 162) 0%, rgb(196, 58, 48) 100%);
 }
 
-#projects-me .bg-container-4 {
+#projects-me .container-projects article:nth-child(4) {
     background-image: linear-gradient(15deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
 }
 
-#projects-me .bg-container-5 {
+#projects-me .container-projects article:nth-child(5) {
     background-image: linear-gradient(to right, rgb(58, 181, 176) 0%, rgb(61, 153, 190) 31%, rgb(86, 49, 122) 100%);
 }
 
-#projects-me .bg-container-6 {
+#projects-me .container-projects article:nth-child(6) {
     background-image: linear-gradient(45deg, rgb(147, 165, 207) 0%, rgb(228, 239, 233) 100%);
 }
 
