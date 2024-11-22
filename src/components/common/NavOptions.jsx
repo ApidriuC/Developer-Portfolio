@@ -1,6 +1,6 @@
-import '../../styles/components/NavOptions.css';
+import './NavOptions.css';
 import { useTranslation } from 'react-i18next';
-import { useNotification } from './NotificationComponent.jsx';
+import { useNotification } from '../common';
 
 function NavOptions() {
     const { t, i18n } = useTranslation();
