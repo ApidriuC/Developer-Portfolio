@@ -2,6 +2,11 @@ import './NavOptions.css';
 import { useTranslation } from 'react-i18next';
 import { useNotification } from '../common';
 
+const goToScroll = (id, position = 'center') => {
+    const section = document.getElementById(id);
+    if (section) section.scrollIntoView({ block: position, behavior: 'smooth' });
+}
+
 function NavOptions() {
     const { t, i18n } = useTranslation();
     const { showNotification } = useNotification();
@@ -15,11 +20,6 @@ function NavOptions() {
     const changeTheme = () => {
         document.body.classList.toggle('dark-theme');
         showNotification(t('notification-theme-change'));
-    }
-
-    const goToScroll = (id, position = 'center') => {
-        const section = document.getElementById(id);
-        if (section) section.scrollIntoView({ block: position, behavior: 'smooth' });
     }
 
     const options = [
