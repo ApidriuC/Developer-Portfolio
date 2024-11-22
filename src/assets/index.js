@@ -22,3 +22,7 @@ export { default as sqlImage } from '../assets/sql-logo.png';
 export { default as oracleImage } from '../assets/oracle-logo.svg';
 export { default as visualImage } from '../assets/visual-logo.png';
 export { default as gitImage } from '../assets/git-logo.png';
+export { default as gitHubImage } from '../assets/github-icon.svg';
+export { default as linkedImage } from '../assets/linkedln-icon.svg';
+export { default as messageMeImage } from '../assets/message-me-icon.svg';
+export { default as MeImage } from '../assets/me-image-profile.jpeg';

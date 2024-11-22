@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import gitHubIcon from '../../assets/github-icon.svg';
-import linkedIcon from '../../assets/linkedln-icon.svg';
-import messageMeIcon from '../../assets/message-me-icon.svg';
+import { gitHubImage, linkedImage, messageMeImage } from '../../assets';
 
 function ConnectMeSection() {
     const { t } = useTranslation();
@@ -10,19 +8,19 @@ function ConnectMeSection() {
         {
             href: "https://github.com/ApidriuC",
             alt: "Go to Andrés GitHub",
-            icon: gitHubIcon,
+            icon: gitHubImage,
             title: "GitHub"
         },
         {
             href: "https://www.linkedin.com/in/andr%C3%A9s-felipe-londo%C3%B1o-campos-b03741222/",
             alt: "Connect with Andrés on LinkedIn",
-            icon: linkedIcon,
+            icon: linkedImage,
             title: "LinkedIn"
         },
         {
             href: "mailto:andresfloncam@gmail.com",
             alt: "Send Andrés an email",
-            icon: messageMeIcon,
+            icon: messageMeImage,
             title: "Email"
         }
     ];
