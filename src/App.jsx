@@ -1,13 +1,16 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import BgAnimation from './components/utils/BgAnimation.jsx';
-import NavOptions from './components/common/NavOptions.jsx';
-import HelloSection from './components/home/HelloSection.jsx';
-import SkillsSection from './components/skills/SkillsSection.jsx';
-import AboutMeSection from './components/resume/AboutMeSection.jsx';
-import ProjectsSection from './components/projects/ProjectsSection.jsx';
-import ConnectMeSection from './components/contact/ConnectMeSection.jsx';
-import { NotificationProvider } from './components/common/NotificationComponent.jsx';
+import {
+    Border,
+    NavOptions,
+    BgAnimation,
+    HelloSection,
+    SkillsSection,
+    AboutMeSection,
+    ProjectsSection,
+    ConnectMeSection,
+    NotificationProvider
+} from './components';
 
 function App() {
     const { t, i18n } = useTranslation();
@@ -24,13 +27,13 @@ function App() {
                     <BgAnimation />
                     <NavOptions />
                     <HelloSection />
-                    <BorderSection />
+                    <Border />
 
                     <AboutMeSection />
-                    <BorderSection />
+                    <Border />
 
                     <SkillsSection />
-                    <BorderSection />
+                    <Border />
 
                     <ProjectsSection />
                 </main>
@@ -40,10 +43,6 @@ function App() {
             </NotificationProvider>
         </>
     );
-}
-
-function BorderSection() {
-    return <div className='border-t border-gray-600 w-[90%] ml-[5%] mr-[5%]' />;
 }
 
 export default App;

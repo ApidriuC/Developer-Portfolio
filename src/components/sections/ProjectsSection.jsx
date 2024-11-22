@@ -1,21 +1,23 @@
 import { useTranslation } from 'react-i18next';
-import cImage from '../../assets/logo-c.svg'
-import netImage from '../../assets/net-frame.png';
-import reactImage from '../../assets/react-logo.png';
-import streamLabs from '../../assets/stream-labs.png';
-import nodeImage from '../../assets/nodejs-white.png';
-import jsImage from '../../assets/logo-javascript.png';
-import htmlImage from '../../assets/icon-html.jpg'
-import cssImage from '../../assets/logo-css.png'
-import boostrapImage from '../../assets/logo-boostrap.svg'
-import edeskPrisma from '../../assets/edesk-prisma.png'
-import foxGame from '../../assets/FOXGAME.png'
-import construct3 from '../../assets/construct3.jpg'
-import bookings from '../../assets/DDABOOKING.png'
-import tailwindcss from '../../assets/logo-tailwind.png'
-import dispensadorR from '../../assets/dispensador-registro.png'
-import bingo from '../../assets/bingoResultado.png'
-import javaImage from '../../assets/Java-Logo.png'
+import {
+    htmlImage,
+    javaImage,
+    bingoImage,
+    reactImage,
+    nodeJsImage,
+    cSharpImage,
+    foxGameImage,
+    boostrapImage,
+    bookingsImage,
+    construct3Image,
+    streamLabsImage,
+    javascriptImage,
+    styleSheetImage,
+    edeskPrismaImage,
+    tailwindcssImage,
+    dispensadorImage,
+    netFrameworkImage
+} from '../../assets';
 
 function ProjectsSection() {
     const { t } = useTranslation();
@@ -23,39 +25,39 @@ function ProjectsSection() {
     const projects = [
         {
             title: 'EDESK PRISMA',
-            link: 'https://edeskprisma.syc.com.co/santander',
-            image: edeskPrisma,
-            tags: [cImage, netImage, jsImage, htmlImage, cssImage, boostrapImage]
+            link: 'https://edeskprisma.syc.com.co/NoClient.html',
+            image: edeskPrismaImage,
+            tags: [cSharpImage, netFrameworkImage, javascriptImage, htmlImage, styleSheetImage, boostrapImage]
         },
         {
             title: 'Stream For Labs',
             link: 'https://github.com/IngDeiver/streams-for-labs-web-client',
-            image: streamLabs,
-            tags: [nodeImage, reactImage, jsImage, tailwindcss, boostrapImage]
+            image: streamLabsImage,
+            tags: [nodeJsImage, reactImage, javascriptImage, tailwindcssImage, boostrapImage]
         },
         {
             title: 'DDA Bookings',
             link: 'https://github.com/ApidriuC/DDA-BOOKINGS-Dispositivos-Moviles',
-            image: bookings,
-            tags: [reactImage, jsImage]
+            image: bookingsImage,
+            tags: [reactImage, javascriptImage]
         },
         {
             title: 'Dispensador - Casa Libro Total',
             link: '',
-            image: dispensadorR,
-            tags: [cImage, netImage, jsImage, htmlImage, cssImage, boostrapImage]
+            image: dispensadorImage,
+            tags: [cSharpImage, netFrameworkImage, javascriptImage, htmlImage, styleSheetImage, boostrapImage]
         },
         {
             title: t('bingo-project-label'),
             link: 'https://github.com/ApidriuC/Bingo_Alcaldia_Risaralda',
-            image: bingo,
+            image: bingoImage,
             tags: [javaImage]
         },
         {
             title: 'Fox Game',
             link: 'https://github.com/ApidriuC/FoxGame---Construct3',
-            image: foxGame,
-            tags: [construct3]
+            image: foxGameImage,
+            tags: [construct3Image]
         }
     ];
 
@@ -87,6 +89,7 @@ const Cards = ({ title, link, image, tags }) => {
 
     // Generar un número aleatorio entre 40 y 60 para el height
     const heightRandom = Math.floor(Math.random() * (60 - 35 + 1)) + 35;
+
     return (
         <article
             style={{
