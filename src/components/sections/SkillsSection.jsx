@@ -1,21 +1,58 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import vsCodeImage from '../../assets/vsco-logo.jpg'
-import htmlImage from '../../assets/icon-html.jpg'
-import cssImage from '../../assets/logo-css.png'
-import boostrapImage from '../../assets/logo-boostrap.svg'
-import tailwindImage from '../../assets/logo-tailwind.png'
-import reactImage from '../../assets/react-logo.png'
-import jsImage from '../../assets/logo-javascript.png'
-import tsImgage from '../../assets/logo-typescript.png'
-import nodeImage from '../../assets/logo-nodejs.png'
-import cImage from '../../assets/logo-c.svg'
-import javaImage from '../../assets/Java-Logo.png'
-import pythonImage from '../../assets/python-logo.png'
-import sqlImage from '../../assets/sql-logo.png'
-import oracleImage from '../../assets/oracle-logo.svg'
-import visualImage from '../../assets/visual-logo.png'
-import gitImage from '../../assets/git-logo.png'
+import {
+    sqlImage,
+    gitImage,
+    htmlImage,
+    javaImage,
+    reactImage,
+    visualImage,
+    cSharpImage,
+    pythonImage,
+    oracleImage,
+    vsCodeImage,
+    nodeJsImage,
+    boostrapImage,
+    javascriptImage,
+    styleSheetImage,
+    typeScriptImage,
+    tailwindcssImage
+} from '../../assets';
+
+const skillsFrontEnd = [
+    { label: 'HTML', sourceImage: htmlImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/HTML' },
+    { label: 'CSS', sourceImage: styleSheetImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/CSS' },
+    { label: 'Boostrap', sourceImage: boostrapImage, sourceLink: 'https://getbootstrap.com/' },
+    { label: 'Tailwind', sourceImage: tailwindcssImage, sourceLink: 'https://tailwindcss.com/' },
+    { label: 'React', sourceImage: reactImage, sourceLink: 'https://es.react.dev/' },
+    { label: 'JavaScript', sourceImage: javascriptImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/JavaScript' },
+    { label: 'TypeScript', sourceImage: typeScriptImage, sourceLink: 'https://www.typescriptlang.org/' },
+];
+
+const skillsBackEnd = [
+    { label: 'NodeJs', sourceImage: nodeJsImage, sourceLink: 'https://nodejs.org/en' },
+    { label: 'C#', sourceImage: cSharpImage, sourceLink: 'https://learn.microsoft.com/es-es/dotnet/csharp/' },
+    { label: 'Java', sourceImage: javaImage, sourceLink: 'https://www.java.com/es/' },
+    { label: 'Python', sourceImage: pythonImage, sourceLink: 'https://www.python.org/' }
+];
+
+const skillsDataBase = [
+    { label: 'SQL Server', sourceImage: sqlImage, sourceLink: 'https://www.microsoft.com/es-co/sql-server/sql-server-downloads' },
+    { label: 'Oracle', sourceImage: oracleImage, sourceLink: 'https://www.oracle.com/co/' }
+];
+
+const skillsFrames = [
+    { label: 'Visual Studio Code', sourceImage: vsCodeImage, sourceLink: 'https://code.visualstudio.com/' },
+    { label: 'Visual Studio 2022', sourceImage: visualImage, sourceLink: 'https://visualstudio.microsoft.com/es/vs/' },
+    { label: 'GIT', sourceImage: gitImage, sourceLink: 'https://git-scm.com/' }
+];
+
+const containerSkillsOptns = [
+    { label: 'Front-End', items: skillsFrontEnd },
+    { label: 'Back-End', items: skillsBackEnd },
+    { label: 'Data Base', items: skillsDataBase },
+    { label: 'Frameworks', items: skillsFrames },
+];
 
 function SkillsSection() {
     const { t } = useTranslation();
@@ -25,41 +62,6 @@ function SkillsSection() {
         { year: '2023', label: t('education-title-2'), value: t('education-place-2'), details: t('education-details-2') },
         { year: '2022', label: t('education-title-3'), value: t('education-place-3'), details: t('education-details-3') },
         { year: '2021', label: t('education-title-4'), value: t('education-place-4'), details: t('education-details-4') }
-    ];
-
-    const skillsFrontEnd = [
-        { label: 'HTML', sourceImage: htmlImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/HTML' },
-        { label: 'CSS', sourceImage: cssImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/CSS' },
-        { label: 'Boostrap', sourceImage: boostrapImage, sourceLink: 'https://getbootstrap.com/' },
-        { label: 'Tailwind', sourceImage: tailwindImage, sourceLink: 'https://tailwindcss.com/' },
-        { label: 'React', sourceImage: reactImage, sourceLink: 'https://es.react.dev/' },
-        { label: 'JavaScript', sourceImage: jsImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/JavaScript' },
-        { label: 'TypeScript', sourceImage: tsImgage, sourceLink: 'https://www.typescriptlang.org/' },
-    ];
-
-    const skillsBackEnd = [
-        { label: 'NodeJs', sourceImage: nodeImage, sourceLink: 'https://nodejs.org/en' },
-        { label: 'C#', sourceImage: cImage, sourceLink: 'https://learn.microsoft.com/es-es/dotnet/csharp/' },
-        { label: 'Java', sourceImage: javaImage, sourceLink: 'https://www.java.com/es/' },
-        { label: 'Python', sourceImage: pythonImage, sourceLink: 'https://www.python.org/' }
-    ];
-
-    const skillsBd = [
-        { label: 'SQL Server', sourceImage: sqlImage, sourceLink: 'https://www.microsoft.com/es-co/sql-server/sql-server-downloads' },
-        { label: 'Oracle', sourceImage: oracleImage, sourceLink: 'https://www.oracle.com/co/' }
-    ];
-
-    const skillsFrames = [
-        { label: 'Visual Studio Code', sourceImage: vsCodeImage, sourceLink: 'https://code.visualstudio.com/' },
-        { label: 'Visual Studio 2022', sourceImage: visualImage, sourceLink: 'https://visualstudio.microsoft.com/es/vs/' },
-        { label: 'GIT', sourceImage: gitImage, sourceLink: 'https://git-scm.com/' }
-    ];
-
-    const containerSkillsOptns = [
-        { label: 'Front-End', items: skillsFrontEnd },
-        { label: 'Back-End', items: skillsBackEnd },
-        { label: 'Data Base', items: skillsBd },
-        { label: 'Frameworks', items: skillsFrames },
     ];
 
     return (
