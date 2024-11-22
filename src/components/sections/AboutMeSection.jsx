@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import MeImage from '../../assets/me-image-profile.jpeg';
+import { MeImage } from '../../assets';
 
 function AboutMeSection() {
     const { t } = useTranslation();
