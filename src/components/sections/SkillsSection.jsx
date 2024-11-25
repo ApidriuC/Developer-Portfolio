@@ -47,14 +47,14 @@ const skillsFrames = [
     { label: 'GIT', sourceImage: gitImage, sourceLink: 'https://git-scm.com/' }
 ];
 
-const containerSkillsOptns = [
+const ContainerSkillsOptns = [
     { label: 'Front-End', items: skillsFrontEnd },
     { label: 'Back-End', items: skillsBackEnd },
     { label: 'Data Base', items: skillsDataBase },
-    { label: 'Frameworks', items: skillsFrames },
+    { label: 'Frameworks', items: skillsFrames }
 ];
 
-function SkillsSection() {
+export default function SkillsSection() {
     const { t } = useTranslation();
 
     const educationOptns = [
@@ -92,7 +92,7 @@ function SkillsSection() {
 
                 {/* Skills */}
                 <div className='w-full md:w-2/3 pl-20 flex justify-center items-center content-center flex-wrap xs:pr-0 xs:pt-5 xs:pl-0 md:pt-0'>
-                    {containerSkillsOptns.map((option, index) => (
+                    {ContainerSkillsOptns.map((option, index) => (
                         <ContainerSkill
                             key={index}
                             label={option.label}
@@ -105,26 +105,27 @@ function SkillsSection() {
     );
 }
 
-function EducationBox({ label, value, year, details }) {
+const EducationBox = ({ label, value, year, details }) => {
     const { t } = useTranslation();
     const [showPopup, setShowPopup] = useState(false);
     const [shouldRenderPopup, setShouldRenderPopup] = useState(false);
 
-    const handleMouseEnter = () => {
+    const onMouseEnterHandler = () => {
         setShouldRenderPopup(true);
         setShowPopup(true);
     };
 
-    const handleMouseLeave = () => {
+    const onMouseLeaveHandler = () => {
         setShowPopup(false);
         setTimeout(() => setShouldRenderPopup(false), 300);
     };
 
     return (
         <div
-            className='box-education relative z-[1] p-4 rounded-lg border w-full h-[150px] max-w-[500px] xs:max-w-none xs:h-[120px] md:h-[150px] flex justify-center items-center content-center flex-wrap shadow-lg'
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            className='box-education relative z-[1] p-4 rounded-lg border w-full h-[150px] max-w-[500px] xs:max-w-none xs:h-[120px] md:h-[150px] 
+                flex justify-center items-center content-center flex-wrap shadow-lg'
+            onMouseEnter={onMouseEnterHandler}
+            onMouseLeave={onMouseLeaveHandler}
         >
             <div className='label-rectangle absolute top-[10px] left-[-30px] text-white font-bold xs:text-xs'>
                 {year}
@@ -136,45 +137,41 @@ function EducationBox({ label, value, year, details }) {
                 {value}
             </span>
 
-            {/* Condicionamos la renderización del Popup */}
-            {shouldRenderPopup && (
-                <div
-                    className={`popup absolute md:top-1/2 md:right-[-575px] transform md:-translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-[999] transition-opacity duration-300 ease-in-out xs:hidden md:block
-                        ${showPopup ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-                >
-                    <h3 className='font-bold text-white'>
-                        {t('education-details-title')}
-                    </h3>
-                    <p className='text-sm text-justify'>
-                        {details}
-                    </p>
-                    <div className='com-circule first-circule absolute shadow-lg' />
-                    <div className='com-circule second-circule absolute shadow-lg' />
-                </div>
-            )}
+            {/* Renderizar el Popup si es necesario */}
+            {shouldRenderPopup && <Popup isVisible={showPopup} textContent={details} title={t('education-details-title')} />}
         </div>
     );
 }
 
-function ContainerSkill({ label, items = [] }) {
-    return (
-        <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mb-5 xs:p-[0] xs:pl-3 md:pl-5'>
-            <h3 className='text-left w-full mb-3 text-xl'>{label}</h3>
-            <div className='items flex flex-wrap gap-4'>
-                {items.map((item, index) => (
-                    <SkillBox
-                        key={index}
-                        label={item.label}
-                        sourceImage={item.sourceImage}
-                        sourceLink={item.sourceLink}
-                    />
-                ))}
-            </div>
-        </div>
-    );
-}
+const Popup = ({ isVisible, title, textContent }) => (
+    <div
+        className={`popup absolute md:top-1/2 md:right-[-575px] transform md:-translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-[999] transition-opacity duration-300 ease-in-out 
+            xs:hidden md:block ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+    >
+        <h3 className='font-bold text-white'>{title}</h3>
+        <p className='text-sm text-justify'>{textContent}</p>
+        <div className='com-circule first-circule absolute shadow-lg' />
+        <div className='com-circule second-circule absolute shadow-lg' />
+    </div>
+);
 
-function SkillBox({ label, sourceImage, sourceLink }) {
+const ContainerSkill = ({ label, items = [] }) => (
+    <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mb-5 xs:p-[0] xs:pl-3 md:pl-5'>
+        <h3 className='text-left w-full mb-3 text-xl'>{label}</h3>
+        <div className='items flex flex-wrap gap-4'>
+            {items.map((item, index) => (
+                <SkillBox
+                    key={index}
+                    label={item.label}
+                    sourceImage={item.sourceImage}
+                    sourceLink={item.sourceLink}
+                />
+            ))}
+        </div>
+    </div>
+);
+
+const SkillBox = ({ label, sourceImage, sourceLink }) => {
     const goToPage = () => window.open(sourceLink, '_blank');
 
     return (
@@ -187,5 +184,3 @@ function SkillBox({ label, sourceImage, sourceLink }) {
         </div>
     );
 }
-
-export default SkillsSection;

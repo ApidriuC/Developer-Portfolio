@@ -19,41 +19,53 @@ import {
     netFrameworkImage
 } from '../../assets';
 
-function ProjectsSection() {
+export default function ProjectsSection() {
     const { t } = useTranslation();
 
     const projects = [
         {
+            width: 70,
+            height: 40,
             title: 'EDESK PRISMA',
             link: 'https://edeskprisma.syc.com.co/NoClient.html',
             image: edeskPrismaImage,
             tags: [cSharpImage, netFrameworkImage, javascriptImage, htmlImage, styleSheetImage, boostrapImage]
         },
         {
+            width: 50,
+            height: 55,
             title: 'Stream For Labs',
             link: 'https://github.com/IngDeiver/streams-for-labs-web-client',
             image: streamLabsImage,
             tags: [nodeJsImage, reactImage, javascriptImage, tailwindcssImage, boostrapImage]
         },
         {
+            width: 70,
+            height: 55,
             title: 'DDA Bookings',
             link: 'https://github.com/ApidriuC/DDA-BOOKINGS-Dispositivos-Moviles',
             image: bookingsImage,
             tags: [reactImage, javascriptImage]
         },
         {
+            width: 80,
+            height: 45,
             title: 'Dispensador - Casa Libro Total',
             link: '',
             image: dispensadorImage,
             tags: [cSharpImage, netFrameworkImage, javascriptImage, htmlImage, styleSheetImage, boostrapImage]
         },
         {
+            width: 50,
+            height: 45,
             title: t('bingo-project-label'),
             link: 'https://github.com/ApidriuC/Bingo_Alcaldia_Risaralda',
             image: bingoImage,
             tags: [javaImage]
         },
         {
+            width: 75,
+            height: 55,
             title: 'Fox Game',
             link: 'https://github.com/ApidriuC/FoxGame---Construct3',
             image: foxGameImage,
@@ -83,19 +95,11 @@ function ProjectsSection() {
     );
 }
 
-const Cards = ({ title, link, image, tags }) => {
-    // Generar un número aleatorio entre 56 y 80 para el width
-    const widthRandom = Math.floor(Math.random() * (80 - 56 + 1)) + 56;
-
-    // Generar un número aleatorio entre 40 y 60 para el height
-    const heightRandom = Math.floor(Math.random() * (60 - 35 + 1)) + 35;
+const Cards = ({ title, width, height, link, image, tags }) => {
 
     return (
         <article
-            style={{
-                width: `${widthRandom}vh`,
-                height: `${heightRandom}vh`,
-            }}
+            style={{ width: `${width}vh`, height: `${height}vh` }}
             className={`relative xs:w-[40vh] xs:h-[30vh] rounded-lg hover:rounded-3xl overflow-hidden duration-[350ms] transition-all ease-expo group shadow-2xl`}
         >
             <a className='block w-full h-full z-10' href={link} target='_blank' rel='noreferrer'>
@@ -116,5 +120,3 @@ const Cards = ({ title, link, image, tags }) => {
         </article>
     );
 };
-
-export default ProjectsSection;
