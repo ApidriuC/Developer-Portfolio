@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { MeImage } from '../../assets';
 
-function AboutMeSection() {
+export default function AboutMeSection() {
     const { t } = useTranslation();
 
     return (
@@ -22,12 +22,16 @@ function AboutMeSection() {
                 </h2>
                 <div className='text-justify'>
                     <p className='text-base text-justify md:text-sm xs:text-xs'>
+                        {/* Parrafos */}
                         {t('about-me-desc-1')}
-                        <br /><br />
+                        <br />
+                        <br />
                         {t('about-me-desc-2')}
-                        <br /><br />
+                        <br />
+                        <br />
                         {t('about-me-desc-3')}
-                        <br /><br />
+                        <br />
+                        <br />
                         {t('about-me-desc-4')}
                     </p>
                 </div>
@@ -35,5 +39,3 @@ function AboutMeSection() {
         </section>
     );
 }
-
-export default AboutMeSection;

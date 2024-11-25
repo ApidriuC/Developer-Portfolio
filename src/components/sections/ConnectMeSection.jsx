@@ -3,26 +3,26 @@ import { gitHubImage, linkedImage, messageMeImage } from '../../assets';
 
 const links = [
     {
-        href: "https://github.com/ApidriuC",
-        alt: "Go to Andrés GitHub",
+        title: "GitHub",
         icon: gitHubImage,
-        title: "GitHub"
+        alt: "Go to Andrés GitHub",
+        href: "https://github.com/ApidriuC"
     },
     {
-        href: "https://www.linkedin.com/in/andr%C3%A9s-felipe-londo%C3%B1o-campos-b03741222/",
-        alt: "Connect with Andrés on LinkedIn",
+        title: "LinkedIn",
         icon: linkedImage,
-        title: "LinkedIn"
+        alt: "Connect with Andrés on LinkedIn",
+        href: "https://www.linkedin.com/in/andr%C3%A9s-felipe-londo%C3%B1o-campos-b03741222/"
     },
     {
-        href: "mailto:andresfloncam@gmail.com",
-        alt: "Send Andrés an email",
+        title: "Email",
         icon: messageMeImage,
-        title: "Email"
+        alt: "Send Andrés an email",
+        href: "mailto:andresfloncam@gmail.com"
     }
 ];
 
-function ConnectMeSection() {
+export default function ConnectMeSection() {
     const { t } = useTranslation();
 
     return (
@@ -53,5 +53,3 @@ function ConnectMeSection() {
         </section>
     );
 }
-
-export default ConnectMeSection;

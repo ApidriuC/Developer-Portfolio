@@ -12,7 +12,7 @@ import {
     NotificationProvider
 } from './components';
 
-function App() {
+export default function App() {
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
@@ -44,5 +44,3 @@ function App() {
         </>
     );
 }
-
-export default App;

@@ -7,7 +7,7 @@ const goToScroll = (id, position = 'center') => {
     if (section) section.scrollIntoView({ block: position, behavior: 'smooth' });
 }
 
-function NavOptions() {
+export default function NavOptions() {
     const { t, i18n } = useTranslation();
     const { showNotification } = useNotification();
 
@@ -50,17 +50,13 @@ function NavOptions() {
     );
 }
 
-function OptionControl({ value, label, action, className }) {
-    return (
-        <div className='option-navBar'>
-            <label className='option md:text-base xs:text-xs'>{label}</label>
-            <button
-                onClick={action}
-                className={`${className} h-[5.5vh] w-[5.5vh] md:h-[5.5vh] md:w-[5vh] xs:h-[4.5vh] xs:w-[4.5vh]`}>
-                {value}
-            </button>
-        </div>
-    );
-}
-
-export default NavOptions;
+const OptionControl = ({ value, label, action, className }) => (
+    <div className='option-navBar'>
+        <label className='option md:text-base xs:text-xs'>{label}</label>
+        <button
+            onClick={action}
+            className={`${className} h-[5.5vh] w-[5.5vh] md:h-[5.5vh] md:w-[5vh] xs:h-[4.5vh] xs:w-[4.5vh]`}>
+            {value}
+        </button>
+    </div>
+);
