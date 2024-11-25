@@ -79,26 +79,12 @@ export default function SkillsSection() {
 
                 {/* Education */}
                 <div className='w-full md:w-1/3 h-full pr-10 flex justify-center items-center content-center flex-wrap gap-4 xs:pt-[0px] xs:pr-[15px] xs:pl-[15px] md:pr-10 relative z-[1]'>
-                    {educationOptns.map((option, index) => (
-                        <EducationBox
-                            key={index}
-                            year={option.year}
-                            label={option.label}
-                            value={option.value}
-                            details={option.details}
-                        />
-                    ))}
+                    {educationOptns.map((option, index) => <EducationBox key={index} {...option} />)}
                 </div>
 
                 {/* Skills */}
                 <div className='w-full md:w-2/3 pl-20 flex justify-center items-center content-center flex-wrap xs:pr-0 xs:pt-5 xs:pl-0 md:pt-0'>
-                    {ContainerSkillsOptns.map((option, index) => (
-                        <ContainerSkill
-                            key={index}
-                            label={option.label}
-                            items={option.items}
-                        />
-                    ))}
+                    {ContainerSkillsOptns.map((option, index) => <ContainerSkill key={index} {...option} />)}
                 </div>
             </div>
         </section>
@@ -159,14 +145,7 @@ const ContainerSkill = ({ label, items = [] }) => (
     <div className='skill-container border-l border-gray-500 w-full h-auto pl-5 pr-5 pb-3 mb-5 xs:p-[0] xs:pl-3 md:pl-5'>
         <h3 className='text-left w-full mb-3 text-xl'>{label}</h3>
         <div className='items flex flex-wrap gap-4'>
-            {items.map((item, index) => (
-                <SkillBox
-                    key={index}
-                    label={item.label}
-                    sourceImage={item.sourceImage}
-                    sourceLink={item.sourceLink}
-                />
-            ))}
+            {items.map((item, index) => <SkillBox key={index} {...item} />)}
         </div>
     </div>
 );
