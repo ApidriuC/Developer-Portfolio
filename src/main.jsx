@@ -7,8 +7,9 @@ import App from './App.jsx'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-createRoot(document.getElementById('root')).render(
+const currentRoot = document.getElementById('root');
+createRoot(currentRoot).render(
   <StrictMode>
     <App />
   </StrictMode>
-)
+);

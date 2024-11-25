@@ -36,15 +36,7 @@ export default function NavOptions() {
         <>
             <div className='navBar-bg' />
             <div className='navBar-float shadow-lg'>
-                {options.map((option, index) => (
-                    <OptionControl
-                        key={index}
-                        label={option.label}
-                        value={option.value}
-                        action={option.action}
-                        className={option.className}
-                    />
-                ))}
+                {options.map((option, index) => <OptionControl key={index} {...option} />)}
             </div>
         </>
     );
@@ -52,7 +44,9 @@ export default function NavOptions() {
 
 const OptionControl = ({ value, label, action, className }) => (
     <div className='option-navBar'>
-        <label className='option md:text-base xs:text-xs'>{label}</label>
+        <label className='option md:text-base xs:text-xs'>
+            {label}
+        </label>
         <button
             onClick={action}
             className={`${className} h-[5.5vh] w-[5.5vh] md:h-[5.5vh] md:w-[5vh] xs:h-[4.5vh] xs:w-[4.5vh]`}>

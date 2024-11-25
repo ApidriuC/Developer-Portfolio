@@ -32,19 +32,7 @@ export default function ConnectMeSection() {
                     {t('connect-me-title')}
                 </h2>
                 <ul className="w-auto footer-links flex justify-center align-center list-none items-center text-center text-3xl gap-4 p-5 rounded-lg">
-                    {links.map((link, index) => (
-                        <li key={index} className="transform scale-90 hover:scale-100 duration-200">
-                            <a
-                                href={link.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                title={link.alt}
-                                tabIndex="0"
-                            >
-                                <img className="h-12" alt={link.alt} src={link.icon} />
-                            </a>
-                        </li>
-                    ))}
+                    {links.map((link, index) => <ImageReference key={index} {...link} />)}
                 </ul>
                 <p className="w-full">
                     &copy; {t('copyright-text')}
@@ -53,3 +41,17 @@ export default function ConnectMeSection() {
         </section>
     );
 }
+
+const ImageReference = ({ key, alt, href, icon }) => (
+    <li key={key} className="transform scale-90 hover:scale-100 duration-200">
+        <a
+            title={alt}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex="0"
+        >
+            <img className="h-12" alt={alt} src={icon} />
+        </a>
+    </li>
+);
