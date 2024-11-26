@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import React, { useState, useCallback } from 'react';
 import { EducationBoxProps, PopupProps, SkillBoxProps, ContainerSkillProps } from 'types/props';
 import {
     sqlImage,

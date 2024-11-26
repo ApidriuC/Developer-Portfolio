@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ImageReferenceProps } from 'types/props';
 import { gitHubImage, linkedImage, messageMeImage } from '../../assets';
+import React from 'react';
 
 const links: ImageReferenceProps[] = [
     {
@@ -40,16 +41,18 @@ export default function ConnectMeSection() {
     );
 }
 
-const ImageReference: React.FC<ImageReferenceProps> = ({ key, alt, href, icon }) => (
-    <li key={key} className="transform scale-90 hover:scale-100 duration-200">
-        <a
-            title={alt}
-            href={href}
-            tabIndex={0}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img className="h-12" alt={alt} src={icon} />
-        </a>
-    </li>
-);
+const ImageReference = React.memo(({ key, alt, href, icon }: ImageReferenceProps) => {
+    return (
+        <li key={key} className="transform scale-90 hover:scale-100 duration-200">
+            <a
+                title={alt}
+                href={href}
+                tabIndex={0}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img className="h-12" alt={alt} src={icon} />
+            </a>
+        </li>
+    );
+});
