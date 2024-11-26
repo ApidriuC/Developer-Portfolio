@@ -1,21 +1,19 @@
 import { useTranslation } from 'react-i18next';
+import { ImageReferenceProps } from 'types/props';
 import { gitHubImage, linkedImage, messageMeImage } from '../../assets';
 
-const links = [
+const links: ImageReferenceProps[] = [
     {
-        title: "GitHub",
         icon: gitHubImage,
         alt: "Go to Andrés GitHub",
         href: "https://github.com/ApidriuC"
     },
     {
-        title: "LinkedIn",
         icon: linkedImage,
         alt: "Connect with Andrés on LinkedIn",
         href: "https://www.linkedin.com/in/andr%C3%A9s-felipe-londo%C3%B1o-campos-b03741222/"
     },
     {
-        title: "Email",
         icon: messageMeImage,
         alt: "Send Andrés an email",
         href: "mailto:andresfloncam@gmail.com"
@@ -42,14 +40,14 @@ export default function ConnectMeSection() {
     );
 }
 
-const ImageReference = ({ key, alt, href, icon }) => (
+const ImageReference: React.FC<ImageReferenceProps> = ({ key, alt, href, icon }) => (
     <li key={key} className="transform scale-90 hover:scale-100 duration-200">
         <a
             title={alt}
             href={href}
+            tabIndex={0}
             target="_blank"
             rel="noopener noreferrer"
-            tabIndex="0"
         >
             <img className="h-12" alt={alt} src={icon} />
         </a>
