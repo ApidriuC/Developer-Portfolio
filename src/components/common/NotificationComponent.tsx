@@ -1,15 +1,28 @@
 import ReactDOM from 'react-dom';
+import { NotificationProviderProps, Notification } from 'types/props';
 import React, { createContext, useContext, useState, useRef } from 'react';
 
-const NotificationContext = createContext();
+interface NotificationContextProps {
+    showNotification: (message: string, duration?: number) => void;
+}
 
-export const useNotification = () => useContext(NotificationContext);
+const NotificationContext = createContext<NotificationContextProps | null>(null);
 
-export const NotificationProvider = ({ children }) => {
-    const timeoutRef = useRef(null);
-    const [notification, setNotification] = useState(null);
+export const useNotification = (): NotificationContextProps => {
+    const currentContext = useContext(NotificationContext);
 
-    const showNotification = (message, duration = 2000) => {
+    if (!currentContext) {
+        throw new Error('Error: useNotification debe ser usado dentro de un NotificationProvider');
+    }
+
+    return currentContext;
+}
+
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+    const timeoutRef = useRef<number | null>(null);
+    const [notification, setNotification] = useState<Notification | null>(null);
+
+    const showNotification = (message: string, duration: number = 2000) => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
