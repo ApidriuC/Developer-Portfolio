@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { CardProps } from 'types/props';
 import {
     htmlImage,
     javaImage,
@@ -22,14 +23,21 @@ import {
 export default function ProjectsSection() {
     const { t } = useTranslation();
 
-    const projects = [
+    const projects: CardProps[] = [
         {
             width: 70,
             height: 40,
             title: 'EDESK PRISMA',
             link: 'https://edeskprisma.syc.com.co/NoClient.html',
             image: edeskPrismaImage,
-            tags: [cSharpImage, netFrameworkImage, javascriptImage, htmlImage, styleSheetImage, boostrapImage]
+            tags: [
+                { image: cSharpImage, alt: 'C#' },
+                { image: netFrameworkImage, alt: '.NET Framework' },
+                { image: javascriptImage, alt: 'JavaScript' },
+                { image: htmlImage, alt: 'HTML' },
+                { image: styleSheetImage, alt: 'CSS' },
+                { image: boostrapImage, alt: 'Bootstrap' }
+            ]
         },
         {
             width: 50,
@@ -37,7 +45,13 @@ export default function ProjectsSection() {
             title: 'Stream For Labs',
             link: 'https://github.com/IngDeiver/streams-for-labs-web-client',
             image: streamLabsImage,
-            tags: [nodeJsImage, reactImage, javascriptImage, tailwindcssImage, boostrapImage]
+            tags: [
+                { image: nodeJsImage, alt: 'Node.js' },
+                { image: reactImage, alt: 'React' },
+                { image: javascriptImage, alt: 'JavaScript' },
+                { image: tailwindcssImage, alt: 'Tailwind CSS' },
+                { image: boostrapImage, alt: 'Bootstrap' }
+            ]
         },
         {
             width: 70,
@@ -45,15 +59,24 @@ export default function ProjectsSection() {
             title: 'DDA Bookings',
             link: 'https://github.com/ApidriuC/DDA-BOOKINGS-Dispositivos-Moviles',
             image: bookingsImage,
-            tags: [reactImage, javascriptImage]
+            tags: [
+                { image: reactImage, alt: 'React' },
+                { image: javascriptImage, alt: 'JavaScript' }
+            ]
         },
         {
             width: 80,
             height: 45,
             title: 'Dispensador - Casa Libro Total',
-            link: '',
             image: dispensadorImage,
-            tags: [cSharpImage, netFrameworkImage, javascriptImage, htmlImage, styleSheetImage, boostrapImage]
+            tags: [
+                { image: cSharpImage, alt: 'C#' },
+                { image: netFrameworkImage, alt: '.NET Framework' },
+                { image: javascriptImage, alt: 'JavaScript' },
+                { image: htmlImage, alt: 'HTML' },
+                { image: styleSheetImage, alt: 'CSS' },
+                { image: boostrapImage, alt: 'Bootstrap' }
+            ]
         },
         {
             width: 50,
@@ -61,7 +84,7 @@ export default function ProjectsSection() {
             title: t('bingo-project-label'),
             link: 'https://github.com/ApidriuC/Bingo_Alcaldia_Risaralda',
             image: bingoImage,
-            tags: [javaImage]
+            tags: [{ image: javaImage, alt: 'Java' }]
         },
         {
             width: 75,
@@ -69,7 +92,7 @@ export default function ProjectsSection() {
             title: 'Fox Game',
             link: 'https://github.com/ApidriuC/FoxGame---Construct3',
             image: foxGameImage,
-            tags: [construct3Image]
+            tags: [{ image: construct3Image, alt: 'Construct 3' }]
         }
     ];
 
@@ -95,12 +118,11 @@ export default function ProjectsSection() {
     );
 }
 
-const Cards = ({ title, width, height, link, image, tags }) => (
+const Cards: React.FC<CardProps> = ({ title, width, height, link, image, tags }) => (
     <article
         style={{ width: `${width}vh`, height: `${height}vh` }}
-        className={`relative xs:w-[40vh] xs:h-[30vh] rounded-lg hover:rounded-3xl overflow-hidden duration-[350ms] transition-all ease-expo group shadow-2xl`}
-    >
-        <a className='block w-full h-full z-10' href={link} target='_blank' rel='noreferrer'>
+        className={`relative xs:w-[40vh] xs:h-[30vh] rounded-lg hover:rounded-3xl overflow-hidden duration-[350ms] transition-all ease-expo group shadow-2xl`}>
+        <a className='block w-full h-full z-10' href={link || '#'} target='_blank' rel='noreferrer'>
             <div className='relative w-full h-full'>
                 <img
                     className='w-full h-full object-contain object-center scale-90 duration-[350ms] transition-all ease-expo group-hover:scale-95'
@@ -111,10 +133,9 @@ const Cards = ({ title, width, height, link, image, tags }) => (
 
             {/* Etiquetas */}
             <div className='overlay cursor-pointer absolute p-4 flex justify-start items-baseline content-end flex-wrap 
-                xs:opacity-100 md:opacity-0 group-hover:opacity-100 h-full w-full top-0 left-0 gap-3'
-            >
+                xs:opacity-100 md:opacity-0 group-hover:opacity-100 h-full w-full top-0 left-0 gap-3'>
                 <h2 className='text-white w-full text-left text-4xl md:text-4xl xs:text-2xl'>{title}</h2>
-                {tags.map((tag, index) => (<img key={index} className='object-center h-7' src={tag} alt={`tag_${index}`} />))}
+                {tags.map((tag, index) => <img key={index} src={tag.image} alt={tag.alt} className='object-center h-7' />)}
             </div>
         </a>
     </article>
