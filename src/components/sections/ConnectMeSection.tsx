@@ -5,16 +5,19 @@ import React from 'react';
 
 const links: ImageReferenceProps[] = [
     {
+        id: 0,
         icon: gitHubImage,
         alt: "Go to Andrés GitHub",
         href: "https://github.com/ApidriuC"
     },
     {
+        id: 1,
         icon: linkedImage,
         alt: "Connect with Andrés on LinkedIn",
         href: "https://www.linkedin.com/in/andr%C3%A9s-felipe-londo%C3%B1o-campos-b03741222/"
     },
     {
+        id: 2,
         icon: messageMeImage,
         alt: "Send Andrés an email",
         href: "mailto:andresfloncam@gmail.com"
@@ -41,9 +44,9 @@ export default function ConnectMeSection() {
     );
 }
 
-const ImageReference = React.memo(({ key, alt, href, icon }: ImageReferenceProps) => {
+const ImageReference = React.memo(({ id, alt, href, icon }: ImageReferenceProps) => {
     return (
-        <li key={key} className="transform scale-90 hover:scale-100 duration-200">
+        <li key={id} className="transform scale-90 hover:scale-100 duration-200">
             <a
                 title={alt}
                 href={href}

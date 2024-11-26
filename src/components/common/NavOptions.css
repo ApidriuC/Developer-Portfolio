@@ -70,6 +70,16 @@ body.dark-theme .navBar-bg {
     display: block;
 }
 
+@media (max-width: 499px) {
+    .navBar-float .option-navBar:hover {
+        transform: none;
+    }
+
+    .navBar-float .option-navBar:hover .option {
+        display: none;
+    }
+}
+
 .navBar-float .option-navBar .theme-icon {
     background-image: url('/src/assets/light-theme.svg');
     background-repeat: no-repeat;
