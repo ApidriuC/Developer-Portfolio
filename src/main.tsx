@@ -3,7 +3,7 @@ import './styles/main.css'
 import './styles/tailwindInput.css'
 import './styles/tailwindOutput.css'
 
-import App from './App.jsx'
+import App from './App'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
