@@ -16,7 +16,7 @@ export interface BaseProps {
 }
 
 export interface ImageReferenceProps {
-    key?: number,
+    id: number,
     alt: string,
     href: string,
     icon: string
