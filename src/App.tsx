@@ -12,7 +12,7 @@ import {
     NotificationProvider
 } from './components';
 
-function App() {
+export default function App() {
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
@@ -24,17 +24,21 @@ function App() {
         <>
             <NotificationProvider>
                 <main className='w-full h-full'>
+                    {/* Portada */}
                     <BgAnimation />
                     <NavOptions />
                     <HelloSection />
                     <Border />
 
+                    {/* Sobre mí */}
                     <AboutMeSection />
                     <Border />
 
+                    {/* Conocimientos */}
                     <SkillsSection />
                     <Border />
 
+                    {/* Proyectos */}
                     <ProjectsSection />
                 </main>
                 <footer className='w-full'>
@@ -44,5 +48,3 @@ function App() {
         </>
     );
 }
-
-export default App;
