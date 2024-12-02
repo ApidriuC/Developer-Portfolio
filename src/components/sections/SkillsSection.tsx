@@ -96,7 +96,7 @@ export default function SkillsSection() {
     );
 }
 
-const EducationBox: React.FC<EducationBoxProps> = ({ label, value, year, description }) => {
+const EducationBox = ({ label, value, year, description }: EducationBoxProps) => {
     const { t } = useTranslation();
     const [showPopup, setShowPopup] = useState(false);
     const [shouldRenderPopup, setShouldRenderPopup] = useState(false);
@@ -134,17 +134,19 @@ const EducationBox: React.FC<EducationBoxProps> = ({ label, value, year, descrip
     );
 }
 
-const Popup: React.FC<PopupProps> = ({ isVisible, title, textContent }) => (
-    <div
-        className={`popup absolute md:top-1/2 md:right-[-575px] transform md:-translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-[999] transition-opacity duration-300 ease-in-out 
-            xs:hidden md:block ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-    >
-        <h3 className='font-bold text-white'>{title}</h3>
-        <p className='text-sm text-justify'>{textContent}</p>
-        <div className='com-circule first-circule absolute shadow-lg' />
-        <div className='com-circule second-circule absolute shadow-lg' />
-    </div>
-);
+const Popup = ({ isVisible, title, textContent }: PopupProps) => {
+    return (
+        <div
+            className={`popup absolute md:top-1/2 md:right-[-575px] transform md:-translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-[999] transition-opacity duration-300 ease-in-out 
+        xs:hidden md:block ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
+            <h3 className='font-bold text-white'>{title}</h3>
+            <p className='text-sm text-justify'>{textContent}</p>
+            <div className='com-circule first-circule absolute shadow-lg' />
+            <div className='com-circule second-circule absolute shadow-lg' />
+        </div>
+    );
+};
 
 const ContainerSkill = React.memo(({ label, skills }: ContainerSkillProps) => {
     return (

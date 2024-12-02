@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { CardProps } from 'types/props';
 import {
@@ -118,25 +119,27 @@ export default function ProjectsSection() {
     );
 }
 
-const Cards: React.FC<CardProps> = ({ title, width, height, link, image, tags }) => (
-    <article
-        style={{ width: `${width}vh`, height: `${height}vh` }}
-        className={`relative xs:w-[40vh] xs:h-[30vh] rounded-lg hover:rounded-3xl overflow-hidden duration-[350ms] transition-all ease-expo group shadow-2xl`}>
-        <a className='block w-full h-full z-10' href={link || '#'} target='_blank' rel='noreferrer'>
-            <div className='relative w-full h-full'>
-                <img
-                    className='w-full h-full object-contain object-center scale-90 duration-[350ms] transition-all ease-expo group-hover:scale-95'
-                    src={image}
-                    alt={`${title}_img`}
-                />
-            </div>
+const Cards = React.memo(({ title, width, height, link, image, tags }: CardProps) => {
+    return (
+        <article
+            style={{ width: `${width}vh`, height: `${height}vh` }}
+            className={`relative xs:w-[40vh] xs:h-[30vh] rounded-lg hover:rounded-3xl overflow-hidden duration-[350ms] transition-all ease-expo group shadow-2xl`}>
+            <a className='block w-full h-full z-10' href={link || '#'} target='_blank' rel='noreferrer'>
+                <div className='relative w-full h-full'>
+                    <img
+                        className='w-full h-full object-contain object-center scale-90 duration-[350ms] transition-all ease-expo group-hover:scale-95'
+                        src={image}
+                        alt={`${title}_img`}
+                    />
+                </div>
 
-            {/* Etiquetas */}
-            <div className='overlay cursor-pointer absolute p-4 flex justify-start items-baseline content-end flex-wrap 
+                {/* Etiquetas */}
+                <div className='overlay cursor-pointer absolute p-4 flex justify-start items-baseline content-end flex-wrap 
                 xs:opacity-100 md:opacity-0 group-hover:opacity-100 h-full w-full top-0 left-0 gap-3'>
-                <h2 className='text-white w-full text-left text-4xl md:text-4xl xs:text-2xl'>{title}</h2>
-                {tags.map((tag, index) => <img key={index} src={tag.image} alt={tag.alt} className='object-center h-7' />)}
-            </div>
-        </a>
-    </article>
-);
+                    <h2 className='text-white w-full text-left text-4xl md:text-4xl xs:text-2xl'>{title}</h2>
+                    {tags.map((tag, index) => <img key={index} src={tag.image} alt={tag.alt} className='object-center h-7' />)}
+                </div>
+            </a>
+        </article>
+    );
+});
