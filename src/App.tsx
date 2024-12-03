@@ -12,7 +12,7 @@ import {
     NotificationProvider
 } from './components';
 
-export default function App() {
+export const App = () => {
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
@@ -22,10 +22,10 @@ export default function App() {
 
     return (
         <>
+            <BgAnimation />
             <NotificationProvider>
-                <main className='w-full h-full'>
+                <main className='w-full h-full overflow-auto'>
                     {/* Portada */}
-                    <BgAnimation />
                     <NavOptions />
                     <HelloSection />
                     <Border />
@@ -40,10 +40,10 @@ export default function App() {
 
                     {/* Proyectos */}
                     <ProjectsSection />
-                </main>
-                <footer className='w-full'>
+
+                    {/* Conecta conmigo */}
                     <ConnectMeSection />
-                </footer>
+                </main>
             </NotificationProvider>
         </>
     );

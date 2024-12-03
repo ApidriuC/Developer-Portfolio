@@ -5,6 +5,14 @@
     --size-text-big: 4rem;
     --size-text-small: 1rem;
     --size-text-default: 1.5rem;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -17,18 +25,18 @@ body.dark-theme {
     background-color: black;
 }
 
-body::-webkit-scrollbar-thumb {
+body *::-webkit-scrollbar-thumb {
     border-radius: 10px;
     height: 20px;
     background-color: gray;
 }
 
-body::-webkit-scrollbar-track {
+body *::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
     border-radius: 10px;
 }
 
-body::-webkit-scrollbar {
+body *::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
@@ -265,6 +273,50 @@ body.dark-theme #contact-me p {
     background-color: rgb(31 36 33);
 }
 
+.form_container {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ffffff36;
+}
+
+.form_container .form_footer button {
+    border-radius: 30px;
+    background-color: #f5f5dc;
+    border: 1px solid #a67d9d;
+    transition: all .3s ease;
+}
+
+.form_container .form_footer button:hover {
+    transform: translate(2px, -2px);
+}
+
+.form_container .image_experience {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 7px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+.form_container .text_side h2 {
+    color: #ff4081 !important;
+}
+
+body.dark-theme .form_container {
+    background-color: hsl(0deg 0% 9% / 82%);
+}
+
+body.dark-theme .form_container .form_footer button {
+    background-color: #e0f7fa;
+    border-color: #b2dfdb;
+    color: #333333 !important;
+}
+
+body.dark-theme .form_container .text_side h2 {
+    color: #ca00ff !important;
+}
+
 @media (max-width: 768px) {
     :root {
         --size-text-big: 2.8rem;
@@ -281,4 +333,63 @@ body.dark-theme #contact-me p {
     #intro .description-intro {
         padding: 5px;
     }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.animate__animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn
+}
+
+.animate__fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut
 }
