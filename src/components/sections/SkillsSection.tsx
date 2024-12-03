@@ -1,6 +1,7 @@
+import { Form } from '../common';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useCallback } from 'react';
-import { EducationBoxProps, PopupProps, SkillBoxProps, ContainerSkillProps } from 'types/props';
+import { EducationBoxProps, PopupProps, SkillBoxProps, ContainerSkillProps, FormProps } from 'types/props';
 import {
     sqlImage,
     gitImage,
@@ -17,7 +18,11 @@ import {
     javascriptImage,
     styleSheetImage,
     typeScriptImage,
-    tailwindcssImage
+    tailwindcssImage,
+    SupVeracode,
+    SupMintic,
+    SupCongresoIng,
+    SupActaGrado
 } from '../../assets';
 
 const containersSkills: ContainerSkillProps[] = [
@@ -62,11 +67,11 @@ const containersSkills: ContainerSkillProps[] = [
 export const SkillsSection = () => {
     const { t } = useTranslation();
 
-    const educationOptns = [
-        { year: '2023', label: t('education-title-1'), value: t('education-place-1'), description: t('education-details-1') },
-        { year: '2023', label: t('education-title-2'), value: t('education-place-2'), description: t('education-details-2') },
-        { year: '2022', label: t('education-title-3'), value: t('education-place-3'), description: t('education-details-3') },
-        { year: '2021', label: t('education-title-4'), value: t('education-place-4'), description: t('education-details-4') }
+    const educationOptns: EducationBoxProps[] = [
+        { year: '2023', label: t('education-title-1'), value: t('education-place-1'), description: t('education-details-1'), support: SupActaGrado },
+        { year: '2023', label: t('education-title-2'), value: t('education-place-2'), description: t('education-details-2'), support: SupVeracode },
+        { year: '2022', label: t('education-title-3'), value: t('education-place-3'), description: t('education-details-3'), support: SupMintic },
+        { year: '2021', label: t('education-title-4'), value: t('education-place-4'), description: t('education-details-4'), support: SupCongresoIng }
     ];
 
     return (
@@ -96,27 +101,15 @@ export const SkillsSection = () => {
     );
 }
 
-const EducationBox = ({ label, value, year, description }: EducationBoxProps) => {
-    const { t } = useTranslation();
-    const [showPopup, setShowPopup] = useState(false);
-    const [shouldRenderPopup, setShouldRenderPopup] = useState(false);
-
-    const onMouseEnterHandler = useCallback(() => {
-        setShouldRenderPopup(true);
-        setShowPopup(true);
-    }, []);
-
-    const onMouseLeaveHandler = useCallback(() => {
-        setShowPopup(false);
-        setTimeout(() => setShouldRenderPopup(false), 300);
-    }, []);
+const EducationBox = ({ year, label, value, description, support }: EducationBoxProps) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const toggleFormVisibility = useCallback(() => setIsVisible(!isVisible), [isVisible]);
 
     return (
         <div
             className='box-education relative z-[1] p-4 rounded-lg border w-full h-[150px] max-w-[500px] xs:max-w-none xs:h-[120px] md:h-[150px] 
                 flex justify-center items-center content-center flex-wrap shadow-lg'
-            onMouseEnter={onMouseEnterHandler}
-            onMouseLeave={onMouseLeaveHandler}
+            onClick={toggleFormVisibility}
         >
             <div className='label-rectangle absolute top-[10px] left-[-30px] text-white font-bold xs:text-xs'>
                 {year}
@@ -128,25 +121,27 @@ const EducationBox = ({ label, value, year, description }: EducationBoxProps) =>
                 {value}
             </span>
 
-            {/* Renderizar el Popup si es necesario */}
-            {shouldRenderPopup && <Popup isVisible={showPopup} textContent={description} title={t('education-details-title')} />}
+            {/* Renderizar modal */}
+            {isVisible && (
+                <Form
+                    className='form_education'
+                    onClose={toggleFormVisibility}
+                >
+                    <div className='text_side text-center w-full grid place-items-center p-4'>
+                        <h2 className='text-4xl'>{label}</h2>
+                        <h6 className='italic'>{value}</h6>
+                    </div>
+                    <p className='text-justify'>
+                        {description}
+                    </p>
+                    <div className='flex justify-center items-center pt-2'>
+                        <img alt={`image_${label}`} src={support} className='image_experience md:h-[45vh] xs:h-auto' />
+                    </div>
+                </Form>
+            )}
         </div>
     );
 }
-
-const Popup = ({ isVisible, title, textContent }: PopupProps) => {
-    return (
-        <div
-            className={`popup absolute md:top-1/2 md:right-[-575px] transform md:-translate-y-1/2 w-[500px] p-4 shadow-2xl rounded-lg z-[999] transition-opacity duration-300 ease-in-out 
-        xs:hidden md:block ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-        >
-            <h3 className='font-bold text-white'>{title}</h3>
-            <p className='text-sm text-justify'>{textContent}</p>
-            <div className='com-circule first-circule absolute shadow-lg' />
-            <div className='com-circule second-circule absolute shadow-lg' />
-        </div>
-    );
-};
 
 const ContainerSkill = React.memo(({ label, skills }: ContainerSkillProps) => {
     return (

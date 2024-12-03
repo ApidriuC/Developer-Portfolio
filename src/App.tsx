@@ -22,10 +22,10 @@ export const App = () => {
 
     return (
         <>
+            <BgAnimation />
             <NotificationProvider>
-                <main className='w-full h-full'>
+                <main className='w-full h-full overflow-auto'>
                     {/* Portada */}
-                    <BgAnimation />
                     <NavOptions />
                     <HelloSection />
                     <Border />
@@ -40,10 +40,10 @@ export const App = () => {
 
                     {/* Proyectos */}
                     <ProjectsSection />
-                </main>
-                <footer className='w-full'>
+
+                    {/* Conecta conmigo */}
                     <ConnectMeSection />
-                </footer>
+                </main>
             </NotificationProvider>
         </>
     );

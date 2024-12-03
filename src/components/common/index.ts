@@ -1,3 +1,4 @@
+export { Form } from './Form';
 export { Border } from './Border';
 export { NavOptions } from './NavOptions';
 export { BgAnimation } from './BgAnimation';
