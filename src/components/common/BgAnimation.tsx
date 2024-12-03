@@ -1,6 +1,6 @@
 import './BgAnimation.css';
 
-export default function BgAnimation() {
+export const BgAnimation = () => {
     return (
         <div className="bg-animation">
             <div id="stars"></div>

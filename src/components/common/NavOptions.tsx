@@ -10,7 +10,7 @@ const goToScroll = (id: string, position: ScrollLogicalPosition = 'center') => {
     if (section) section.scrollIntoView({ block: position, behavior: 'smooth' });
 }
 
-export default function NavOptions() {
+export const NavOptions = () => {
     const { t, i18n } = useTranslation();
     const { showNotification } = useNotification();
 

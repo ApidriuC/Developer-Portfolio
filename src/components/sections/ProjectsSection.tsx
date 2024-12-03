@@ -21,7 +21,7 @@ import {
     netFrameworkImage
 } from '../../assets';
 
-export default function ProjectsSection() {
+export const ProjectsSection = () => {
     const { t } = useTranslation();
 
     const projects: CardProps[] = [
