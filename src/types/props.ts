@@ -16,7 +16,7 @@ export interface BaseProps {
 }
 
 export interface ImageReferenceProps {
-    key?: number,
+    id: number,
     alt: string,
     href: string,
     icon: string
@@ -55,5 +55,12 @@ export interface PopupProps {
 
 export interface EducationBoxProps extends BaseProps {
     year: string,
-    description: string
+    description: string,
+    support: string
+}
+
+export interface FormProps {
+    className?: string,
+    children: ReactNode,
+    onClose: () => void
 }

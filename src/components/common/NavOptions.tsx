@@ -1,4 +1,5 @@
 import './NavOptions.css';
+import { useCallback } from 'react';
 import { BaseProps } from 'types/props';
 import { Language } from 'types/general';
 import { useNotification } from '../common';
@@ -9,7 +10,7 @@ const goToScroll = (id: string, position: ScrollLogicalPosition = 'center') => {
     if (section) section.scrollIntoView({ block: position, behavior: 'smooth' });
 }
 
-export default function NavOptions() {
+export const NavOptions = () => {
     const { t, i18n } = useTranslation();
     const { showNotification } = useNotification();
 
@@ -19,10 +20,10 @@ export default function NavOptions() {
         showNotification(t('notification-lng-change'));
     };
 
-    const changeTheme = () => {
+    const changeTheme = useCallback(() => {
         document.body.classList.toggle('dark-theme');
         showNotification(t('notification-theme-change'));
-    }
+    }, [i18n.language]);
 
     const options: BaseProps[] = [
         { className: 'icon-character', label: t('option-home-label'), action: () => goToScroll('intro') },
@@ -44,7 +45,7 @@ export default function NavOptions() {
     );
 }
 
-const OptionControl: React.FC<BaseProps> = ({ label, value, className, action }) => (
+const OptionControl = ({ label, value, className, action }: BaseProps) => (
     <div className='option-navBar'>
         <label className='option md:text-base xs:text-xs'>
             {label}

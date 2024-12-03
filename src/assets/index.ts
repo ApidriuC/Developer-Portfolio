@@ -26,3 +26,7 @@ export { default as gitHubImage } from '../assets/github-icon.svg';
 export { default as linkedImage } from '../assets/linkedln-icon.svg';
 export { default as messageMeImage } from '../assets/message-me-icon.svg';
 export { default as MeImage } from '../assets/me-image-profile.jpeg';
+export { default as SupVeracode } from '../assets/support_veracode.jpg';
+export { default as SupMintic } from '../assets/support_mintic_uis.jpg';
+export { default as SupCongresoIng } from '../assets/support_congreso_ing.jpg';
+export { default as SupActaGrado } from '../assets/support_acta_grado.jpg';
