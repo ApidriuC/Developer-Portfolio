@@ -19,8 +19,8 @@ export default {
       },
       animation: {
         alertSlideIn: 'alertSlideIn 1s ease-out'
-      },
-    },
-  },
+      }
+    }
+  }
 }
 

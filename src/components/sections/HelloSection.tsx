@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-export default function HelloSection() {
+export const HelloSection = () => {
     const { t } = useTranslation();
 
     return (

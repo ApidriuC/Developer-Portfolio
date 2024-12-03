@@ -1,5 +1,5 @@
-export { default as HelloSection } from './HelloSection';
-export { default as SkillsSection } from './SkillsSection';
-export { default as AboutMeSection } from './AboutMeSection';
-export { default as ProjectsSection } from './ProjectsSection';
-export { default as ConnectMeSection } from './ConnectMeSection';
+export { HelloSection } from './HelloSection';
+export { SkillsSection } from './SkillsSection';
+export { AboutMeSection } from './AboutMeSection';
+export { ProjectsSection } from './ProjectsSection';
+export { ConnectMeSection } from './ConnectMeSection';
