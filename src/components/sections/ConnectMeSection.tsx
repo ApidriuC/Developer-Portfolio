@@ -24,7 +24,7 @@ const links: ImageReferenceProps[] = [
     }
 ];
 
-export default function ConnectMeSection() {
+export const ConnectMeSection = () => {
     const { t } = useTranslation();
 
     return (

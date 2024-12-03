@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { MeImage } from '../../assets';
 
-export default function AboutMeSection() {
+export const AboutMeSection = () => {
     const { t } = useTranslation();
 
     return (

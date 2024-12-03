@@ -59,7 +59,7 @@ const containersSkills: ContainerSkillProps[] = [
     }
 ];
 
-export default function SkillsSection() {
+export const SkillsSection = () => {
     const { t } = useTranslation();
 
     const educationOptns = [
