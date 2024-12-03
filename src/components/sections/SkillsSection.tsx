@@ -1,7 +1,7 @@
 import { Form } from '../common';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useCallback } from 'react';
-import { EducationBoxProps, PopupProps, SkillBoxProps, ContainerSkillProps, FormProps } from 'types/props';
+import { EducationBoxProps, SkillBoxProps, ContainerSkillProps } from 'types/props';
 import {
     sqlImage,
     gitImage,

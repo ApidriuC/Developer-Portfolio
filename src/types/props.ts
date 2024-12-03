@@ -47,12 +47,6 @@ export interface ContainerSkillProps {
     skills: SkillBoxProps[]
 }
 
-export interface PopupProps {
-    isVisible: boolean,
-    title: string,
-    textContent: string
-}
-
 export interface EducationBoxProps extends BaseProps {
     year: string,
     description: string,
