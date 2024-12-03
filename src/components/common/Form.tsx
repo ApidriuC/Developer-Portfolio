@@ -19,14 +19,14 @@ export const Form: React.FC<FormProps> = ({ className, children, onClose }) => {
                     onClick={e => hideForm(e)}
                 >
                     <div
-                        className={`${className} form_container absolute top-2/4 left-2/4 transform translate-x-[-50%] translate-y-[-50%] lg:h-[80%] lg:w-2/3 xs:w-[90%] xs:h-[95%] p-2 shadow-2xl`}
+                        className={`${className} form_container absolute top-2/4 left-2/4 transform translate-x-[-50%] translate-y-[-50%] lg:h-[80%] lg:w-2/3 xs:w-[90%] p-2 shadow-2xl`}
                         onClick={e => e.stopPropagation()}>
-                        <div className='form_body h-[calc(100%-4rem)] w-full pl-8 pr-8 pt-4 pb-4 overflow-auto'>
+                        <div className='form_body h-[calc(100%-4rem)] w-full md:pl-8 md:pr-8 pt-4 pb-4 xs:p-2 overflow-auto'>
                             {children}
                         </div>
                         <div className='form_footer h-16 grid place-items-center'>
                             <button
-                                className='h-10 w-auto'
+                                className='h-10 w-auto xs:py-2 xs:px-12'
                                 onClick={e => hideForm(e)}
                             >
                                 Cerrar
