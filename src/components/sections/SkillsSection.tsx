@@ -127,11 +127,11 @@ const EducationBox = ({ year, label, value, description, support }: EducationBox
                     className='form_education'
                     onClose={toggleFormVisibility}
                 >
-                    <div className='text_side text-center w-full grid place-items-center p-4'>
-                        <h2 className='text-4xl'>{label}</h2>
-                        <h6 className='italic'>{value}</h6>
+                    <div className='text_side text-center w-full grid place-items-center md:p-4 xs:p-0'>
+                        <h2 className='md:text-4xl xs:text-xl'>{label}</h2>
+                        <h6 className='italic md:text-lg xs:text-sm'>{value}</h6>
                     </div>
-                    <p className='text-justify'>
+                    <p className='text-justify md:text-base xs:text-xs xs:p-2'>
                         {description}
                     </p>
                     <div className='flex justify-center items-center pt-2'>

@@ -281,7 +281,6 @@ body.dark-theme #contact-me p {
 
 .form_container .form_footer button {
     border-radius: 30px;
-    padding: 5px 55px;
     background-color: #f5f5dc;
     border: 1px solid #a67d9d;
     transition: all .3s ease;
