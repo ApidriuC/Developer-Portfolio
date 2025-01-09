@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
+import { createContext, useContext, useState, useRef } from 'react';
 import { NotificationProviderProps, Notification } from 'types/props';
-import React, { createContext, useContext, useState, useRef } from 'react';
 
 interface NotificationContextProps {
     showNotification: (message: string, duration?: number) => void;
@@ -18,7 +18,7 @@ export const useNotification = (): NotificationContextProps => {
     return currentContext;
 }
 
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+export const NotificationProvider = ({ children }: NotificationProviderProps) => {
     const timeoutRef = useRef<number | null>(null);
     const [notification, setNotification] = useState<Notification | null>(null);
 

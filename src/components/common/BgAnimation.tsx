@@ -1,9 +1,7 @@
 import './BgAnimation.css';
 
-export const BgAnimation = () => {
-    return (
-        <div className="bg-animation">
-            <div id="stars"></div>
-        </div>
-    );
-}
+export const BgAnimation = () => (
+    <div className="bg-animation">
+        <div id="stars"></div>
+    </div>
+);
