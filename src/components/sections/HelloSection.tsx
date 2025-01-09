@@ -1,10 +1,11 @@
+import { SectionFrame } from '../common';
 import { useTranslation } from 'react-i18next';
 
 export const HelloSection = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="intro" className='w-full'>
+        <SectionFrame id='intro' className='w-full'>
             <div className="container-intro">
                 <p>{t('intro-hello')}</p>
                 <h1>
@@ -21,6 +22,6 @@ export const HelloSection = () => {
                     - Martin Goldin.
                 </p>
             </div>
-        </section>
+        </SectionFrame>
     );
 }

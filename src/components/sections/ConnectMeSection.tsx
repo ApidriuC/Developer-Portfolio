@@ -1,7 +1,8 @@
+import React from 'react';
+import { SectionFrame } from '../common';
 import { useTranslation } from 'react-i18next';
 import { ImageReferenceProps } from 'types/props';
 import { gitHubImage, linkedImage, messageMeImage } from '../../assets';
-import React from 'react';
 
 const links: ImageReferenceProps[] = [
     {
@@ -28,7 +29,7 @@ export const ConnectMeSection = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="contact-me" className="w-full h-[100vh] rounded-t-3xl">
+        <SectionFrame id="contact-me" className='w-full h-[100vh] rounded-t-3xl'>
             <div className="h-full w-full p-40 flex justify-center content-center items-center flex-wrap gap-5 xs:p-5">
                 <h2 className="w-full text-7xl font-bold md:text-5xl xs:text-4xl">
                     {t('connect-me-title')}
@@ -40,7 +41,7 @@ export const ConnectMeSection = () => {
                     &copy; {t('copyright-text')}
                 </p>
             </div>
-        </section>
+        </SectionFrame>
     );
 }
 

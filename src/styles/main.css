@@ -68,9 +68,10 @@ body.dark-theme label {
     color: var(--color-dark);
 }
 
-section {
+.section-motion {
     box-sizing: border-box;
-}
+    will-change: opacity, transform;
+  }
 
 #intro {
     width: 100%;
@@ -324,7 +325,7 @@ body.dark-theme .form_container .text_side h2 {
         --size-text-default: 1rem;
     }
 
-    section {
+    .section-motion {
         padding: 15px !important;
     }
 }
