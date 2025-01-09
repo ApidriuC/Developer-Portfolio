@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import { useState } from 'react';
 import { FormProps } from 'types/props';
 
-export const Form: React.FC<FormProps> = ({ className, children, onClose }) => {
+export const Form = ({ className, children, onClose }: FormProps) => {
     const [animation, setAnimation] = useState<string>('animate__fadeIn');
 
     const hideForm = (event: React.MouseEvent) => {
