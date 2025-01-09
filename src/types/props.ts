@@ -58,3 +58,9 @@ export interface FormProps {
     children: ReactNode,
     onClose: () => void
 }
+
+export interface SectionFrameProps {
+    id: string,
+    className?: string,
+    children: ReactNode
+}

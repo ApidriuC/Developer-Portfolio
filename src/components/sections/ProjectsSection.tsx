@@ -1,6 +1,7 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { CardProps } from 'types/props';
+import { SectionFrame } from '../common';
+import { useTranslation } from 'react-i18next';
 import {
     htmlImage,
     javaImage,
@@ -98,7 +99,7 @@ export const ProjectsSection = () => {
     ];
 
     return (
-        <section id='projects-me' className='h-auto p-20'>
+        <SectionFrame id='projects-me' className='h-auto p-20'>
             <div className='h-full w-full flex justify-center items-start flex-wrap'>
                 {/* Título */}
                 <div className='w-full mb-5'>
@@ -115,7 +116,7 @@ export const ProjectsSection = () => {
                     {projects.map((project, index) => <Cards key={index} {...project} />)}
                 </div>
             </div>
-        </section>
+        </SectionFrame>
     );
 }
 

@@ -1,5 +1,5 @@
-import { Form } from '../common';
 import { useTranslation } from 'react-i18next';
+import { Form, SectionFrame } from '../common';
 import React, { useState, useCallback } from 'react';
 import { EducationBoxProps, SkillBoxProps, ContainerSkillProps } from 'types/props';
 import {
@@ -75,7 +75,7 @@ export const SkillsSection = () => {
     ];
 
     return (
-        <section id='skills-me' className='h-auto p-20'>
+        <SectionFrame id='skills-me' className='h-auto p-20'>
             <div className='h-full w-full flex justify-center items-start flex-wrap'>
                 {/* Titulo */}
                 <div className='w-full mb-5'>
@@ -97,7 +97,7 @@ export const SkillsSection = () => {
                     {containersSkills.map((option, index) => <ContainerSkill key={index} {...option} />)}
                 </div>
             </div>
-        </section>
+        </SectionFrame>
     );
 }
 
