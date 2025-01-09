@@ -1,26 +1,8 @@
 import React from 'react';
+import * as assets from '../../assets';
 import { CardProps } from 'types/props';
 import { SectionFrame } from '../common';
 import { useTranslation } from 'react-i18next';
-import {
-    htmlImage,
-    javaImage,
-    bingoImage,
-    reactImage,
-    nodeJsImage,
-    cSharpImage,
-    foxGameImage,
-    boostrapImage,
-    bookingsImage,
-    construct3Image,
-    streamLabsImage,
-    javascriptImage,
-    styleSheetImage,
-    edeskPrismaImage,
-    tailwindcssImage,
-    dispensadorImage,
-    netFrameworkImage
-} from '../../assets';
 
 export const ProjectsSection = () => {
     const { t } = useTranslation();
@@ -31,14 +13,14 @@ export const ProjectsSection = () => {
             height: 40,
             title: 'EDESK PRISMA',
             link: 'https://edeskprisma.syc.com.co/NoClient.html',
-            image: edeskPrismaImage,
+            image: assets.edeskPrismaImage,
             tags: [
-                { image: cSharpImage, alt: 'C#' },
-                { image: netFrameworkImage, alt: '.NET Framework' },
-                { image: javascriptImage, alt: 'JavaScript' },
-                { image: htmlImage, alt: 'HTML' },
-                { image: styleSheetImage, alt: 'CSS' },
-                { image: boostrapImage, alt: 'Bootstrap' }
+                { image: assets.cSharpImage, alt: 'C#' },
+                { image: assets.netFrameworkImage, alt: '.NET Framework' },
+                { image: assets.javascriptImage, alt: 'JavaScript' },
+                { image: assets.htmlImage, alt: 'HTML' },
+                { image: assets.styleSheetImage, alt: 'CSS' },
+                { image: assets.boostrapImage, alt: 'Bootstrap' }
             ]
         },
         {
@@ -46,13 +28,13 @@ export const ProjectsSection = () => {
             height: 55,
             title: 'Stream For Labs',
             link: 'https://github.com/IngDeiver/streams-for-labs-web-client',
-            image: streamLabsImage,
+            image: assets.streamLabsImage,
             tags: [
-                { image: nodeJsImage, alt: 'Node.js' },
-                { image: reactImage, alt: 'React' },
-                { image: javascriptImage, alt: 'JavaScript' },
-                { image: tailwindcssImage, alt: 'Tailwind CSS' },
-                { image: boostrapImage, alt: 'Bootstrap' }
+                { image: assets.nodeJsImage, alt: 'Node.js' },
+                { image: assets.reactImage, alt: 'React' },
+                { image: assets.javascriptImage, alt: 'JavaScript' },
+                { image: assets.tailwindcssImage, alt: 'Tailwind CSS' },
+                { image: assets.boostrapImage, alt: 'Bootstrap' }
             ]
         },
         {
@@ -60,24 +42,24 @@ export const ProjectsSection = () => {
             height: 55,
             title: 'DDA Bookings',
             link: 'https://github.com/ApidriuC/DDA-BOOKINGS-Dispositivos-Moviles',
-            image: bookingsImage,
+            image: assets.bookingsImage,
             tags: [
-                { image: reactImage, alt: 'React' },
-                { image: javascriptImage, alt: 'JavaScript' }
+                { image: assets.reactImage, alt: 'React' },
+                { image: assets.javascriptImage, alt: 'JavaScript' }
             ]
         },
         {
             width: 80,
             height: 45,
             title: 'Dispensador - Casa Libro Total',
-            image: dispensadorImage,
+            image: assets.dispensadorImage,
             tags: [
-                { image: cSharpImage, alt: 'C#' },
-                { image: netFrameworkImage, alt: '.NET Framework' },
-                { image: javascriptImage, alt: 'JavaScript' },
-                { image: htmlImage, alt: 'HTML' },
-                { image: styleSheetImage, alt: 'CSS' },
-                { image: boostrapImage, alt: 'Bootstrap' }
+                { image: assets.cSharpImage, alt: 'C#' },
+                { image: assets.netFrameworkImage, alt: '.NET Framework' },
+                { image: assets.javascriptImage, alt: 'JavaScript' },
+                { image: assets.htmlImage, alt: 'HTML' },
+                { image: assets.styleSheetImage, alt: 'CSS' },
+                { image: assets.boostrapImage, alt: 'Bootstrap' }
             ]
         },
         {
@@ -85,16 +67,16 @@ export const ProjectsSection = () => {
             height: 45,
             title: t('bingo-project-label'),
             link: 'https://github.com/ApidriuC/Bingo_Alcaldia_Risaralda',
-            image: bingoImage,
-            tags: [{ image: javaImage, alt: 'Java' }]
+            image: assets.bingoImage,
+            tags: [{ image: assets.javaImage, alt: 'Java' }]
         },
         {
             width: 75,
             height: 55,
             title: 'Fox Game',
             link: 'https://github.com/ApidriuC/FoxGame---Construct3',
-            image: foxGameImage,
-            tags: [{ image: construct3Image, alt: 'Construct 3' }]
+            image: assets.foxGameImage,
+            tags: [{ image: assets.construct3Image, alt: 'Construct 3' }]
         }
     ];
 

@@ -1,65 +1,44 @@
+import * as assets from '../../assets';
 import { useTranslation } from 'react-i18next';
 import { Form, SectionFrame } from '../common';
 import React, { useState, useCallback } from 'react';
 import { EducationBoxProps, SkillBoxProps, ContainerSkillProps } from 'types/props';
-import {
-    sqlImage,
-    gitImage,
-    htmlImage,
-    javaImage,
-    reactImage,
-    visualImage,
-    cSharpImage,
-    pythonImage,
-    oracleImage,
-    vsCodeImage,
-    nodeJsImage,
-    boostrapImage,
-    javascriptImage,
-    styleSheetImage,
-    typeScriptImage,
-    tailwindcssImage,
-    SupVeracode,
-    SupMintic,
-    SupCongresoIng,
-    SupActaGrado
-} from '../../assets';
 
 const containersSkills: ContainerSkillProps[] = [
     {
         label: 'Front-End',
         skills: [
-            { label: 'HTML', sourceImage: htmlImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/HTML' },
-            { label: 'CSS', sourceImage: styleSheetImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/CSS' },
-            { label: 'Boostrap', sourceImage: boostrapImage, sourceLink: 'https://getbootstrap.com/' },
-            { label: 'Tailwind', sourceImage: tailwindcssImage, sourceLink: 'https://tailwindcss.com/' },
-            { label: 'React', sourceImage: reactImage, sourceLink: 'https://es.react.dev/' },
-            { label: 'JavaScript', sourceImage: javascriptImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/JavaScript' },
-            { label: 'TypeScript', sourceImage: typeScriptImage, sourceLink: 'https://www.typescriptlang.org/' },
+            { label: 'HTML', sourceImage: assets.htmlImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/HTML' },
+            { label: 'CSS', sourceImage: assets.styleSheetImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/CSS' },
+            { label: 'Boostrap', sourceImage: assets.boostrapImage, sourceLink: 'https://getbootstrap.com/' },
+            { label: 'Tailwind', sourceImage: assets.tailwindcssImage, sourceLink: 'https://tailwindcss.com/' },
+            { label: 'React', sourceImage: assets.reactImage, sourceLink: 'https://es.react.dev/' },
+            { label: 'JavaScript', sourceImage: assets.javascriptImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/JavaScript' },
+            { label: 'TypeScript', sourceImage: assets.typeScriptImage, sourceLink: 'https://www.typescriptlang.org/' },
         ]
     },
     {
         label: 'Back-End',
         skills: [
-            { label: 'NodeJs', sourceImage: nodeJsImage, sourceLink: 'https://nodejs.org/en' },
-            { label: 'C#', sourceImage: cSharpImage, sourceLink: 'https://learn.microsoft.com/es-es/dotnet/csharp/' },
-            { label: 'Java', sourceImage: javaImage, sourceLink: 'https://www.java.com/es/' },
-            { label: 'Python', sourceImage: pythonImage, sourceLink: 'https://www.python.org/' }
+            { label: 'NodeJs', sourceImage: assets.nodeJsImage, sourceLink: 'https://nodejs.org/en' },
+            { label: 'C#', sourceImage: assets.cSharpImage, sourceLink: 'https://learn.microsoft.com/es-es/dotnet/csharp/' },
+            { label: 'Java', sourceImage: assets.javaImage, sourceLink: 'https://www.java.com/es/' },
+            { label: 'Python', sourceImage: assets.pythonImage, sourceLink: 'https://www.python.org/' }
         ]
     },
     {
         label: 'Data Base',
         skills: [
-            { label: 'SQL Server', sourceImage: sqlImage, sourceLink: 'https://www.microsoft.com/es-co/sql-server/sql-server-downloads' },
-            { label: 'Oracle', sourceImage: oracleImage, sourceLink: 'https://www.oracle.com/co/' }
+            { label: 'SQL Server', sourceImage: assets.sqlImage, sourceLink: 'https://www.microsoft.com/es-co/sql-server/sql-server-downloads' },
+            { label: 'Oracle', sourceImage: assets.oracleImage, sourceLink: 'https://www.oracle.com/co/' }
         ]
     },
     {
         label: 'Frameworks',
         skills: [
-            { label: 'Visual Studio Code', sourceImage: vsCodeImage, sourceLink: 'https://code.visualstudio.com/' },
-            { label: 'Visual Studio 2022', sourceImage: visualImage, sourceLink: 'https://visualstudio.microsoft.com/es/vs/' },
-            { label: 'GIT', sourceImage: gitImage, sourceLink: 'https://git-scm.com/' }
+            { label: 'Visual Studio Code', sourceImage: assets.vsCodeImage, sourceLink: 'https://code.visualstudio.com/' },
+            { label: 'Visual Studio 2022', sourceImage: assets.visualImage, sourceLink: 'https://visualstudio.microsoft.com/es/vs/' },
+            { label: 'GIT', sourceImage: assets.gitImage, sourceLink: 'https://git-scm.com/' }
         ]
     }
 ];
@@ -68,10 +47,10 @@ export const SkillsSection = () => {
     const { t } = useTranslation();
 
     const educationOptns: EducationBoxProps[] = [
-        { year: '2023', label: t('education-title-1'), value: t('education-place-1'), description: t('education-details-1'), support: SupActaGrado },
-        { year: '2023', label: t('education-title-2'), value: t('education-place-2'), description: t('education-details-2'), support: SupVeracode },
-        { year: '2022', label: t('education-title-3'), value: t('education-place-3'), description: t('education-details-3'), support: SupMintic },
-        { year: '2021', label: t('education-title-4'), value: t('education-place-4'), description: t('education-details-4'), support: SupCongresoIng }
+        { year: '2023', label: t('education-title-1'), value: t('education-place-1'), description: t('education-details-1'), support: assets.SupActaGrado },
+        { year: '2023', label: t('education-title-2'), value: t('education-place-2'), description: t('education-details-2'), support: assets.SupVeracode },
+        { year: '2022', label: t('education-title-3'), value: t('education-place-3'), description: t('education-details-3'), support: assets.SupMintic },
+        { year: '2021', label: t('education-title-4'), value: t('education-place-4'), description: t('education-details-4'), support: assets.SupCongresoIng }
     ];
 
     return (
