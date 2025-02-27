@@ -1,10 +1,6 @@
 import ReactDOM from 'react-dom';
 import { createContext, useContext, useState, useRef } from 'react';
-import { NotificationProviderProps, Notification } from 'types/props';
-
-interface NotificationContextProps {
-    showNotification: (message: string, duration?: number) => void;
-}
+import { NotificationContextProps, NotificationProviderProps, Notification } from 'types/props';
 
 const NotificationContext = createContext<NotificationContextProps | null>(null);
 

@@ -10,6 +10,65 @@
     --animate-repeat: 1
 }
 
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.animate__animated {
+    animation-duration: .5s;
+    -webkit-animation-duration: .5s;
+    animation-duration: var(--animate-duration);
+    -webkit-animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+.animate__fadeOut {
+    animation-name: fadeOut;
+    -webkit-animation-name: fadeOut;
+}
+
 html {
     height: 100%;
     overflow: hidden;
@@ -71,7 +130,7 @@ body.dark-theme label {
 .section-motion {
     box-sizing: border-box;
     will-change: opacity, transform;
-  }
+}
 
 #intro {
     width: 100%;
@@ -318,6 +377,8 @@ body.dark-theme .form_container .text_side h2 {
     color: #ca00ff !important;
 }
 
+/* MEDIAQ's */
+
 @media (max-width: 768px) {
     :root {
         --size-text-big: 2.8rem;
@@ -334,63 +395,4 @@ body.dark-theme .form_container .text_side h2 {
     #intro .description-intro {
         padding: 5px;
     }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@-webkit-keyframes fadeOut {
-    0% {
-        opacity: 1
-    }
-
-    to {
-        opacity: 0
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1
-    }
-
-    to {
-        opacity: 0
-    }
-}
-
-.animate__animated {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-duration: var(--animate-duration);
-    animation-duration: var(--animate-duration);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both
-}
-
-.animate__fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn
-}
-
-.animate__fadeOut {
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut
 }
