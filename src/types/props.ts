@@ -1,11 +1,15 @@
 import { ReactNode } from "react"
 
+export interface Notification {
+    message: string
+}
+
 export interface NotificationProviderProps {
     children: ReactNode
 }
 
-export interface Notification {
-    message: string
+export interface NotificationContextProps {
+    showNotification: (message: string, duration?: number) => void;
 }
 
 export interface BaseProps {
