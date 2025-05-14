@@ -1,7 +1,3 @@
-# Portfolio
-
-![image](https://github.com/user-attachments/assets/95132c51-0f61-47df-9a26-17f8fa9d3a2a)
-
 # 💼 Portafolio Personal de Andrés Felipe Londoño Campos
 
 ¡Bienvenido a mi portafolio personal! Este proyecto es una aplicación web desarrollada con el objetivo de presentar de manera profesional mis habilidades, proyectos y experiencia en el campo de la ingeniería de sistemas e informática.
