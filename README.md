@@ -20,8 +20,6 @@ Este portafolio ha sido construido utilizando las siguientes tecnologías y herr
   <img src="https://img.shields.io/badge/GitHub_Pages-222?style=for-the-badge&logo=github&logoColor=white" />
 </div>
 
----
-
 ## 📑 Secciones del Portafolio
 
 - **🏠 Inicio**: Presentación general y bienvenida.
@@ -30,11 +28,7 @@ Este portafolio ha sido construido utilizando las siguientes tecnologías y herr
 - **🧠 Habilidades**: Tecnologías, lenguajes y herramientas que manejo.
 - **📬 Contacto**: Formulario y enlaces a redes para establecer comunicación.
 
----
-
 ## 📜 Licencia
 
 Este proyecto está licenciado bajo la **Licencia Pública General GNU v3.0**.  
 Consulta el archivo [LICENSE](LICENSE) para más información.
-
----
