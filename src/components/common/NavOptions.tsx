@@ -1,9 +1,9 @@
-import './NavOptions.css';
 import { useCallback } from 'react';
-import { BaseProps } from 'types/props';
-import { Language } from 'types/general';
-import { useNotification } from '../common';
 import { useTranslation } from 'react-i18next';
+import { Language } from 'types/general';
+import { BaseProps } from 'types/props';
+import { useNotification } from '../common';
+import './NavOptions.css';
 
 const goToScroll = (id: string, position: ScrollLogicalPosition = 'center') => {
     const section = document.getElementById(id);

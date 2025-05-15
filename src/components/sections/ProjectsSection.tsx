@@ -1,8 +1,8 @@
 import React from 'react';
-import * as assets from '../../assets';
-import { CardProps } from 'types/props';
-import { SectionFrame } from '../common';
 import { useTranslation } from 'react-i18next';
+import { CardProps } from 'types/props';
+import * as assets from '../../assets';
+import { SectionFrame } from '../common';
 
 export const ProjectsSection = () => {
     const { t } = useTranslation();
@@ -11,7 +11,7 @@ export const ProjectsSection = () => {
         {
             width: 70,
             height: 40,
-            title: 'EDESK PRISMA',
+            title: 'EDESK Prisma',
             link: 'https://edeskprisma.syc.com.co/NoClient.html',
             image: assets.edeskPrismaImage,
             tags: [
@@ -38,14 +38,19 @@ export const ProjectsSection = () => {
             ]
         },
         {
-            width: 70,
+            width: 55,
             height: 55,
-            title: 'DDA Bookings',
-            link: 'https://github.com/ApidriuC/DDA-BOOKINGS-Dispositivos-Moviles',
-            image: assets.bookingsImage,
+            title: 'SyCaptcha',
+            link: 'https://github.com/ApidriuC/SyCaptcha.Client',
+            image: assets.SyCaptcha,
             tags: [
+                { image: assets.htmlImage, alt: 'HTML' },
+                { image: assets.styleSheetImage, alt: 'CSS' },
+                { image: assets.javascriptImage, alt: 'JavaScript' },
+                { image: assets.typeScriptImage, alt: 'TypeScript' },
                 { image: assets.reactImage, alt: 'React' },
-                { image: assets.javascriptImage, alt: 'JavaScript' }
+                { image: assets.cSharpImage, alt: 'C#' },
+                { image: assets.netFrameworkImage, alt: '.NET Framework' }
             ]
         },
         {
@@ -63,20 +68,28 @@ export const ProjectsSection = () => {
             ]
         },
         {
+            width: 70,
+            height: 40,
+            title: 'MercAnalyzer - WebScraping',
+            link: 'https://github.com/ApidriuC/MercAnalyzer.Client',
+            image: assets.MercAnalyzer,
+            tags: [
+                { image: assets.htmlImage, alt: 'HTML' },
+                { image: assets.styleSheetImage, alt: 'CSS' },
+                { image: assets.javascriptImage, alt: 'JavaScript' },
+                { image: assets.typeScriptImage, alt: 'TypeScript' },
+                { image: assets.reactImage, alt: 'React' },
+                { image: assets.nodeJsImage, alt: 'Node.js' },
+                { image: assets.pythonImage, alt: 'python' }
+            ]
+        },
+        {
             width: 50,
             height: 45,
             title: t('bingo-project-label'),
             link: 'https://github.com/ApidriuC/Bingo_Alcaldia_Risaralda',
             image: assets.bingoImage,
             tags: [{ image: assets.javaImage, alt: 'Java' }]
-        },
-        {
-            width: 75,
-            height: 55,
-            title: 'Fox Game',
-            link: 'https://github.com/ApidriuC/FoxGame---Construct3',
-            image: assets.foxGameImage,
-            tags: [{ image: assets.construct3Image, alt: 'Construct 3' }]
         }
     ];
 

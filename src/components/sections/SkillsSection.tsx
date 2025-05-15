@@ -1,44 +1,56 @@
-import * as assets from '../../assets';
+import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ContainerSkillProps, EducationBoxProps, SkillBoxProps } from 'types/props';
+import * as assets from '../../assets';
 import { Form, SectionFrame } from '../common';
-import React, { useState, useCallback } from 'react';
-import { EducationBoxProps, SkillBoxProps, ContainerSkillProps } from 'types/props';
 
 const containersSkills: ContainerSkillProps[] = [
     {
         label: 'Front-End',
         skills: [
-            { label: 'HTML', sourceImage: assets.htmlImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/HTML' },
-            { label: 'CSS', sourceImage: assets.styleSheetImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/CSS' },
-            { label: 'Boostrap', sourceImage: assets.boostrapImage, sourceLink: 'https://getbootstrap.com/' },
-            { label: 'Tailwind', sourceImage: assets.tailwindcssImage, sourceLink: 'https://tailwindcss.com/' },
-            { label: 'React', sourceImage: assets.reactImage, sourceLink: 'https://es.react.dev/' },
+            { label: 'React', sourceImage: assets.reactImage, sourceLink: 'https://es.react.dev' },
+            { label: 'NextJS', sourceImage: assets.NextJs, sourceLink: 'https://nextjs.org' },
             { label: 'JavaScript', sourceImage: assets.javascriptImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/JavaScript' },
-            { label: 'TypeScript', sourceImage: assets.typeScriptImage, sourceLink: 'https://www.typescriptlang.org/' },
+            { label: 'TypeScript', sourceImage: assets.typeScriptImage, sourceLink: 'https://www.typescriptlang.org' },
+            { label: 'JQuery', sourceImage: assets.jQuery, sourceLink: 'https://jquery.com' },
+            { label: 'CSS', sourceImage: assets.styleSheetImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/CSS' },
+            { label: 'Boostrap', sourceImage: assets.boostrapImage, sourceLink: 'https://getbootstrap.com' },
+            { label: 'Tailwind', sourceImage: assets.tailwindcssImage, sourceLink: 'https://tailwindcss.com' },
+            { label: 'HTML', sourceImage: assets.htmlImage, sourceLink: 'https://developer.mozilla.org/es/docs/Web/HTML' }
         ]
     },
     {
         label: 'Back-End',
         skills: [
             { label: 'NodeJs', sourceImage: assets.nodeJsImage, sourceLink: 'https://nodejs.org/en' },
-            { label: 'C#', sourceImage: assets.cSharpImage, sourceLink: 'https://learn.microsoft.com/es-es/dotnet/csharp/' },
-            { label: 'Java', sourceImage: assets.javaImage, sourceLink: 'https://www.java.com/es/' },
-            { label: 'Python', sourceImage: assets.pythonImage, sourceLink: 'https://www.python.org/' }
+            { label: '.NET', sourceImage: assets.netCore, sourceLink: 'https://dotnet.microsoft.com/es-es' },
+            { label: 'C#', sourceImage: assets.cSharpImage, sourceLink: 'https://learn.microsoft.com/es-es/dotnet/csharp' },
+            { label: 'Java', sourceImage: assets.javaImage, sourceLink: 'https://www.java.com/es' },
+            { label: 'Python', sourceImage: assets.pythonImage, sourceLink: 'https://www.python.org' },
+            { label: 'Docker', sourceImage: assets.dockerImage, sourceLink: 'https://www.docker.com' }
         ]
     },
     {
-        label: 'Data Base',
+        label: 'Database',
         skills: [
             { label: 'SQL Server', sourceImage: assets.sqlImage, sourceLink: 'https://www.microsoft.com/es-co/sql-server/sql-server-downloads' },
-            { label: 'Oracle', sourceImage: assets.oracleImage, sourceLink: 'https://www.oracle.com/co/' }
+            { label: 'Oracle', sourceImage: assets.oracleImage, sourceLink: 'https://www.oracle.com/co' },
+            { label: 'MySQL', sourceImage: assets.mySqlLogo, sourceLink: 'https://www.mysql.com' }
+        ]
+    },
+    {
+        label: 'Cloud',
+        skills: [
+            { label: 'Azure', sourceImage: assets.azureImage, sourceLink: 'https://azure.microsoft.com/es-es' },
+            { label: 'AWS', sourceImage: assets.awsImage, sourceLink: 'https://aws.amazon.com/es' }
         ]
     },
     {
         label: 'Frameworks',
         skills: [
-            { label: 'Visual Studio Code', sourceImage: assets.vsCodeImage, sourceLink: 'https://code.visualstudio.com/' },
-            { label: 'Visual Studio 2022', sourceImage: assets.visualImage, sourceLink: 'https://visualstudio.microsoft.com/es/vs/' },
-            { label: 'GIT', sourceImage: assets.gitImage, sourceLink: 'https://git-scm.com/' }
+            { label: 'GIT', sourceImage: assets.gitImage, sourceLink: 'https://git-scm.com' },
+            { label: 'Visual Studio Code', sourceImage: assets.vsCodeImage, sourceLink: 'https://code.visualstudio.com' },
+            { label: 'Visual Studio 2022', sourceImage: assets.visualImage, sourceLink: 'https://visualstudio.microsoft.com/es/vs' }
         ]
     }
 ];

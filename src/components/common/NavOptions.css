@@ -92,7 +92,7 @@ body.dark-theme .navBar-float .option-navBar .theme-icon {
 }
 
 .icon-character {
-    background-image: url('/src/assets/icon-character-git-hub.png');
+    background-image: url('/src/assets/icon-character-git-hub.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
