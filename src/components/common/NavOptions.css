@@ -1,127 +1,119 @@
-.navBar-bg {
-    mask-image: linear-gradient(0deg, #000000 0, transparent);
+/* Barra de estado inferior (status bar) estilo editor */
+
+.statusbar {
     position: fixed;
-    height: 30px;
+    left: 0;
+    top: 0;
     width: 100%;
-    bottom: 0;
-    background-color: #1e1c1c38;
-}
-
-body.dark-theme .navBar-bg {
-    background-color: #1e1c1c;
-}
-
-.navBar-float {
-    width: auto;
-    height: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 30px;
-    position: fixed;
-    background-color: rgb(53 53 53 / 47%);
-    border-radius: 15px;
-    padding: 5px 10px;
-    border: 1px solid #ffffff36;
-    transition: 0.4s all ease;
-    display: inline-flex;
+    height: 38px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 6px;
+    padding: 0 10px;
     z-index: 99;
-    gap: 10px;
+    background: var(--chrome);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
 }
 
-.navBar-float:hover {
-    transform: translateY(-10px) translateX(-50%) scale(1.1);
-}
-
-.navBar-float button {
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: hsla(0, 0%, 9%, .7);
-    border: 1px solid #ffffff36;
-    color: white;
-}
-
-.navBar-float .option-navBar {
-    height: 100%;
-    width: fit-content;
-    transition: 0.4s all ease;
-}
-
-.navBar-float .option-navBar .option {
+.statusbar::-webkit-scrollbar {
     display: none;
-    position: absolute;
-    top: -40px;
-    left: -30px;
-    width: 100px;
-    text-align: center;
-    background-color: hsla(0, 0%, 9%, .7);
-    color: white;
-    padding: 5px;
-    border-radius: 15px;
-    border: 1px solid #ffffff36;
 }
 
-.navBar-float .option-navBar:hover {
-    transform: translateY(-10px) scale(1.2);
+.sb-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
 }
 
-.navBar-float .option-navBar:hover .option {
-    display: block;
+.sb-nav {
+    flex: 1 1 auto;
+    justify-content: center;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 
-@media (max-width: 499px) {
-    .navBar-float .option-navBar:hover {
-        transform: none;
-    }
+.sb-nav::-webkit-scrollbar {
+    display: none;
+}
 
-    .navBar-float .option-navBar:hover .option {
+.sb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--text-muted);
+    background: transparent;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.sb-item:hover,
+.sb-item:focus-visible {
+    color: var(--accent);
+    background: var(--bg-2);
+    outline: none;
+}
+
+.sb-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 8px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.sb-branch {
+    cursor: default;
+}
+
+.sb-branch:hover {
+    color: var(--text-muted);
+    background: transparent;
+}
+
+.sb-live {
+    cursor: default;
+    color: var(--text-muted);
+}
+
+.sb-live:hover {
+    color: var(--text-muted);
+    background: transparent;
+}
+
+.live-dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: live-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+
+/* Responsive: ocultar etiquetas largas, dejar iconos */
+@media (max-width: 720px) {
+    .sb-brand,
+    .sb-branch,
+    .sb-label {
         display: none;
     }
-}
 
-.navBar-float .option-navBar .theme-icon {
-    background-image: url('/src/assets/light-theme.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60% 100%;
-}
-
-body.dark-theme .navBar-float .option-navBar .theme-icon {
-    background-image: url('/src/assets/black-theme.svg');
-}
-
-.icon-character {
-    background-image: url('/src/assets/icon-character-git-hub.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.icon-person {
-    background-image: url('/src/assets/icon-person.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60% 100%;
-}
-
-.icon-book {
-    background-image: url('/src/assets/icon-book.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60% 100%;
-}
-
-.icon-code {
-    background-image: url('/src/assets/icon-code.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60% 100%;
-}
-
-.icon-message {
-    background-image: url('/src/assets/icon-message.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60% 100%;
+    .sb-nav {
+        justify-content: flex-start;
+    }
 }

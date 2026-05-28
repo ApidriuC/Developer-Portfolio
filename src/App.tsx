@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-    Border,
     NavOptions,
     BgAnimation,
     HelloSection,
-    SkillsSection,
+    StatsSection,
     AboutMeSection,
+    ExperienceSection,
+    ServicesSection,
+    SkillsSection,
     ProjectsSection,
     ConnectMeSection,
     NotificationProvider
@@ -18,33 +20,39 @@ export const App = () => {
     useEffect(() => {
         document.title = t('document-title');
         document.documentElement.lang = i18n.language;
-    }, [i18n.language]);
+    }, [t, i18n.language]);
 
     return (
         <>
             <BgAnimation />
             <NotificationProvider>
-                <main className='w-full h-full overflow-auto'>
-                    {/* Portada */}
+                <main className="w-full h-full overflow-auto">
+                    {/* Portada — terminal */}
                     <NavOptions />
                     <HelloSection />
-                    <Border />
 
-                    {/* Sobre mí */}
+                    {/* Métricas — build output */}
+                    <StatsSection />
+
+                    {/* Sobre mí — README.md */}
                     <AboutMeSection />
-                    <Border />
 
-                    {/* Conocimientos */}
+                    {/* Trayectoria — git log */}
+                    <ExperienceSection />
+
+                    {/* Servicios — function() */}
+                    <ServicesSection />
+
+                    {/* Estudios y habilidades — stack.json */}
                     <SkillsSection />
-                    <Border />
 
-                    {/* Proyectos */}
+                    {/* Proyectos — repos */}
                     <ProjectsSection />
 
-                    {/* Conecta conmigo */}
+                    {/* Contacto — terminal */}
                     <ConnectMeSection />
                 </main>
             </NotificationProvider>
         </>
     );
-}
+};

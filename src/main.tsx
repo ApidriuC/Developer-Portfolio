@@ -1,7 +1,6 @@
 import './locales/i18n';
-import './styles/main.css';
 import './styles/tailwindInput.css';
-import './styles/tailwindOutput.css';
+import './styles/main.css';
 
 import { App } from './App'
 import { StrictMode } from 'react'

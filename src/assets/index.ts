@@ -2,6 +2,9 @@ export { default as gitImage } from '../assets/git-logo.png';
 export { default as gitHubImage } from '../assets/github-icon.svg';
 export { default as linkedImage } from '../assets/linkedln-icon.svg';
 export { default as messageMeImage } from '../assets/message-me-icon.svg';
+export { default as angularImage } from '../assets/angular-logo.svg';
+export { default as nestJsImage } from '../assets/nestjs-logo.svg';
+export { default as postgreSqlImage } from '../assets/postgresql-logo.svg';
 
 // Webp images
 export { default as awsImage } from '../assets/aws-logo.webp';

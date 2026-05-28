@@ -1,8 +1,10 @@
 import ReactDOM from 'react-dom';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FormProps } from 'types/props';
 
 export const Form = ({ className, children, onClose }: FormProps) => {
+    const { t } = useTranslation();
     const [animation, setAnimation] = useState<string>('animate__fadeIn');
 
     const hideForm = (event: React.MouseEvent) => {
@@ -29,7 +31,7 @@ export const Form = ({ className, children, onClose }: FormProps) => {
                                 className='h-10 w-auto xs:py-2 xs:px-12'
                                 onClick={e => hideForm(e)}
                             >
-                                Cerrar
+                                {t('close')}
                             </button>
                         </div>
                     </div>
