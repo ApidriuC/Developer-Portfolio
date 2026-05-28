@@ -6,17 +6,32 @@
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <title>My Portfolio</title>
+    <title>Andrés Londoño — Desarrollador Full Stack & Seguridad</title>
+
+    <!-- Tema inicial (evita parpadeo / FOUC) -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t !== 'light' && t !== 'dark') {
+                    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 
     <!-- Meta description for SEO -->
     <meta name="description"
-        content="Portfolio web de Andrés Felipe Londoño, donde muestro mis proyectos, habilidades en desarrollo de software y 
-        tecnologías utilizadas. Soy un desarrollador Full-Stack con experiencia en JavaScript, React, .NET, C# y más." />
+        content="Portafolio de Andrés Felipe Londoño Campos — Ingeniero de Sistemas y Desarrollador Full Stack
+        especializado en .NET, React, microservicios, nube e IA, con enfoque en seguridad informática." />
 
     <!-- Open Graph to social media -->
     <meta property="og:title" content="Portafolio de Andrés Felipe Londoño" />
     <meta property="og:description"
-        content="Muestra tus habilidades como desarrollador Full-Stack y los proyectos más destacados de tu carrera." />
+        content="Desarrollador Full Stack (.NET, React, nube, IA) con enfoque en seguridad informática. Conoce mis proyectos y trayectoria." />
     <meta property="og:image"
         content="https://github.com/user-attachments/assets/95132c51-0f61-47df-9a26-17f8fa9d3a2a" />
     <meta property="og:url" content="https://apidriuc.github.io/Developer-Portfolio/" />
@@ -25,19 +40,26 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Portafolio de Andrés Felipe Londoño" />
     <meta name="twitter:description"
-        content="Muestra tus habilidades como desarrollador Full-Stack y los proyectos más destacados de tu carrera." />
+        content="Desarrollador Full Stack (.NET, React, nube, IA) con enfoque en seguridad informática." />
     <meta name="twitter:image"
         content="https://github.com/user-attachments/assets/95132c51-0f61-47df-9a26-17f8fa9d3a2a" />
 
-    <!-- Scripts -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet" />
 
-    <!-- Links -->
-    <link async rel="icon" type="image/png" href="/src/assets/icon-portfolio.png" />
-  <script type="module" crossorigin src="/Developer-Portfolio/assets/main-BY0Ma60k.js"></script>
-  <link rel="stylesheet" crossorigin href="/Developer-Portfolio/assets/main-CfJ1pUB4.css">
+    <!-- Icon -->
+    <link rel="icon" type="image/webp" href="/Developer-Portfolio/assets/icon-portfolio-DMbCJlIt.webp" />
+
+    <!-- Scripts -->
+  <script type="module" crossorigin src="/Developer-Portfolio/assets/main-C3Hp-ML-.js"></script>
+  <link rel="stylesheet" crossorigin href="/Developer-Portfolio/assets/main-BOPsHlCw.css">
 </head>
 
-<body class="dark-theme h-full w-full overflow-hidden">
+<body class="h-full w-full overflow-hidden">
     <div id="root" class="w-full max-w-full h-full"></div>
 </body>
 
