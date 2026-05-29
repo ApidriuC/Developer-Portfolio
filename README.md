@@ -1,10 +1,11 @@
 # 💻 Portafolio de Andrés Felipe Londoño Campos
 
-Portafolio personal con un concepto visual **«DevOS»**: el sitio se siente como un **editor de código / terminal**, donde cada sección es una "ventana" distinta (terminal, `README.md`, `git log`, `stack.json`, tarjetas de repos, etc.).
+**Ingeniero de Sistemas** · Desarrollador **Full Stack** (.NET, React, Node) · cursando **Especialización en Seguridad Informática**.
 
-Ingeniero de Sistemas · Desarrollador **Full Stack** (.NET, React, Node) · cursando **Especialización en Seguridad Informática**.
+Soy una persona autodidacta, enfocada en construir soluciones **escalables, seguras y de alto rendimiento**. Trabajo a diario con arquitecturas de microservicios, bases de datos, la nube e integraciones de IA. Este es mi portafolio personal: un espacio para mostrar mi experiencia, mis proyectos y la tecnología con la que trabajo.
 
-🔗 **Sitio en vivo:** [https://apidriuc.github.io/Developer-Portfolio](https://apidriuc.github.io/Developer-Portfolio/)
+🔗 **Sitio en vivo:** [apidriuc.github.io/Developer-Portfolio](https://apidriuc.github.io/Developer-Portfolio/)
+📧 **andresfloncam@gmail.com** · 🐙 [github.com/ApidriuC](https://github.com/ApidriuC)
 
 ![Portafolio — modo oscuro](docs/preview-dark.png)
 
@@ -14,20 +15,80 @@ Ingeniero de Sistemas · Desarrollador **Full Stack** (.NET, React, Node) · cur
 
 ---
 
-## ✨ Características
+## 🪟 El concepto: «DevOS»
 
-- 🎨 **Tema «DevOS»** inspirado en un editor de código (chrome de ventanas, *syntax highlighting* como acentos, fuente monoespaciada).
-- 🌗 **Modo claro y oscuro** con paletas distintas, **persistente** (`localStorage` + `prefers-color-scheme`) y sin parpadeo inicial.
-- 🌐 **Bilingüe Español / Inglés** con `i18next`, también **persistente**.
-- 🧩 **Contenido data-driven**: proyectos, estudios, experiencia, servicios y skills se editan desde archivos en [`src/data/`](src/data) — sin tocar componentes.
-- 🔒 **Proyectos públicos vs. privados**: badges de visibilidad y nota de confidencialidad para contribuciones que no pueden exhibirse.
-- 📨 Botón **"Solicitar mi hoja de vida"** que abre un correo predefinido.
-- ⌨️ Animación de *typing* en la terminal y contadores animados (respetan `prefers-reduced-motion`).
-- 📱 Responsive y accesible (roles/labels, navegación por teclado).
+El portafolio está diseñado como un **editor de código / terminal**: cada sección es una "ventana" distinta, fiel a mi día a día como desarrollador.
+
+| Sección | Cómo se presenta |
+|---|---|
+| 🏠 Inicio | Una **terminal** con animación de escritura (`./whoami --full`) |
+| 📊 Métricas | Salida de `npm run build` con contadores |
+| 👤 Sobre mí | Un archivo **`README.md`** renderizado |
+| 🌿 Trayectoria | Un **`git log`** con mi experiencia como commits |
+| 🧠 Servicios | Tarjetas tipo **`function()`** |
+| 📦 Stack | Un **`stack.json`** con *syntax highlighting* |
+| 📁 Proyectos | Tarjetas tipo **repositorio de GitHub** |
+| 📬 Contacto | Una **terminal** con comandos |
+
+Además: **bilingüe Español/Inglés**, **modo claro y oscuro** (ambos persistentes) y diseño responsive.
 
 ---
 
-## 🚀 Tecnologías
+## 👨‍💻 Sobre mí
+
+Graduado de **Ingeniería de Sistemas e Informática** (Universidad Pontificia Bolivariana, Bucaramanga – Colombia). Me especializo en desarrollo Full Stack con **.NET y React/TypeScript**, APIs y microservicios, gestión de bases de datos (**SQL Server, Oracle**) y despliegue en la nube (**AWS, Azure**). También tengo experiencia en integración de **IA, OCR y automatización**.
+
+Actualmente estoy fortaleciendo mi perfil hacia el **desarrollo seguro**, cursando una Especialización en Seguridad Informática y la certificación AWS Certified Cloud Practitioner.
+
+---
+
+## 🌿 Trayectoria
+
+| Periodo | Rol | Empresa |
+|---|---|---|
+| **2025 – Actual** | Desarrollador de Software Full Stack | I.A.S Software |
+| **2022 – 2025** | Desarrollador de Software Full Stack | Sistemas y Computadores S.A. |
+| **2022** | Practicante Desarrollador de Software | Sistemas y Computadores S.A. |
+
+---
+
+## 🎓 Formación
+
+- 🛡️ **Especialización en Seguridad Informática** — Universidad Pontificia Bolivariana · *en curso*
+- ☁️ **AWS Certified Cloud Practitioner** — Amazon Web Services · *en curso*
+- 🎓 **Ingeniero de Sistemas e Informática** — Universidad Pontificia Bolivariana · 2023
+- 🏅 **Certificación Misión TIC 2022** — Universidad Industrial de Santander · 2023
+- 🏅 **Certificación VERACODE** (seguridad de aplicaciones) · 2023
+- ✨ **1er Congreso Internacional de Ingeniería** — UPB · 2021
+
+---
+
+## 🧰 Stack
+
+- **Front-End:** React · Angular · Next.js · TypeScript · JavaScript · jQuery · HTML · CSS · Bootstrap · Tailwind
+- **Back-End:** Node.js · NestJS · .NET · C# · Java · Python · Docker
+- **Bases de datos:** SQL Server · Oracle · MySQL · PostgreSQL
+- **Cloud:** AWS · Azure
+- **Herramientas:** Git · Visual Studio Code · Visual Studio 2022
+
+---
+
+## 📁 Proyectos destacados
+
+| Proyecto | Descripción | Enlace |
+|---|---|---|
+| **EDESK Prisma** | Plataforma de centralización del servicio al cliente para contribuyentes en Colombia: impuestos y trámites. | [Demo](https://edeskprisma.syc.com.co/NoClient.html) |
+| **Stream For Labs** | Sistema distribuido para administrar, sincronizar y compartir archivos, fotos y video, con galería y streaming. | [Repo](https://github.com/IngDeiver/streams-for-labs-web-client) |
+| **SyCaptcha** | Captcha propio para detectar interacciones automatizadas o maliciosas. | [Repo](https://github.com/ApidriuC/SyCaptcha.Client) |
+| **MercAnalyzer** | Web scraping para análisis y comparación de precios del mercado. | [Repo](https://github.com/ApidriuC/MercAnalyzer.Client) |
+| **Dispensador – Casa Libro Total** | Módulo de registro y dispensación de recursos. | — |
+| **Bingo** | Algoritmo en Java para la generación de cartones de bingo. | [Repo](https://github.com/ApidriuC/Bingo_Alcaldia_Risaralda) |
+
+> 🔒 Una parte importante de mi trabajo está en **proyectos privados o confidenciales** (de clientes y empresa) que no pueden exhibirse públicamente; en esos casos mi aporte queda reflejado como contribución a soluciones internas.
+
+---
+
+## 🛠️ Hecho con
 
 <div align="left">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
@@ -36,99 +97,17 @@ Ingeniero de Sistemas · Desarrollador **Full Stack** (.NET, React, Node) · cur
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
   <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
   <img src="https://img.shields.io/badge/i18next-26A69A?style=for-the-badge&logo=i18next&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub_Pages-222?style=for-the-badge&logo=github&logoColor=white" />
 </div>
 
 ---
 
-## 🪟 Secciones (cada una, una "ventana")
+## 📬 Contacto
 
-| Sección | Concepto |
-|---|---|
-| 🏠 **Inicio** | Terminal con *typing* (`./whoami --full`) + ventana de imagen de perfil |
-| 📊 **Stats** | Salida de `npm run build` con métricas y contadores animados |
-| 👤 **Sobre mí** | Archivo `README.md` renderizado (markdown) |
-| 🌿 **Trayectoria** | `git log --graph` con la experiencia como commits |
-| 🧠 **Servicios** | Tarjetas tipo `function()` con las áreas de especialidad |
-| 📦 **Skills** | `stack.json` con *syntax highlighting* + **Educación** como tarjetas |
-| 📁 **Proyectos** | Tarjetas tipo repositorio de GitHub (con badge público/privado) |
-| 📬 **Contacto** | Terminal con comandos (`./request-cv.sh`, `ls ./social`) |
+¿Tienes un proyecto, una oportunidad o simplemente quieres saludar?
 
-La navegación es una **barra de estado** superior estilo editor.
+- 📧 **andresfloncam@gmail.com**
+- 🐙 [github.com/ApidriuC](https://github.com/ApidriuC)
+- 💼 [LinkedIn](https://www.linkedin.com/in/andr%C3%A9s-felipe-londo%C3%B1o-campos-b03741222/)
+- 🌐 [Sitio en vivo](https://apidriuc.github.io/Developer-Portfolio/)
 
----
-
-## 🗂️ Estructura del proyecto
-
-```text
-src/
-├─ assets/            # Imágenes y logos (webp / svg / png)
-├─ components/
-│  ├─ common/         # WindowFrame, Typewriter, NavOptions, BgAnimation,
-│  │                  # Icon, Form, RequestCvButton, SectionFrame, Notification…
-│  └─ sections/       # Hello, Stats, AboutMe, Experience, Services,
-│                     # Skills, Projects, ConnectMe
-├─ data/              # 🔧 Contenido editable (ver abajo)
-├─ hooks/             # useTheme (tema persistente)
-├─ locales/           # es.json, en.json, i18n.js
-├─ styles/            # main.css (tema DevOS) + tailwindInput.css
-└─ types/             # general.ts, props.ts
-```
-
----
-
-## 🔧 Cómo editar el contenido (data-driven)
-
-Todo el contenido vive en [`src/data/`](src/data). Los textos largos se traducen vía claves en [`src/locales/`](src/locales).
-
-| Quiero… | Edito | Detalle |
-|---|---|---|
-| Añadir un **proyecto** | `data/projects.ts` | `visibility: 'public' \| 'private'`, `link`, `image`, `tags`, `descKey` |
-| Añadir un **estudio/certificación** | `data/education.ts` | `kind`, `status: 'done' \| 'in-progress'` (badge "En curso"), `support` |
-| Añadir un **empleo** | `data/experience.ts` | `current: true` lo marca como `HEAD -> main` |
-| Editar **servicios** | `data/services.ts` | `icon` + claves de título/descripción |
-| Editar el **stack** | `data/skills.ts` | tecnología = `{ label, sourceImage, sourceLink }` |
-| Editar **redes / email** | `data/socials.ts` | incluye `CONTACT_EMAIL` y `GITHUB_URL` |
-
-> Las métricas de **Stats** (años, proyectos, tecnologías, estudios) se **recalculan solas** a partir de estos archivos.
-
-### 🌐 Traducciones
-Para textos nuevos, agrega la misma **clave** en [`src/locales/es.json`](src/locales/es.json) y [`src/locales/en.json`](src/locales/en.json), y referénciala con `t('clave')`.
-
-### 🖼️ Foto de perfil
-Reemplaza [`src/assets/me-image-profile.webp`](src/assets/me-image-profile.webp) (conserva el mismo nombre; idealmente `.webp` optimizado).
-
----
-
-## 🧪 Scripts
-
-```bash
-npm run dev       # Servidor de desarrollo (Vite)
-npm run build     # Build de producción a /dist
-npm run preview   # Previsualiza el build
-npm run lint      # ESLint
-npm run deploy    # Publica /dist en GitHub Pages (gh-pages)
-```
-
-## ▶️ Ejecutar localmente
-
-```bash
-git clone https://github.com/ApidriuC/Developer-Portfolio.git
-cd Developer-Portfolio
-npm install
-npm run dev
-```
-
-Abre la URL que indica Vite (por defecto `http://localhost:5173/Developer-Portfolio/`).
-
-## 🚢 Despliegue
-
-El sitio se publica en **GitHub Pages**. `npm run deploy` ejecuta el build (`predeploy`) y sube `/dist` con `gh-pages`. La ruta base está configurada en [`vite.config.js`](vite.config.js) (`base: '/Developer-Portfolio/'`).
-
----
-
-## 📜 Licencia / Uso
-
-Proyecto **personal**. El código puede servirte de referencia o inspiración. Los **textos, imágenes y datos personales** son propiedad de Andrés Felipe Londoño Campos; por favor, no los reutilices tal cual para tu propio portafolio. Si quieres aprovechar la base, ¡escríbeme!
-
-📧 **andresfloncam@gmail.com** · 🐙 [github.com/ApidriuC](https://github.com/ApidriuC)
+<p align="center"><sub>© Andrés Felipe Londoño Campos · Proyecto personal — textos, imágenes y datos son de mi autoría.</sub></p>

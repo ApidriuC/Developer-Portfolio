@@ -1,6 +1,4 @@
 import { StatItem } from 'types/props';
-import { educationItems } from './education';
-import { projects } from './projects';
 import { containersSkills } from './skills';
 
 /** Año en que inició la trayectoria profesional (CV: prácticas 2022). */
@@ -15,7 +13,7 @@ const technologiesCount = containersSkills.reduce((total, c) => total + c.skills
  */
 export const stats: StatItem[] = [
     { icon: 'calendar', value: yearsOfExperience, suffix: '+', labelKey: 'stat-years' },
-    { icon: 'folder', value: projects.length, suffix: '+', labelKey: 'stat-projects' },
+    { icon: 'folder', value: 15, suffix: '+', labelKey: 'stat-projects' },
     { icon: 'layers', value: technologiesCount, suffix: '+', labelKey: 'stat-technologies' },
-    { icon: 'award', value: educationItems.length, suffix: '+', labelKey: 'stat-studies' }
+    { icon: 'award', value: 10, suffix: '+', labelKey: 'stat-studies' }
 ];
