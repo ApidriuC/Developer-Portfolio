@@ -14,16 +14,6 @@ export interface NotificationContextProps {
     showNotification: (message: string, duration?: number) => void;
 }
 
-/* ────────────────────────────  Navigation  ──────────────────────────── */
-
-export interface BaseProps {
-    label?: string,
-    value?: string,
-    icon?: IconName,
-    className?: string,
-    action?: () => void
-}
-
 /* ────────────────────────────  Icons  ──────────────────────────── */
 
 export type IconName =
@@ -32,7 +22,7 @@ export type IconName =
     | 'shield' | 'cloud' | 'database' | 'cpu' | 'plug' | 'boxes'
     | 'award' | 'graduation' | 'calendar' | 'rocket' | 'sparkles'
     | 'download' | 'send' | 'lock' | 'lock-open' | 'star' | 'close'
-    | 'git-branch' | 'terminal';
+    | 'git-branch' | 'terminal' | 'menu';
 
 /* ────────────────────────────  Skills  ──────────────────────────── */
 

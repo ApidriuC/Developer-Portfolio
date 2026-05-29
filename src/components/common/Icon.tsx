@@ -40,6 +40,7 @@ const paths: Record<IconName, JSX.Element> = {
     close: <path d="M6 6l12 12M18 6 6 18" />,
     'git-branch': <><circle cx="6" cy="6" r="3" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="6" r="3" /><path d="M6 9v6m12-6a9 9 0 0 1-9 9" /></>,
     terminal: <path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm3 4 3 3-3 3m6 0h4" />,
+    menu: <path d="M4 6h16M4 12h16M4 18h16" />,
 };
 
 /** Iconos de marca que usan relleno en lugar de trazo. */

@@ -3,6 +3,7 @@
 
     "option-theme-label": "Tema",
     "option-language-label": "Idioma",
+    "option-menu-label": "Menú",
     "option-home-label": "Inicio",
     "option-about-me-label": "Sobre mí",
     "option-experience-label": "Trayectoria",
@@ -19,7 +20,6 @@
     "cv-email-subject": "Me interesa tu perfil — Solicitud de hoja de vida",
     "cv-email-body": "Hola Andrés,\n\nVi tu portafolio y me interesa mucho tu perfil. ¿Podrías compartirme tu hoja de vida?\n\n¡Gracias!",
 
-    "intro-codeline": "const andres = developer({ fullstack: true, security: true })",
     "intro-hello": "Hola 👋, soy",
     "intro-developer": "Desarrollador Full Stack",
     "intro-security": "Seguridad Informática (en formación)",
@@ -33,8 +33,6 @@
     "stat-studies": "Estudios y certificaciones",
     "stats-build-ok": "compilación exitosa en 1.36s",
 
-    "about-tag": "// sobre_mí",
-    "about-me-2": "Sobre mí",
     "about-me-desc-1": "Graduado de Ingeniería de Sistemas e Informática de la Universidad Pontificia Bolivariana, seccional Bucaramanga / Santander / Colombia. Soy una persona autodidacta, apasionada por aprender cosas nuevas 📚. Me destaco por programar en lenguajes como C#, Java y Python, y cuento con conocimientos en Front-End y Back-End con JavaScript, JQuery, HTML, CSS y más ⚙️.",
     "about-me-desc-2": "Los frameworks en los que principalmente me enfoco para realizar soluciones informáticas son .NET Framework, .NET Core y React. Me especializo en arquitecturas de microservicios, soluciones en la nube y en construir software seguro, escalable y de alto rendimiento.",
     "about-me-desc-3": "Actualmente trabajo en 'IAS Software', una empresa que ofrece soluciones tecnológicas y de desarrollo orientadas a organizaciones que buscan optimizar y agilizar sus procesos internos 🔍. Me desempeño como desarrollador de software Full Stack en un equipo especializado en brindar apoyo en diferentes proyectos para garantizar entregas eficientes y de alta calidad, siguiendo la metodología DevOps 🛠.",
@@ -45,11 +43,7 @@
     "about-fact-langs": "Español · Inglés",
     "about-facts-heading": "datos",
 
-    "experience-tag": "// trayectoria",
-    "experience-title": "Trayectoria",
-    "experience-desc": "Mi recorrido profesional en el desarrollo de software.",
     "experience-present": "Presente",
-    "experience-current-label": "Actual",
     "exp-ias-role": "Desarrollador de Software Full Stack",
     "exp-ias-desc": "Implementación y desarrollo full stack bajo metodología DevOps, apoyando diversos proyectos de la compañía para lograr entregas eficientes y de alta calidad.",
     "exp-syc-role": "Desarrollador de Software Full Stack",
@@ -57,9 +51,6 @@
     "exp-intern-role": "Practicante Desarrollador de Software",
     "exp-intern-desc": "Primeros pasos profesionales: apoyo en el desarrollo de aplicaciones web y de escritorio dentro de equipos de producción.",
 
-    "services-tag": "// servicios",
-    "services-title": "Qué hago",
-    "services-desc": "Áreas en las que aporto valor, construidas sobre experiencia real en producción.",
     "svc-web-title": "Desarrollo Web",
     "svc-web-desc": "Aplicaciones web con .NET y React + TypeScript. Incluye la creación de un captcha propio, diseñado para detectar interacciones automatizadas o maliciosas.",
     "svc-api-title": "APIs & Integraciones",
@@ -73,11 +64,6 @@
     "svc-micro-title": "Microservicios",
     "svc-micro-desc": "Webservices, autómatas y aplicaciones de escritorio con arquitecturas modulares y escalables para sistemas distribuidos.",
 
-    "skills-tag": "// stack",
-    "education-skills": "Estudios y habilidades",
-    "education-skills-desc": "Cuento con conocimientos en las siguientes tecnologías y lenguajes de programación que utilizo comúnmente para la elaboración de soluciones. 🔍",
-    "education-subtitle": "Formación",
-    "skills-subtitle": "Tecnologías",
     "edu-in-progress": "En curso",
     "edu-no-support": "El certificado estará disponible al finalizar el programa.",
 
@@ -105,9 +91,6 @@
     "edu-congress-place": "Universidad Pontificia Bolivariana — Colombia",
     "edu-congress-details": "El 1er Congreso Internacional de Ingeniería: Tendencias para el Desarrollo Sostenible fue un evento destacado donde se discutieron las mejores prácticas y tendencias emergentes en ingeniería de sistemas e informática. Participar me permitió adquirir una visión amplia sobre las innovaciones y los enfoques sostenibles en el desarrollo tecnológico, conectándome con profesionales y expertos del área.",
 
-    "projects-tag": "// proyectos",
-    "projects-title": "Mis proyectos",
-    "projects-desc": "Una selección de proyectos de los que me siento orgulloso a lo largo de mi carrera.",
     "projects-private-note": "Los proyectos aquí mostrados son públicos. Muchos otros son privados o confidenciales (de clientes o de la empresa) y no es posible exhibirlos; en esos casos mi aporte queda reflejado como contribución a soluciones internas.",
     "project-public": "Público",
     "project-private": "Privado",
@@ -123,7 +106,6 @@
     "project-mercanalyzer-desc": "WebScraping para análisis y comparación de precios del mercado.",
     "project-bingo-desc": "Algoritmo en Java para la generación de cartones de bingo.",
 
-    "contact-tag": "// contacto",
     "connect-me-title": "Conecta conmigo",
     "connect-me-desc": "¿Tienes un proyecto, una oportunidad o simplemente quieres saludar? Escríbeme y conversemos.",
     "copyright-text": "Andrés Felipe Londoño Campos. Todos los derechos reservados."

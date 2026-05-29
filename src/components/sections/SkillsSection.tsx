@@ -94,13 +94,13 @@ const EducationCard = ({ year, kind, status, titleKey, placeKey, detailsKey, sup
             <button type="button" className="edu-card" style={style} onClick={() => setIsOpen(true)}>
                 <span className="edu-card-icon"><Icon name={kindIcon[kind]} size={22} /></span>
                 <span className="edu-card-body">
-                    <span className="flex items-center justify-between gap-2">
-                        <span className="edu-card-file">{fileNames[titleKey] ?? 'file'}</span>
-                        {status === 'in-progress' && <span className="badge-progress">{t('edu-in-progress')}</span>}
-                    </span>
+                    <span className="edu-card-file">{fileNames[titleKey] ?? 'file'}</span>
                     <span className="edu-card-title">{t(titleKey)}</span>
                     <span className="edu-card-place">{t(placeKey)}</span>
-                    <span className="edu-card-year">{year}</span>
+                    <span className="edu-card-meta">
+                        <span className="edu-card-year">{year}</span>
+                        {status === 'in-progress' && <span className="badge-progress">{t('edu-in-progress')}</span>}
+                    </span>
                 </span>
             </button>
 

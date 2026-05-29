@@ -35,7 +35,7 @@ export const NotificationProvider = ({ children }: NotificationProviderProps) =>
         <NotificationContext.Provider value={{ showNotification }}>
             {children}
             {notification && ReactDOM.createPortal(
-                <div className='top-[35px] left-1/2 transform -translate-x-1/2 fixed animate-alertSlideIn'>
+                <div className='top-[60px] left-1/2 transform -translate-x-1/2 fixed animate-alertSlideIn'>
                     <div className='border border-white/20 bg-gray-800/50 rounded-lg p-4 text-white shadow-lg'>
                         {notification.message}
                     </div>

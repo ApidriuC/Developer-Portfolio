@@ -1,6 +1,5 @@
 export { Form } from './Form';
 export { Icon } from './Icon';
-export { Border } from './Border';
 export { NavOptions } from './NavOptions';
 export { BgAnimation } from './BgAnimation';
 export { SectionFrame } from './SectionFrame';

@@ -3,6 +3,7 @@
 
     "option-theme-label": "Theme",
     "option-language-label": "Language",
+    "option-menu-label": "Menu",
     "option-home-label": "Home",
     "option-about-me-label": "About",
     "option-experience-label": "Experience",
@@ -19,7 +20,6 @@
     "cv-email-subject": "I'm interested in your profile — Résumé request",
     "cv-email-body": "Hi Andrés,\n\nI came across your portfolio and I'm really interested in your profile. Could you share your résumé with me?\n\nThank you!",
 
-    "intro-codeline": "const andres = developer({ fullstack: true, security: true })",
     "intro-hello": "Hi 👋, I'm",
     "intro-developer": "Full Stack Developer",
     "intro-security": "Information Security (in training)",
@@ -33,8 +33,6 @@
     "stat-studies": "Studies & certifications",
     "stats-build-ok": "build successful in 1.36s",
 
-    "about-tag": "// about_me",
-    "about-me-2": "About Me",
     "about-me-desc-1": "Graduate of Systems and Computer Engineering from Universidad Pontificia Bolivariana, Bucaramanga / Santander / Colombia. I am a self-taught individual, passionate about learning new things 📚. I excel in programming languages such as C#, Java, and Python, and I have experience in both Front-End and Back-End development using JavaScript, JQuery, HTML, CSS, and more ⚙️.",
     "about-me-desc-2": "The frameworks I primarily focus on for building software solutions are .NET Framework, .NET Core, and React. I specialize in microservices architectures, cloud solutions, and building secure, scalable and high-performance software.",
     "about-me-desc-3": "I currently work at 'IAS Software', a company that provides technology and development solutions for organizations seeking to optimize and streamline their internal processes 🔍. I work as a Full Stack software developer within a specialized team that supports various company projects to ensure efficient, high-quality deliveries, following the DevOps methodology 🛠.",
@@ -45,11 +43,7 @@
     "about-fact-langs": "Spanish · English",
     "about-facts-heading": "facts",
 
-    "experience-tag": "// experience",
-    "experience-title": "Experience",
-    "experience-desc": "My professional journey in software development.",
     "experience-present": "Present",
-    "experience-current-label": "Current",
     "exp-ias-role": "Full Stack Software Developer",
     "exp-ias-desc": "Full-stack implementation and development under the DevOps methodology, supporting various company projects to achieve efficient, high-quality deliveries.",
     "exp-syc-role": "Full Stack Software Developer",
@@ -57,9 +51,6 @@
     "exp-intern-role": "Software Development Intern",
     "exp-intern-desc": "First professional steps: supporting the development of web and desktop applications within production teams.",
 
-    "services-tag": "// services",
-    "services-title": "What I do",
-    "services-desc": "Areas where I add value, built on real production experience.",
     "svc-web-title": "Web Development",
     "svc-web-desc": "Web applications with .NET and React + TypeScript. Includes building a custom captcha designed to detect automated or malicious interactions.",
     "svc-api-title": "APIs & Integrations",
@@ -73,11 +64,6 @@
     "svc-micro-title": "Microservices",
     "svc-micro-desc": "Webservices, automata and desktop applications with modular, scalable architectures for distributed systems.",
 
-    "skills-tag": "// stack",
-    "education-skills": "Education & Skills",
-    "education-skills-desc": "I have knowledge of the following technologies and programming languages, which I commonly use to develop solutions. 🔍",
-    "education-subtitle": "Education",
-    "skills-subtitle": "Technologies",
     "edu-in-progress": "In progress",
     "edu-no-support": "The certificate will be available upon completion of the program.",
 
@@ -105,9 +91,6 @@
     "edu-congress-place": "Universidad Pontificia Bolivariana — Colombia",
     "edu-congress-details": "The 1st International Engineering Congress: Trends for Sustainable Development was a notable event where best practices and emerging trends in systems and computer engineering were discussed. Participating allowed me to gain a broad perspective on innovations and sustainable approaches in technological development, connecting with professionals and experts in the field.",
 
-    "projects-tag": "// projects",
-    "projects-title": "My Projects",
-    "projects-desc": "A selection of projects I'm proud of throughout my career.",
     "projects-private-note": "The projects shown here are public. Many others are private or confidential (client or company work) and cannot be displayed; in those cases my work is reflected as a contribution to internal solutions.",
     "project-public": "Public",
     "project-private": "Private",
@@ -123,7 +106,6 @@
     "project-mercanalyzer-desc": "Web scraping for market price analysis and comparison.",
     "project-bingo-desc": "Java algorithm for generating bingo cards.",
 
-    "contact-tag": "// contact",
     "connect-me-title": "Connect with me",
     "connect-me-desc": "Have a project, an opportunity, or just want to say hi? Reach out and let's talk.",
     "copyright-text": "Andrés Felipe Londoño Campos. All rights reserved."
