@@ -22,7 +22,7 @@ export const HelloSection = () => {
     const [step, setStep] = useState(0);
 
     return (
-        <SectionFrame id="intro" className="w-full min-h-screen flex items-start md:items-center justify-center px-4 md:px-8 pt-20 md:pt-16 pb-24">
+        <SectionFrame id="intro" className="relative w-full min-h-screen flex items-start md:items-center justify-center px-4 md:px-8 pt-20 md:pt-16 pb-24">
             <div className="w-full max-w-6xl flex flex-col md:flex-row gap-6 items-stretch justify-center">
                 {/* Terminal */}
                 <WindowFrame
@@ -85,6 +85,19 @@ export const HelloSection = () => {
                     </p>
                 </WindowFrame>
             </div>
+
+            {/* Indicador de scroll — solo en pantallas con espacio vertical */}
+            <button
+                type="button"
+                className="scroll-hint hidden md:flex"
+                onClick={() => scrollTo('stats-me')}
+                aria-label={t('intro-scroll')}
+            >
+                <span className="scroll-hint-label">
+                    <span className="c-green">{'//'}</span> {t('intro-scroll')}
+                </span>
+                <Icon name="chevron-down" size={20} className="scroll-hint-arrow" />
+            </button>
         </SectionFrame>
     );
 };

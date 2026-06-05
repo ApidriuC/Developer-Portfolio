@@ -382,6 +382,49 @@ body *::-webkit-scrollbar-thumb:hover {
     color: var(--text);
 }
 
+/* Indicador de scroll del hero (solo md+) */
+.scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.scroll-hint:hover,
+.scroll-hint:focus-visible {
+    color: var(--accent);
+    outline: none;
+}
+
+.scroll-hint-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+}
+
+.scroll-hint-arrow {
+    animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.55; }
+    50% { transform: translateY(6px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-hint-arrow {
+        animation: none;
+    }
+}
+
 /* ============================================================
    Botones
    ============================================================ */
