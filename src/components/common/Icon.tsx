@@ -42,6 +42,7 @@ const paths: Record<IconName, JSX.Element> = {
     terminal: <path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm3 4 3 3-3 3m6 0h4" />,
     menu: <path d="M4 6h16M4 12h16M4 18h16" />,
     'chevron-down': <path d="m6 9 6 6 6-6" />,
+    'chevron-up': <path d="m6 15 6-6 6 6" />,
 };
 
 /** Iconos de marca que usan relleno en lugar de trazo. */

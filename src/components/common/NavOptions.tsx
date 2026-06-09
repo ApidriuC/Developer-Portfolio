@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Language } from 'types/general';
 import { IconName } from 'types/props';
 import { useTheme } from '../../hooks/useTheme';
+import { useActiveSection } from '../../hooks/useActiveSection';
 import { useNotification } from './NotificationComponent';
 import { Icon } from './Icon';
 import './NavOptions.css';
@@ -29,11 +30,14 @@ const navLinks: NavLink[] = [
     { icon: 'mail', labelKey: 'option-contact-label', target: 'contact-me' }
 ];
 
+const sectionIds = navLinks.map(link => link.target);
+
 export const NavOptions = () => {
     const { t, i18n } = useTranslation();
     const { showNotification } = useNotification();
     const { theme, toggleTheme } = useTheme();
     const [menuOpen, setMenuOpen] = useState(false);
+    const activeSection = useActiveSection(sectionIds);
 
     const changeLanguage = () => {
         const newLang: Language = i18n.language === 'es' ? 'en' : 'es';
@@ -64,8 +68,9 @@ export const NavOptions = () => {
                         <button
                             key={link.target}
                             type="button"
-                            className="sb-item"
+                            className={`sb-item${activeSection === link.target ? ' active' : ''}`}
                             title={t(link.labelKey)}
+                            aria-current={activeSection === link.target ? 'true' : undefined}
                             onClick={() => handleNav(link.target, link.position)}
                         >
                             <Icon name={link.icon} size={15} />
@@ -104,7 +109,8 @@ export const NavOptions = () => {
                             <button
                                 key={link.target}
                                 type="button"
-                                className="sb-item"
+                                className={`sb-item${activeSection === link.target ? ' active' : ''}`}
+                                aria-current={activeSection === link.target ? 'true' : undefined}
                                 onClick={() => handleNav(link.target, link.position)}
                             >
                                 <Icon name={link.icon} size={17} />

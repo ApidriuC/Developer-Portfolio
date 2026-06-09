@@ -11,6 +11,7 @@ import {
     SkillsSection,
     ProjectsSection,
     ConnectMeSection,
+    BackToTop,
     NotificationProvider
 } from './components';
 
@@ -51,6 +52,8 @@ export const App = () => {
 
                     {/* Contacto — terminal */}
                     <ConnectMeSection />
+
+                    <BackToTop />
                 </main>
             </NotificationProvider>
         </>

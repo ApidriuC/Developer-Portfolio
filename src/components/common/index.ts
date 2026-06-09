@@ -6,6 +6,7 @@ export { SectionFrame } from './SectionFrame';
 export { WindowFrame } from './WindowFrame';
 export { Typewriter } from './Typewriter';
 export { RequestCvButton } from './RequestCvButton';
+export { BackToTop } from './BackToTop';
 
 // Hook and component
 export { NotificationProvider, useNotification } from './NotificationComponent';

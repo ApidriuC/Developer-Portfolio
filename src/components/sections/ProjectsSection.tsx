@@ -85,7 +85,7 @@ const RepoCard = React.memo(({ title, titleKey, descKey, link, image, visibility
             )}
 
             <div className="repo-thumb">
-                <img src={image} alt={name} loading="lazy" />
+                <img src={image} alt={name} loading="lazy" decoding="async" />
             </div>
 
             <div className="flex flex-wrap gap-3 items-center">

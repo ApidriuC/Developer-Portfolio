@@ -79,7 +79,7 @@ const CategoryBlock = React.memo(({ label, skills }: ContainerSkillProps) => (
 
 const SkillChip = React.memo(({ label, sourceImage, sourceLink }: SkillBoxProps) => (
     <button type="button" className="skill-chip" onClick={() => window.open(sourceLink, '_blank', 'noopener')} title={label}>
-        <img src={sourceImage} alt={label} />
+        <img src={sourceImage} alt={label} loading="lazy" decoding="async" />
         <span>{label}</span>
     </button>
 ));
@@ -113,7 +113,7 @@ const EducationCard = ({ year, kind, status, titleKey, placeKey, detailsKey, sup
                     <p className="text-justify md:text-base xs:text-xs xs:p-2 text-muted">{t(detailsKey)}</p>
                     {support ? (
                         <div className="flex justify-center items-center pt-4">
-                            <img alt={t(titleKey)} src={support} className="image_experience md:h-[45vh] xs:h-auto" />
+                            <img alt={t(titleKey)} src={support} className="image_experience md:h-[45vh] xs:h-auto" loading="lazy" decoding="async" />
                         </div>
                     ) : (
                         <p className="text-center italic text-muted pt-4">{t('edu-no-support')}</p>

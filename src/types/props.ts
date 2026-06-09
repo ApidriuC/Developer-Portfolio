@@ -22,7 +22,7 @@ export type IconName =
     | 'shield' | 'cloud' | 'database' | 'cpu' | 'plug' | 'boxes'
     | 'award' | 'graduation' | 'calendar' | 'rocket' | 'sparkles'
     | 'download' | 'send' | 'lock' | 'lock-open' | 'star' | 'close'
-    | 'git-branch' | 'terminal' | 'menu' | 'chevron-down';
+    | 'git-branch' | 'terminal' | 'menu' | 'chevron-down' | 'chevron-up';
 
 /* ────────────────────────────  Skills  ──────────────────────────── */
 

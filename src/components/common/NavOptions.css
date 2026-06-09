@@ -67,6 +67,19 @@
     outline: none;
 }
 
+/* Enlace de la sección visible actualmente */
+.sb-nav .sb-item.active {
+    color: var(--accent);
+    background: var(--bg-2);
+    box-shadow: inset 0 -2px 0 0 var(--accent);
+}
+
+.sb-mobile-menu .sb-item.active {
+    color: var(--accent);
+    background: var(--bg-2);
+    box-shadow: inset 2px 0 0 0 var(--accent);
+}
+
 .sb-brand {
     display: inline-flex;
     align-items: center;
