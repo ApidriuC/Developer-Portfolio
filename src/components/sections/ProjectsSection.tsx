@@ -16,7 +16,11 @@ const langColor: Record<string, string> = {
     React: '#61dafb',
     'Tailwind CSS': '#06b6d4',
     Python: '#3572A5',
-    Java: '#b07219'
+    Java: '#b07219',
+    NestJS: '#e0234e',
+    PostgreSQL: '#336791',
+    AWS: '#ff9900',
+    Terraform: '#7b42bc'
 };
 
 const slugify = (value: string) =>
@@ -89,7 +93,7 @@ const RepoCard = React.memo(({ title, titleKey, descKey, link, image, visibility
             </div>
 
             <div className="flex flex-wrap gap-3 items-center">
-                {tags.slice(0, 5).map((tag, index) => (
+                {tags.slice(0, 6).map((tag, index) => (
                     <span key={index} className="repo-lang">
                         <span className="lang-dot" style={{ background: langColor[tag.alt] ?? 'var(--text-muted)' }} />
                         {tag.alt}

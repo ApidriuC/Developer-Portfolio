@@ -9,6 +9,23 @@ import * as assets from '../assets';
  */
 export const projects: Project[] = [
     {
+        title: 'Payment Checkout',
+        descKey: 'project-payment-checkout-desc',
+        link: 'https://github.com/ApidriuC/payment-checkout',
+        image: assets.paymentCheckoutImage,
+        visibility: 'public',
+        gradient: 'linear-gradient(135deg, rgb(99, 102, 241) 0%, rgb(56, 189, 248) 100%)',
+        tags: [
+            { image: assets.typeScriptImage, alt: 'TypeScript' },
+            { image: assets.reactImage, alt: 'React' },
+            { image: assets.nestJsImage, alt: 'NestJS' },
+            { image: assets.postgreSqlImage, alt: 'PostgreSQL' },
+            { image: assets.awsImage, alt: 'AWS' },
+            { image: assets.terraformImage, alt: 'Terraform' },
+            { image: assets.nodeJsImage, alt: 'Node.js' }
+        ]
+    },
+    {
         title: 'EDESK Prisma',
         descKey: 'project-edesk-desc',
         link: 'https://edeskprisma.syc.com.co/NoClient.html',
@@ -44,7 +61,7 @@ export const projects: Project[] = [
         descKey: 'project-sycaptcha-desc',
         link: 'https://github.com/ApidriuC/SyCaptcha.Client',
         image: assets.SyCaptcha,
-        visibility: 'private',
+        visibility: 'public',
         gradient: 'linear-gradient(135deg, rgb(135, 77, 162) 0%, rgb(196, 58, 48) 100%)',
         tags: [
             { image: assets.htmlImage, alt: 'HTML' },

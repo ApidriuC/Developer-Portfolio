@@ -2,6 +2,7 @@ export { default as gitImage } from '../assets/git-logo.png';
 export { default as angularImage } from '../assets/angular-logo.svg';
 export { default as nestJsImage } from '../assets/nestjs-logo.svg';
 export { default as postgreSqlImage } from '../assets/postgresql-logo.svg';
+export { default as terraformImage } from '../assets/terraform-logo.svg';
 
 // Webp images
 export { default as awsImage } from '../assets/aws-logo.webp';
@@ -27,6 +28,7 @@ export { default as netCore } from '../assets/netCore.webp';
 export { default as NextJs } from '../assets/nextjs-logo.webp';
 export { default as nodeJsImage } from '../assets/nodeJs.webp';
 export { default as oracleImage } from '../assets/oracle-logo.webp';
+export { default as paymentCheckoutImage } from '../assets/payment-checkout.webp';
 export { default as pythonImage } from '../assets/python-logo.webp';
 export { default as reactImage } from '../assets/react-logo.webp';
 export { default as sqlImage } from '../assets/sql-logo.webp';

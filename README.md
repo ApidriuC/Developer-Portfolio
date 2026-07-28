@@ -68,7 +68,7 @@ Actualmente estoy fortaleciendo mi perfil hacia el **desarrollo seguro**, cursan
 - **Front-End:** React · Angular · Next.js · TypeScript · JavaScript · jQuery · HTML · CSS · Bootstrap · Tailwind
 - **Back-End:** Node.js · NestJS · .NET · C# · Java · Python · Docker
 - **Bases de datos:** SQL Server · Oracle · MySQL · PostgreSQL
-- **Cloud:** AWS · Azure
+- **Cloud:** AWS · Azure · Terraform
 - **Herramientas:** Git · Visual Studio Code · Visual Studio 2022
 
 ---
@@ -77,6 +77,7 @@ Actualmente estoy fortaleciendo mi perfil hacia el **desarrollo seguro**, cursan
 
 | Proyecto | Descripción | Enlace |
 |---|---|---|
+| **Payment Checkout** | Checkout de pago con tarjeta: SPA en React y API en NestJS con arquitectura hexagonal, reserva de stock y despliegue en AWS. | [Repo](https://github.com/ApidriuC/payment-checkout) |
 | **EDESK Prisma** | Plataforma de centralización del servicio al cliente para contribuyentes en Colombia: impuestos y trámites. | [Demo](https://edeskprisma.syc.com.co/NoClient.html) |
 | **Stream For Labs** | Sistema distribuido para administrar, sincronizar y compartir archivos, fotos y video, con galería y streaming. | [Repo](https://github.com/IngDeiver/streams-for-labs-web-client) |
 | **SyCaptcha** | Captcha propio para detectar interacciones automatizadas o maliciosas. | [Repo](https://github.com/ApidriuC/SyCaptcha.Client) |

@@ -101,6 +101,7 @@
     "project-confidential": "Confidential project",
     "projects-view-more": "View more on GitHub",
     "bingo-project-label": "Bingo Generation Algorithm",
+    "project-payment-checkout-desc": "Credit-card checkout: React SPA and NestJS API with hexagonal architecture, stock reservation and AWS deployment.",
     "project-edesk-desc": "Customer-service centralization platform for taxpayers in Colombia: tax payments and procedures.",
     "project-streamlabs-desc": "Distributed system to manage, sync and share files, photos and video, with gallery and streaming.",
     "project-sycaptcha-desc": "Custom captcha to detect automated or malicious interactions.",
